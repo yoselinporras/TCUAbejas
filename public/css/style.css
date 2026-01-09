@@ -45,6 +45,7 @@ h1 , h2, h3{
 
 .carousel{
     background: #41b089;
+    /* background: #e6e6e6; */
     border-radius: 0.5em;
 }
 
@@ -82,7 +83,8 @@ html, body, #container {
 }
 
 body{
-    background-color: #9bddc0;
+    /* background-color: #9bddc0; */
+    background: #e6e6e6;
 }
 
 #map {
