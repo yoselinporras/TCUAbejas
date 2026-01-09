@@ -1,0 +1,366 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}
+.carousel, .carousel-inner > .item > img {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+h6 > i{
+    padding: 0.5em;
+}
+
+
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-item > img{
+    object-fit: initial;
+}
+
+
+h1 , h2, h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #034247;
+    font-weight: 800;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+
+
+.carousel{
+    background: #41b089;
+    border-radius: 0.5em;
+}
+
+
+
+
+
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    color: #9bddc0;
+    font-weight: 500;
+    padding: 1%;
+}
+
+.h4-referencias{
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.h4-referencias > a{
+    color: #0d6efd;
+}
+
+html, body, #container {
+    height: 100%;
+    width: 100%;
+}
+
+.container-inicio{
+    padding: 0 16px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90%;
+}
+
+body{
+    background-color: #9bddc0;
+}
+
+#map {
+    height: 100%;
+    width: auto;
+}
+
+#sidebar{
+    height: 75%;
+}
+
+p{
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leaflet-image-layer{
+    object-fit: fill;
+}
+
+img{
+    padding: 0.5em;
+    margin: auto;
+    border-radius: 1em;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+#imgcolmena{
+    position: relative;
+    float: right;
+    height: 50%;
+}
+
+.modal-dialog {
+    width: auto;
+    height: auto;
+    min-height: fit-content;
+    min-width: 90%;
+}
+
+.nav-item  a:hover {
+    background-color: #bcbebf;
+}
+
+.nav-item a {
+    width: 100%;
+}
+
+.leaflet-popup-content{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.leaflet-popup-close-button{
+    display: none;
+}
+
+.leaflet-top, .leaflet-bottom {
+    z-index: 799;
+}
+
+.leaflet-container {
+    background: #9bddc0;
+    outline: 0;
+}
+
+input[type=button]{
+    border-radius: 2em;
+    background-color: #41b089;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 2.2em;
+    padding: 0.3em;
+    align-content: center;
+}
+
+input[type=button]:hover
+{
+    background-color: #fff;
+    color: #41b089;
+
+}
+
+#vermapabutton{
+    width: 250px;
+    height: 75px;
+}
+
+
+.imginvolucrados{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+
+
+.modal-body{
+    background:  #9bddc0;
+}
+
+
+h1{
+    font-size: 5.2em ;
+}
+
+.h2{
+    font-weight: 800;
+}
+h2{
+    font-size: 46pt;
+}
+
+.btn-list {
+    color: #fff;
+    background-color: #41b089;
+    border-color: #41b089;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+#close-tutorial{
+
+    background-color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #034247 ;
+    font-size: 3em;
+    height: 0%;
+}
+
+.btn-colmena{
+    max-width: 75%;
+    width: 240px;
+}
+
+.plist{
+    margin-bottom:0;
+    padding: 0;
+}
+
+.btnactive {
+    cursor: pointer;
+}
+
+.leaflet-sidebar-header {
+    background-color: #41b089;
+}
+
+.leaflet-sidebar-tabs > li.active, .leaflet-sidebar-tabs > ul > li.active {
+    color: #fff;
+    background-color: #41b089;
+}
+
+.activelistbutton{
+    background-color: #fff;
+    color: #41b089;
+}
+
+
+.col-lg{
+    text-align: center;
+}
+
+
+
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.img-encabezado{
+    padding: unset;
+}
+
+
+#img-ubicacion{
+    max-width: 90%;
+    display: flex;
+}
+
+.img-fluid{
+    height: 100%;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    #img-ubicacion{
+        max-width: 100%;
+        padding: 0px;
+        display: flex;
+    }
+
+
+}
+
+.tutorial{
+    width: 100%;
+    box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.30);
+    -webkit-box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.30);
+    -moz-box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.30);
+}
+
+
+
+@media (max-width: 1024px){
+
+    h1{
+        font-size:3em;
+    }
+    h2{
+        font-size: 30pt;
+    }
+
+    #imgcolmena{
+
+        height: 100%;
+    }
+    #sidebar{
+        height: 100%;
+        margin-top: 10px;
+        max-height: 85%;
+        border-radius: 0.35rem;
+        transition: width 500ms;
+    }
+
+
+
+    .carousel, .carousel-inner > .item > img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .carousel-control-prev, .carousel-control-next{
+        width: 22%;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 360px){
+
+
+}
+
+
+
+@media (max-width: 2585px) and (min-width: 1349px){
+    #encabezado a img {
+        /*width: 1276px;*/
+        /*height: 78px;*/
+    }
+}
+
+
+@media (max-width: 2585px) and (min-width: 1349px){
+    #encabezado {
+        /*height: 80px;*/
+
+    }
+}
+
+
+
+

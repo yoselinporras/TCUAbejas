@@ -1,0 +1,375 @@
+.environment-pollen-catcher {
+    display: block;
+    margin: auto;
+    height: 600px;
+}
+
+.container-pollenCatcher{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(#ffffff, transparent) #ffff66;
+
+    transition: background-color 1s linear;
+    overflow: hidden;
+}
+
+.bee{
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+    background: url(../img/pollenCatcher/bee.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.pollen{
+    width: 50px;
+    height: 50px;
+    bottom: 0px;
+    z-index: 2;
+    background: url(../img/pollenCatcher/pollen.png) repeat-x 0px 0px;
+    background-size: cover;
+    position: absolute;
+}
+
+.toxic-barrel{
+    width: 50px;
+    height: 50px;
+    bottom: 0px;
+    z-index: 2;
+    position: absolute;
+    background: url(../img/pollenCatcher/toxicBarrel.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.ant{
+    width: 50px;
+    height: 50px;
+    bottom: 0px;
+    z-index: 2;
+    position: absolute;
+    background: url(../img/pollenCatcher/ant.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.hi-score{
+    height: 30px;
+
+    position: relative;
+    z-index: 3;
+    color: #20c997;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.score{
+
+    height: 30px;
+    position: relative;
+    z-index: 3;
+
+    color: #20c997;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.container-gameOver{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-over{
+    display: none;
+    width: 100%;
+    text-align: center;
+    color: #20c997;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    z-index: 3;
+    margin: 1rem;
+}
+
+.button-restart{
+    display: none;
+    padding: 1rem;
+
+    text-align: center;
+    z-index: 3;
+    margin: 1rem;
+}
+
+
+.uid{
+    background: linear-gradient(#ffff66, transparent)#ffffff;
+}
+
+.hp-list{
+    list-style: none;
+    margin-bottom: 0px;
+    min-height: 50px;
+
+}
+
+.hp-list li {
+    display:inline-block;
+}
+
+.bee-move {
+    animation: animatedBee 0.16s steps(4) infinite;
+}
+.ant-move{
+    animation: animatedAnt 0.50s steps(4) infinite;
+}
+
+
+.bee-hp{
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    background: url(../img/pollenCatcher/heart.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.bee-hp-on-field{
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    position: absolute;
+    background: url(../img/pollenCatcher/heart.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.bee-hit{
+    animation: animatedBeeHit 0.3s infinite;
+}
+
+.uid-border-animation{
+    animation: animatedBorder 0.5s alternate infinite;
+}
+
+.heart-beat{
+    animation: animatedBeat 0.5s alternate infinite;
+}
+
+.pollen-beat{
+    animation: animatedBeat 0.5s alternate infinite;
+}
+
+.toxic-barrel-rotate {
+    animation: 2s rotate linear infinite;
+}
+
+
+@keyframes animatedBeeHit{
+    0% {
+        opacity: 0.0;
+    }
+    25% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+
+@keyframes animatedBorder{
+    0% {
+
+
+        border-bottom: 3px;
+        border-style: solid;
+        border-color: red;
+
+
+
+    }
+    25% {
+
+        border-bottom: 3px;
+        border-style: solid;
+        border-color: orange;
+
+
+    }
+    50% {
+
+        border-bottom: 3px;
+        border-style: solid;
+        border-color: blue;
+    }
+    100% {
+
+        border-bottom: 3px;
+        border-style: solid;
+        border-color: green;
+
+
+    }
+}
+
+@keyframes animatedBee{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position-x: -600px;
+    }
+}
+
+@keyframes animatedAnt{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position-x: -400px;
+    }
+}
+
+
+@keyframes animatedBeat{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .bee{
+        transform: scale(0.7);
+    }
+
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg) scale(0.7);
+
+        }
+        to {
+            transform: rotate(360deg) scale(0.7);
+        }
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .bee{
+        transform: scale(0.9);
+    }
+
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg) scale(0.9);
+
+        }
+        to {
+            transform: rotate(360deg) scale(0.9);
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .bee{
+        transform: scale(1.0);
+    }
+
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg) scale(1.0);
+
+        }
+        to {
+            transform: rotate(360deg) scale(1.0);
+        }
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .bee{
+        transform: scale(1.2);
+    }
+
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg) scale(1.2);
+
+        }
+        to {
+            transform: rotate(360deg) scale(1.2);
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .bee{
+        transform: scale(1.3);
+    }
+
+    @keyframes animatedAnt{
+        0%{
+            background-position: 0px;
+
+        }
+
+        100%{
+            background-position-x: -400px;
+
+        }
+
+    }
+
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg) scale(1.3);
+
+        }
+        to {
+            transform: rotate(360deg) scale(1.3);
+        }
+    }
+
+}
+

@@ -1,0 +1,291 @@
+.environment-bee-catcher {
+    display: block;
+    margin: auto;
+    height: 600px;
+
+    padding: 1rem;
+
+}
+
+
+.container-bee-catcher{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  
+}
+
+.background{
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(../img/beeCatcher/BG.png) repeat-x 0px 0px;
+    background-size: 50% 100%;
+}
+
+
+.catch-bee{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    background: url(../img/pollenCatcher/bee.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.catch-ant{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    background: url(../img/pollenCatcher/ant.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.gold-bee{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    background: url(../img/beeCatcher/goldbee.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.catch-wasp{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    background: url(../img/beeCatcher/wasp.png) repeat-x 0px 0px;
+    background-size: cover;
+}
+
+.score-catch{
+
+    height: 30px;
+    position: relative;
+    z-index: 3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.score-animation{
+    animation: animatedScore 0.5s infinite;
+}
+
+.bee-respawn{
+    animation: animatedRespawn 1s;
+}
+
+.bee-fade{
+    animation: animatedFade 1s ;
+}
+
+.bee-gold-move{
+    animation: animatedGoldBee 0.16s steps(4) infinite;
+}
+
+
+
+@keyframes animatedRespawn{
+    0% {
+        opacity: 0.25;
+    }
+    25% {
+        opacity: 0.50;
+
+    }
+    50% {
+        opacity: 0.75;
+
+    }
+    100% {
+        opacity: 1.0;
+
+    }
+
+}
+
+@keyframes animatedFade{
+    0% {
+        opacity: 0.75;
+    }
+    25% {
+        opacity: 0.50;
+    }
+    50% {
+
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0.0;
+    }
+
+}
+
+
+@keyframes animatedGoldBee{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position-x: -600px;
+    }
+}
+
+
+@keyframes animatedScore{
+    0% {
+
+        color: red;
+    }
+    16.6% {
+        color: orange;
+    }
+    33.3%{
+
+
+        color: yellow;
+    }
+    49.8% {
+
+        color: green;
+    }
+
+    66.5% {
+
+        color: blue;
+    }
+
+    83%{
+
+        color: #4B0082;
+    }
+
+    100%{
+
+        color: #aa0083;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .catch-bee{
+        transform: scale(0.6);
+    }
+
+    .catch-ant{
+        transform: scale(0.6);
+    }
+
+    .gold-bee{
+        transform: scale(0.6);
+    }
+
+    .catch-wasp{
+        transform: scale(0.6);
+    }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .catch-bee{
+        transform: scale(0.7);
+    }
+
+    .catch-ant{
+        transform: scale(0.7);
+    }
+
+    .gold-bee{
+        transform: scale(0.7);
+    }
+
+    .catch-wasp{
+        transform: scale(0.7);
+    }
+
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .catch-bee{
+        transform: scale(0.8);
+    }
+
+    .catch-ant{
+        transform: scale(0.8);
+    }
+
+    .gold-bee{
+        transform: scale(0.8);
+    }
+
+    .catch-wasp{
+        transform: scale(0.8);
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .catch-bee{
+        transform: scale(1);
+    }
+
+    .catch-ant{
+        transform: scale(1);
+    }
+
+    .gold-bee{
+        transform: scale(1);
+    }
+
+    .catch-wasp{
+        transform: scale(1);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .catch-bee{
+        transform: scale(1);
+    }
+
+    .catch-ant{
+        transform: scale(1);
+    }
+
+    .gold-bee{
+        transform: scale(1);
+    }
+
+    .catch-wasp{
+        transform: scale(1);
+    }
+
+}
+
+
+
+
+
+
+
