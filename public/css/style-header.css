@@ -10,11 +10,13 @@
 #encabezado {
     background-size: 100%;
     width: 100%;
-    background: #41ade7;
+    /* background: #41ade7; */
+    background:#00c0f3;
 }
 
 #navbar_top{
-    background: #f2f2f2;
+    /* background: #f2f2f2; */
+    background:white;
     /*opacity: .85;*/
     padding: 0;
     text-align: center;

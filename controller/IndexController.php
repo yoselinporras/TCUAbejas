@@ -1,6 +1,9 @@
 <?php
 
 class IndexController {
+
+    public $view; 
+
     public function __construct() {
         $this->view = new View();
     } // constructor
