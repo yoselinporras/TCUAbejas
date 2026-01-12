@@ -1,6 +1,9 @@
 <?php
 
 class MemoryMatchController {
+
+    public $view; 
+     
     public function __construct() {
         $this->view = new View();
     } // constructor
