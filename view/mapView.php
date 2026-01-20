@@ -347,16 +347,11 @@ include_once 'public/header.php';
                 </div>
             </div>
 
-
-
-
-
             <div class="leaflet-sidebar-pane" id="referencias-boton">
                 <h1 class="leaflet-sidebar-header">
                     Referencias
                     <div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
                 </h1>
-
 
                 <div class="bd-example" role="tabpanel" style="margin-top: 10px">
                     <div class="row">
@@ -474,11 +469,7 @@ include_once 'public/header.php';
 
 </div>
 
-
-
-
 <script>
-
 
     $(document).ready(function () {
         activebuttons();
@@ -489,7 +480,6 @@ include_once 'public/header.php';
         $('#mymodalTutorial').modal('toggle');
         responsiveModals();
     });
-
 
     var map = L.map('map', {
         minZoom: 1,
