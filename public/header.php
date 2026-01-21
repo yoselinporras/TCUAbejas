@@ -61,27 +61,26 @@
 
         <header>
 
+<div class="container-header" id="encabezado"> 
 
+    <a href="https://www.ucr.ac.cr/">
+        <img class="img-encabezado" src="./public/img/header/firmaU.png" alt="Logo Universidad de Costa Rica">
+    </a>
 
+    <a href="http://www.sa.ucr.ac.cr/web/">
+        <img class="img-encabezado" src="./public/img/header/logoSede.png" alt="Logo Sede del Atlántico">
+    </a>
 
-            <div class="container-header" id="encabezado"> 
+    <a>
+        <img class="img-encabezado" src="./public/img/header/logoTC-627.png" alt="Logo TCU-627 Gestión Ambiental">
+    </a>
 
-                <a href="https://www.ucr.ac.cr/">
-                    <img class="img-fluid img-encabezado" src="./public/img/firma-horizontal-dos-lineas-reverso.svg" alt="Logo Universidad de Costa Rica">
-                </a>
+    <a>
+        <img class="img-encabezado" src="./public/img/header/logoED.png" alt="Partes de abeja">
+    </a>
 
-                <a href="http://www.sa.ucr.ac.cr/web/">
-                    <img class="img-fluid img-encabezado" src="./public/img/Logo sede.svg" alt="Logo Sede del Atlántico">
-                </a>
+</div>
 
-                <a>
-                    <img class="img-fluid img-encabezado" src="./public/img/logoTCU.svg" alt="Logo TCU-627 Gestión Ambiental">
-                </a>
-
-                <a>
-                    <img class="img-fluid img-encabezado" src="./public/img/Logo establecimiento de meliponarios.svg" alt="Partes de abeja">
-                </a>
-            </div>
 
             <div class="col-sm-12">
 
@@ -90,6 +89,7 @@
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
+                           
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <div class="container">
@@ -97,7 +97,8 @@
                                     <ul class="navbar-nav" style="align-items: center">
                                         <div id='pagina-inicio' class="col-sm-4">
                                             <li class="nav-item">
-                                                <a class="nav-link"  href="?controlador=Index&accion=mostrar">Inicio</a>
+                                                <a  class="fa fa-home nav-link"  href="?controlador=Index&accion=mostrar"> Inicio</a>
+                                                 
                                             </li>
                                         </div>
 
@@ -107,7 +108,7 @@
 
 
                                                 <div class="col-sm-12">
-                                                    <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <a class="fa fa-gamepad nav-link dropdown-toggle "  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                         Juegos
                                                     </a>
                                                     <ul class="dropdown-menu fade-down" style="width: 100%"  aria-labelledby="navbarDropdownMenuLink">
@@ -123,7 +124,7 @@
 
                                         <div id='sobre-nosotros' class="col-sm-4">
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Acerca del proyecto</a>
+                                                <a class=" fa fa-info-circle nav-link nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> Acerca del proyecto</a>
 
                                                 <ul class="dropdown-menu fade-down" style="width: 100%"  aria-labelledby="navbarDropdownMenuLink">
                                                     <li><a class="dropdown-item" href="?controlador=About&accion=mostrar">Creadores</a></li>
