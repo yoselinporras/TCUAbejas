@@ -1,8 +1,3 @@
-
-
-
-
-
 $(document).ready(function () {
     var bee;
     var container;
@@ -448,11 +443,11 @@ $(document).ready(function () {
         var aRect = a.get(0).getBoundingClientRect();// obtiene el elemento a
         var bRect = b.get(0).getBoundingClientRect();// obtiene el elemento b
         return !(
-                ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
-                (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
-                ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
-                (aRect.left + paddingLeft > (bRect.left + bRect.width))
-                );
+            ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
+            (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
+            ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
+            (aRect.left + paddingLeft > (bRect.left + bRect.width))
+        );
     }
 
 
@@ -468,7 +463,7 @@ $(document).ready(function () {
     }
 
     function randomPositionPollen(pollen) {
-        
+
         pollen.each(function () {
             $campoPiezas = $('.container-pollenCatcher');
             $divWidth = $campoPiezas.width() - pollen.width();
@@ -523,7 +518,7 @@ $(document).ready(function () {
             environment.css('height', (window.innerHeight - 130) + 'px');
             size = environment.height() - uid.height();
             container.css('height', size + 'px');
-            
+
             console.log("Entre");
 
         });

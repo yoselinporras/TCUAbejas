@@ -19,19 +19,13 @@ include_once 'public/header.php';
                         <h3>Rompecabezas</h3>
                     </div>
                     <div id="img-fondo" class="col-sm-6">
-
-
                         <center style="padding-top: 16px; padding-bottom: 16px;">
-
-
                             <table id="matriz">
-
                                 <tr>
                                     <td id="pieza0"><img class="pieza" id="img_0" src="" onclick="" /></td>
                                     <td id="pieza1"><img  class="pieza" id="img_1" src="" onclick="" /></td>
                                     <td id="pieza2"><img class="pieza" id="img_2" src="" onclick="" /></td>
                                 </tr>
-
                                 <tr>
                                     <td id="pieza3"><img class="pieza" id="img_3" src="" onclick="" /></td>
                                     <td id="pieza4"><img class="pieza" id="img_4" src="" onclick="" /></td>
@@ -42,12 +36,8 @@ include_once 'public/header.php';
                                     <td id="pieza7"><img class="pieza" id="img_7" src="" onclick="" /></td>
                                     <td id="pieza8"><img class="pieza" id="img_8" src="" onclick="" /></td>
                                 </tr>
-
                             </table>
-
                         </center>
-
-
                     </div>
 
                     <div class="col-sm-6 campo-piezas"> 
@@ -78,9 +68,6 @@ include_once 'public/header.php';
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div> 
         </div>               

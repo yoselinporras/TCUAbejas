@@ -125,6 +125,10 @@ include_once 'public/header.php';
 
     </div>
 
+    <div class="beee-container">
+        <img src="./public/img/abj.png" class="beee">
+    </div>
+
 </div>
 
 

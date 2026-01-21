@@ -10,10 +10,10 @@ var especie8 = [];
 
 function agregarBotonMapaANavbar() {
     $('#pagina-inicio').after('<div class="col-sm-3">' +
-            '<li class="nav-item">' +
-            '<a class="nav-link"  href="?controlador=Map&accion=mostrar">Mapa</a>' +
-            '</li>' +
-            '</div>');
+        '<li class="nav-item">' +
+        '<a class="nav-link"  href="?controlador=Map&accion=mostrar">Mapa</a>' +
+        '</li>' +
+        '</div>');
 
     $('#pagina-inicio').removeClass('col-sm-4');
     $('#pagina-inicio').addClass('col-sm-3');
@@ -137,42 +137,42 @@ function iniModalSidebar() {
 
     });
 
-//    $("#modalespecie2").on('click', function () {
-//        $('#nombrecientifico').html("");
-//        $('#nombrecientifico').append('<i>Scaptotrigona luteipennis</i>');
-//        $('#nombrecomun').text("Soncuano ala roja o ala dorada");
-//        $('#morfologia').text("La longitud del cuerpo de un adulto puede llegar a ser de 5-7 mm,\n\
-// presenta un color naranja-rojizo en sus alas muy característico de esta especie mientras que el \n\
-//cuerpo es de color negro con poca vellosidad.");
-//        $('#comportamiento').text("A pesar de que no tienen aguijón se defienden eficientemente, \n\
-//algunas huyen pero otras son agresivas atacando por medio de mordiscos y depósito de sustancias \n\
-//resinosas sobre la piel del individuo. Las poblaciones más grandes son más agresivas. Tienen abejas\n\
-// guardianas en la colmena. Guardan sus alimentos en potes de cerumen ovoides, redondos o cilíndricos, unos para polen y otros para miel. ");
-//        $('#caracteristica').text("Estas abejas construyen nidos cubiertos prácticamente en cualquier\n\
-// cavidad (árboles, rocas, paredes). Presenta una estructura cilíndrica y su diámetro aproximado es de \n\
-//1.2 cm y el largo promedio de 5 cm. Estos nidos pueden ubicarse a una altura del suelo desde los 50 \n\
-//centímetros hasta los 5 metros y tienen numerosos orificios para la circulación del aire y de las \n\
-//propias abejas. El tamaño de las colonias puede ser de 2000 a 5000 abejas.");
-//
-//        for (var i = 1; i < 29; i++) {
-//            if ($("#itemcarousel" + i).length) {
-//                $("#itemcarousel" + i).remove();
-//            }
-//        }
-//
-//        $("#contenidocarousel").append('<div id="itemcarousel1" class="carousel-item active"> <img id="img1" class="d-block w-100" alt="Colmena 1"></div>');
-//        $("#contenidocarousel").append('<div id="itemcarousel2" class="carousel-item"> <img id="img2" class="d-block w-100" alt="Colmena 2"></div>');
-//        $("#contenidocarousel").append('<div id="itemcarousel3" class="carousel-item"> <img id="img3" class="d-block w-100" alt="Colmena 3"></div>');
-//
-//        $('#img1').attr("src", "public/img/soncuanoalas/soncuano1.jpg");
-//        $('#img2').attr("src", "public/img/soncuanoalas/soncuano2.jpg");
-//        $('#img3').attr("src", "public/img/soncuanoalas/soncuano3.jpg");
-//        $('#mymodal').modal('show');
-//        $('#img-ubicacion').attr("src", "public/img/ubicaciongeografica/Especies-2.png");
-//
-//        $('#referencias').text('Referencias: 5 y 6');
-//
-//    });
+    //    $("#modalespecie2").on('click', function () {
+    //        $('#nombrecientifico').html("");
+    //        $('#nombrecientifico').append('<i>Scaptotrigona luteipennis</i>');
+    //        $('#nombrecomun').text("Soncuano ala roja o ala dorada");
+    //        $('#morfologia').text("La longitud del cuerpo de un adulto puede llegar a ser de 5-7 mm,\n\
+    // presenta un color naranja-rojizo en sus alas muy característico de esta especie mientras que el \n\
+    //cuerpo es de color negro con poca vellosidad.");
+    //        $('#comportamiento').text("A pesar de que no tienen aguijón se defienden eficientemente, \n\
+    //algunas huyen pero otras son agresivas atacando por medio de mordiscos y depósito de sustancias \n\
+    //resinosas sobre la piel del individuo. Las poblaciones más grandes son más agresivas. Tienen abejas\n\
+    // guardianas en la colmena. Guardan sus alimentos en potes de cerumen ovoides, redondos o cilíndricos, unos para polen y otros para miel. ");
+    //        $('#caracteristica').text("Estas abejas construyen nidos cubiertos prácticamente en cualquier\n\
+    // cavidad (árboles, rocas, paredes). Presenta una estructura cilíndrica y su diámetro aproximado es de \n\
+    //1.2 cm y el largo promedio de 5 cm. Estos nidos pueden ubicarse a una altura del suelo desde los 50 \n\
+    //centímetros hasta los 5 metros y tienen numerosos orificios para la circulación del aire y de las \n\
+    //propias abejas. El tamaño de las colonias puede ser de 2000 a 5000 abejas.");
+    //
+    //        for (var i = 1; i < 29; i++) {
+    //            if ($("#itemcarousel" + i).length) {
+    //                $("#itemcarousel" + i).remove();
+    //            }
+    //        }
+    //
+    //        $("#contenidocarousel").append('<div id="itemcarousel1" class="carousel-item active"> <img id="img1" class="d-block w-100" alt="Colmena 1"></div>');
+    //        $("#contenidocarousel").append('<div id="itemcarousel2" class="carousel-item"> <img id="img2" class="d-block w-100" alt="Colmena 2"></div>');
+    //        $("#contenidocarousel").append('<div id="itemcarousel3" class="carousel-item"> <img id="img3" class="d-block w-100" alt="Colmena 3"></div>');
+    //
+    //        $('#img1').attr("src", "public/img/soncuanoalas/soncuano1.jpg");
+    //        $('#img2').attr("src", "public/img/soncuanoalas/soncuano2.jpg");
+    //        $('#img3').attr("src", "public/img/soncuanoalas/soncuano3.jpg");
+    //        $('#mymodal').modal('show');
+    //        $('#img-ubicacion').attr("src", "public/img/ubicaciongeografica/Especies-2.png");
+    //
+    //        $('#referencias').text('Referencias: 5 y 6');
+    //
+    //    });
 
     $("#modalespecie3").on('click', function () {
         $('#nombrecientifico').html("");
@@ -337,7 +337,7 @@ function iniModalSidebar() {
 }
 
 function initmarkers() {
-//    Abejas solitarias inicio
+    //    Abejas solitarias inicio
     especie1[1] = L.marker([-211.40234375, 712.125], {
         icon: L.ExtraMarkers.icon({
 
@@ -348,13 +348,13 @@ function initmarkers() {
             prefix: 'far'
         })
     }).addTo(map);
-//    Abejas solitarias fin
+    //    Abejas solitarias fin
 
-//soncuano ala roja o dorada inicio
+    //soncuano ala roja o dorada inicio
 
-//soncuano ala roja o dorada fin
+    //soncuano ala roja o dorada fin
 
-//Enreda pelo inicio
+    //Enreda pelo inicio
     especie3[1] = L.marker([-173.77734375, 546.875], {
         icon: L.ExtraMarkers.icon({
 
@@ -365,9 +365,9 @@ function initmarkers() {
             prefix: 'far'
         })
     }).addTo(map);
-//Enreda pelo fin
+    //Enreda pelo fin
 
-//Mariolon inicio 
+    //Mariolon inicio 
     especie4[1] = L.marker([-216.15234375, 489.875], {
         icon: L.ExtraMarkers.icon({
 
@@ -378,9 +378,9 @@ function initmarkers() {
             prefix: 'fas'
         })
     }).addTo(map);
-//Mariolon fin
+    //Mariolon fin
 
-//Mariola inicio
+    //Mariola inicio
     especie5[1] = L.marker([-193.52734375, 441.5], {
         icon: L.ExtraMarkers.icon({
 
@@ -633,9 +633,9 @@ function initmarkers() {
             prefix: 'fas'
         })
     }).addTo(map);
-//Mariola fin
+    //Mariola fin
 
-//Chicopipe inicio
+    //Chicopipe inicio
     especie6[1] = L.marker([-88.02734375, 426.5], {
         icon: L.ExtraMarkers.icon({
 
@@ -691,9 +691,9 @@ function initmarkers() {
             prefix: 'fas'
         })
     }).addTo(map);
-//Chicopipe fin
+    //Chicopipe fin
 
-//Soncuano inicio
+    //Soncuano inicio
     especie7[1] = L.marker([-131.15234375, 380.75], {
         icon: L.ExtraMarkers.icon({
             icon: 'fa-star',
@@ -743,9 +743,9 @@ function initmarkers() {
             prefix: 'far'
         })
     }).addTo(map);
-//Soncuano fin
+    //Soncuano fin
 
-//Euglossa inicio
+    //Euglossa inicio
     especie8[1] = L.marker([-220.40234375, 395], {
         icon: L.ExtraMarkers.icon({
             icon: 'fa-square',
@@ -755,7 +755,7 @@ function initmarkers() {
             prefix: 'fas'
         })
     }).addTo(map);
-//Euglossa fin
+    //Euglossa fin
 
 
 }
@@ -1130,7 +1130,7 @@ function showMarkers(map) {
 }
 
 function popups() {
-    
+
     $('#close-tutorial');
 
     especie1[1].on('mouseover', function (e) {
@@ -1139,11 +1139,11 @@ function popups() {
         this.closePopup();
     });
 
-//    especie2[1].on('mouseover', function (e) {
-//        this.bindPopup("Soncuano ala roja o dorada").openPopup();
-//    }).on('mouseout', function (e) {
-//        this.closePopup();
-//    });
+    //    especie2[1].on('mouseover', function (e) {
+    //        this.bindPopup("Soncuano ala roja o dorada").openPopup();
+    //    }).on('mouseout', function (e) {
+    //        this.closePopup();
+    //    });
 
 
     especie3[1].on('mouseover', function (e) {
@@ -1202,15 +1202,15 @@ function alertsColmenas() {
 
     });
 
-//    especie2[1].on('click', function (e) {
-//
-//        creacionItemsCarrousel(3, 2);
-//        $('#img1Colmena').attr("src", "public/img/soncuanoalas/soncuano1.jpg");
-//        $('#img2Colmena').attr("src", "public/img/soncuanoalas/soncuano2.jpg");
-//        $('#img3Colmena').attr("src", "public/img/soncuanoalas/soncuano3.jpg");
-//
-//
-//    });
+    //    especie2[1].on('click', function (e) {
+    //
+    //        creacionItemsCarrousel(3, 2);
+    //        $('#img1Colmena').attr("src", "public/img/soncuanoalas/soncuano1.jpg");
+    //        $('#img2Colmena').attr("src", "public/img/soncuanoalas/soncuano2.jpg");
+    //        $('#img3Colmena').attr("src", "public/img/soncuanoalas/soncuano3.jpg");
+    //
+    //
+    //    });
 
     especie3[1].on('click', function (e) {
 
@@ -1435,13 +1435,13 @@ function creacionItemsCarrousel(numeroItems, numeroColmena) {
             $("#itemColmena" + i).remove();
         }
     }
-    
+
     for (var i = 1; i <= numeroItems; i++) {
         if ($("#itemColmena1").length) {
             $("#contenidocarouselColmena").append('<div  id="itemColmena' + i + '" class="carousel-item "> <img id="img' + i + 'Colmena" class="d-block w-100" alt="Colmena ' + numeroColmena + '"> </div>');
         } else {
-          var element = $('<div id="itemColmena' + i + '" class="carousel-item active "> <img id="img' + i + 'Colmena" class="d-block w-100" alt="Colmena ' + numeroColmena + '"> </div>' ).appendTo('#contenidocarouselColmena');
-          
+            var element = $('<div id="itemColmena' + i + '" class="carousel-item active "> <img id="img' + i + 'Colmena" class="d-block w-100" alt="Colmena ' + numeroColmena + '"> </div>').appendTo('#contenidocarouselColmena');
+
         }
 
     }
@@ -1462,7 +1462,7 @@ function getOffset(el) {
         _y += el.offsetTop - el.scrollTop;
         el = el.offsetParent;
     }
-    return {top: _y, left: _x};
+    return { top: _y, left: _x };
 }
 
 

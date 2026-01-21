@@ -1,5 +1,5 @@
 class Enemy extends Phaser.Physics.Arcade.Sprite {
-        
+
     constructor(scene, x, y, imagen) {
         super(scene, x, y, imagen); // The frame is optional 
         this.max = 700;
@@ -7,20 +7,20 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
         this.maxbinario = 3;
         this.minbinario = 1;
         this.rango = 700 - 100 + 1;
-        this.rangobinario =0;
+        this.rangobinario = 0;
         this.rangobinario = 3 - 1 + 1;
         this.direccion = 0;
         this.activo = false;
     }
-    move(p_x,p_y, p_width, p_height) {
-      //  alert(p_x);
+    move(p_x, p_y, p_width, p_height) {
+        //  alert(p_x);
         var x = p_x;
         var y = p_y;
         if (x == -1) {
 
             this.x = ((Math.random() * this.rango) + this.min);
             this.direccion = Math.round((Math.random() * this.rangobinario) + this.minbinario);
-             //alert(this.direccion);
+            //alert(this.direccion);
             this.y = 0;
 
         } //fin if
@@ -61,13 +61,13 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
 
     collisionPlayer(p_x, p_y) { // deteccion de coliciones entre la abeja y las paredes
 
-        if (p_x <= this.x + 30 && p_x+30 >= this.x
-        && p_y <= this.y + 30 && p_y+30 >= this.y) {
+        if (p_x <= this.x + 30 && p_x + 30 >= this.x
+            && p_y <= this.y + 30 && p_y + 30 >= this.y) {
             this.x = -1;
             this.y = 0;
-            return true; 
+            return true;
         } //end if 
-    
-    
+
+
     } //collisionPlayer
 }//end enemy class

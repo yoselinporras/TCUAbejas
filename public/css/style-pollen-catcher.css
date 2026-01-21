@@ -4,7 +4,7 @@
     height: 600px;
 }
 
-.container-pollenCatcher{
+.container-pollenCatcher {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
     overflow: hidden;
 }
 
-.bee{
+.bee {
     width: 150px;
     height: 150px;
     z-index: 2;
@@ -24,7 +24,7 @@
     background-size: cover;
 }
 
-.pollen{
+.pollen {
     width: 50px;
     height: 50px;
     bottom: 0px;
@@ -34,7 +34,7 @@
     position: absolute;
 }
 
-.toxic-barrel{
+.toxic-barrel {
     width: 50px;
     height: 50px;
     bottom: 0px;
@@ -44,7 +44,7 @@
     background-size: cover;
 }
 
-.ant{
+.ant {
     width: 50px;
     height: 50px;
     bottom: 0px;
@@ -54,7 +54,7 @@
     background-size: cover;
 }
 
-.hi-score{
+.hi-score {
     height: 30px;
 
     position: relative;
@@ -66,7 +66,7 @@
     text-align: left;
 }
 
-.score{
+.score {
 
     height: 30px;
     position: relative;
@@ -79,7 +79,7 @@
     text-align: left;
 }
 
-.container-gameOver{
+.container-gameOver {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -88,7 +88,7 @@
     align-items: center;
 }
 
-.game-over{
+.game-over {
     display: none;
     width: 100%;
     text-align: center;
@@ -100,7 +100,7 @@
     margin: 1rem;
 }
 
-.button-restart{
+.button-restart {
     display: none;
     padding: 1rem;
 
@@ -110,11 +110,11 @@
 }
 
 
-.uid{
+.uid {
     background: linear-gradient(#ffff66, transparent)#ffffff;
 }
 
-.hp-list{
+.hp-list {
     list-style: none;
     margin-bottom: 0px;
     min-height: 50px;
@@ -122,18 +122,19 @@
 }
 
 .hp-list li {
-    display:inline-block;
+    display: inline-block;
 }
 
 .bee-move {
     animation: animatedBee 0.16s steps(4) infinite;
 }
-.ant-move{
+
+.ant-move {
     animation: animatedAnt 0.50s steps(4) infinite;
 }
 
 
-.bee-hp{
+.bee-hp {
     width: 50px;
     height: 50px;
     z-index: 2;
@@ -141,7 +142,7 @@
     background-size: cover;
 }
 
-.bee-hp-on-field{
+.bee-hp-on-field {
     width: 50px;
     height: 50px;
     z-index: 2;
@@ -150,19 +151,19 @@
     background-size: cover;
 }
 
-.bee-hit{
+.bee-hit {
     animation: animatedBeeHit 0.3s infinite;
 }
 
-.uid-border-animation{
+.uid-border-animation {
     animation: animatedBorder 0.5s alternate infinite;
 }
 
-.heart-beat{
+.heart-beat {
     animation: animatedBeat 0.5s alternate infinite;
 }
 
-.pollen-beat{
+.pollen-beat {
     animation: animatedBeat 0.5s alternate infinite;
 }
 
@@ -171,23 +172,26 @@
 }
 
 
-@keyframes animatedBeeHit{
+@keyframes animatedBeeHit {
     0% {
         opacity: 0.0;
     }
+
     25% {
         opacity: 1.0;
     }
+
     50% {
         opacity: 0.0;
     }
+
     100% {
         opacity: 1.0;
     }
 }
 
 
-@keyframes animatedBorder{
+@keyframes animatedBorder {
     0% {
 
 
@@ -198,6 +202,7 @@
 
 
     }
+
     25% {
 
         border-bottom: 3px;
@@ -206,12 +211,14 @@
 
 
     }
+
     50% {
 
         border-bottom: 3px;
         border-style: solid;
         border-color: blue;
     }
+
     100% {
 
         border-bottom: 3px;
@@ -222,32 +229,33 @@
     }
 }
 
-@keyframes animatedBee{
-    0%{
+@keyframes animatedBee {
+    0% {
         background-position: 0px;
     }
 
-    100%{
+    100% {
         background-position-x: -600px;
     }
 }
 
-@keyframes animatedAnt{
-    0%{
+@keyframes animatedAnt {
+    0% {
         background-position: 0px;
     }
 
-    100%{
+    100% {
         background-position-x: -400px;
     }
 }
 
 
-@keyframes animatedBeat{
-    from{
+@keyframes animatedBeat {
+    from {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(1.3);
     }
 }
@@ -257,6 +265,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -267,7 +276,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-    .bee{
+    .bee {
         transform: scale(0.7);
     }
 
@@ -277,6 +286,7 @@
             transform: rotate(0deg) scale(0.7);
 
         }
+
         to {
             transform: rotate(360deg) scale(0.7);
         }
@@ -287,7 +297,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
-    .bee{
+    .bee {
         transform: scale(0.9);
     }
 
@@ -297,6 +307,7 @@
             transform: rotate(0deg) scale(0.9);
 
         }
+
         to {
             transform: rotate(360deg) scale(0.9);
         }
@@ -305,7 +316,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .bee{
+    .bee {
         transform: scale(1.0);
     }
 
@@ -315,6 +326,7 @@
             transform: rotate(0deg) scale(1.0);
 
         }
+
         to {
             transform: rotate(360deg) scale(1.0);
         }
@@ -324,7 +336,7 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .bee{
+    .bee {
         transform: scale(1.2);
     }
 
@@ -334,6 +346,7 @@
             transform: rotate(0deg) scale(1.2);
 
         }
+
         to {
             transform: rotate(360deg) scale(1.2);
         }
@@ -343,17 +356,17 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-    .bee{
+    .bee {
         transform: scale(1.3);
     }
 
-    @keyframes animatedAnt{
-        0%{
+    @keyframes animatedAnt {
+        0% {
             background-position: 0px;
 
         }
 
-        100%{
+        100% {
             background-position-x: -400px;
 
         }
@@ -366,10 +379,10 @@
             transform: rotate(0deg) scale(1.3);
 
         }
+
         to {
             transform: rotate(360deg) scale(1.3);
         }
     }
 
 }
-

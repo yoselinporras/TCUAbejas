@@ -1,10 +1,10 @@
-class CountDown extends Phaser.Scene{
+class CountDown extends Phaser.Scene {
     scene
     timerEvent
     label
     constructor(scene, label) {
-       super(scene);
-       this.scene = scene;
+        super(scene);
+        this.scene = scene;
         this.label = label;
     }
 

@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     function Start() {
         container = $(".container-bee-catcher");
-//        container.html("");
+        //        container.html("");
         backrground = $(".background");
         backrgroundX = 0;
 
@@ -142,7 +142,7 @@ $(document).ready(function () {
                     var id1 = setTimeout(function () {
                         bee.removeClass('bee-respawn');
                         bee.addClass('bee-fade');
-                        
+
 
                         var id12 = setTimeout(function () {
                             bee.remove();
@@ -333,11 +333,11 @@ $(document).ready(function () {
         var aRect = a.get(0).getBoundingClientRect();// obtiene el elemento a
         var bRect = b.get(0).getBoundingClientRect();// obtiene el elemento b
         return !(
-                ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
-                (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
-                ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
-                (aRect.left + paddingLeft > (bRect.left + bRect.width))
-                );
+            ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
+            (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
+            ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
+            (aRect.left + paddingLeft > (bRect.left + bRect.width))
+        );
     }
 
 

@@ -65,7 +65,7 @@ class Scene3 extends Phaser.Scene {
         this.cameras.main.startFollow(this.player);
 
         this.life = this.physics.add.staticGroup();
-   
+
 
         this.life = this.add.text(this.player.x, 120, this.player.life, {
             font: '600 30px Poppins'
@@ -166,54 +166,54 @@ var createLabel = function (scene, text) {
 }
 var dialo = function (scene, isGameOver, p_x, p_y) {
     var dialog = scene.rexUI.add.dialog({
-            x: p_x,
-            y: p_y,
+        x: p_x,
+        y: p_y,
 
 
-            background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
+        background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
 
-            title: scene.rexUI.add.label({
-                background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
-                text: scene.add.text(0, 0, 'Ganaste', {
-                    fontSize: '24px'
-                }),
-                space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
-                }
-            }),
-
-
-            content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+        title: scene.rexUI.add.label({
+            background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
+            text: scene.add.text(0, 0, 'Ganaste', {
                 fontSize: '24px'
             }),
-
-            actions: [
-                createLabel(scene, 'Si'),
-                createLabel(scene, 'No')
-            ],
-
             space: {
-                title: 25,
-                content: 25,
-                action: 15,
-
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-            },
-
-            align: {
-                actions: 'right', // 'center'|'left'|'right'
-            },
-
-            expand: {
-                content: false, // Content is a pure text object
+                left: 15,
+                right: 15,
+                top: 10,
+                bottom: 10
             }
-        })
+        }),
+
+
+        content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+            fontSize: '24px'
+        }),
+
+        actions: [
+            createLabel(scene, 'Si'),
+            createLabel(scene, 'No')
+        ],
+
+        space: {
+            title: 25,
+            content: 25,
+            action: 15,
+
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 20,
+        },
+
+        align: {
+            actions: 'right', // 'center'|'left'|'right'
+        },
+
+        expand: {
+            content: false, // Content is a pure text object
+        }
+    })
         .layout()
         // .drawBounds(this.add.graphics(), 0xff0000)
         .popUp(1000);
@@ -245,52 +245,52 @@ var dialo = function (scene, isGameOver, p_x, p_y) {
 var dialoGameOver = function (scene, p_x, p_y) {
     var dialog = scene.rexUI.add.dialog({
 
-            x: p_x,
-            y: p_y,
+        x: p_x,
+        y: p_y,
 
-            background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
+        background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
 
-            title: scene.rexUI.add.label({
-                background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
-                text: scene.add.text(0, 0, 'Perdiste', {
-                    fontSize: '24px'
-                }),
-                space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
-                }
-            }),
-
-            content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+        title: scene.rexUI.add.label({
+            background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
+            text: scene.add.text(0, 0, 'Perdiste', {
                 fontSize: '24px'
             }),
-
-            actions: [
-                createLabel(scene, 'Si'),
-                createLabel(scene, 'No')
-            ],
-
             space: {
-                title: 25,
-                content: 25,
-                action: 15,
-
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-            },
-
-            align: {
-                actions: 'right', // 'center'|'left'|'right'
-            },
-
-            expand: {
-                content: false, // Content is a pure text object
+                left: 15,
+                right: 15,
+                top: 10,
+                bottom: 10
             }
-        })
+        }),
+
+        content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+            fontSize: '24px'
+        }),
+
+        actions: [
+            createLabel(scene, 'Si'),
+            createLabel(scene, 'No')
+        ],
+
+        space: {
+            title: 25,
+            content: 25,
+            action: 15,
+
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 20,
+        },
+
+        align: {
+            actions: 'right', // 'center'|'left'|'right'
+        },
+
+        expand: {
+            content: false, // Content is a pure text object
+        }
+    })
         .layout()
         //.drawBounds(this.add.graphics(), 0xff0000)
         .popUp(1000);
@@ -323,52 +323,52 @@ var dialoGameOver = function (scene, p_x, p_y) {
 var dialoGameOver = function (scene, p_x, p_y) {
     var dialog = scene.rexUI.add.dialog({
 
-            x: p_x,
-            y: p_y,
+        x: p_x,
+        y: p_y,
 
-            background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
+        background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
 
-            title: scene.rexUI.add.label({
-                background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
-                text: scene.add.text(0, 0, 'Perdiste', {
-                    fontSize: '24px'
-                }),
-                space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
-                }
-            }),
-
-            content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+        title: scene.rexUI.add.label({
+            background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
+            text: scene.add.text(0, 0, 'Perdiste', {
                 fontSize: '24px'
             }),
-
-            actions: [
-                createLabel(scene, 'Si'),
-                createLabel(scene, 'No')
-            ],
-
             space: {
-                title: 25,
-                content: 25,
-                action: 15,
-
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-            },
-
-            align: {
-                actions: 'right', // 'center'|'left'|'right'
-            },
-
-            expand: {
-                content: false, // Content is a pure text object
+                left: 15,
+                right: 15,
+                top: 10,
+                bottom: 10
             }
-        })
+        }),
+
+        content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+            fontSize: '24px'
+        }),
+
+        actions: [
+            createLabel(scene, 'Si'),
+            createLabel(scene, 'No')
+        ],
+
+        space: {
+            title: 25,
+            content: 25,
+            action: 15,
+
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 20,
+        },
+
+        align: {
+            actions: 'right', // 'center'|'left'|'right'
+        },
+
+        expand: {
+            content: false, // Content is a pure text object
+        }
+    })
         .layout()
         //.drawBounds(this.add.graphics(), 0xff0000)
         .popUp(1000);

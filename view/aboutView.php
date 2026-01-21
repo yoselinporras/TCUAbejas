@@ -10,10 +10,6 @@ include_once 'public/header.php';
             agregarBotonMapaANavbar();
         }); 
     </script>
-
-    
-    
-    
     
     <div class="row col-sm-auto">
         
