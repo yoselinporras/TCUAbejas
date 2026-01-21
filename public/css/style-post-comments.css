@@ -1,5 +1,4 @@
-
-.send-button{
+.send-button {
 
     border-radius: 2em;
     background-color: #41b089;
@@ -11,40 +10,39 @@
 }
 
 
-.form-post-comments{
+.form-post-comments {
     display: grid;
     padding: 1em;
     grid-gap: 1em;
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: "nothing-0 name nothing-1"
-                         "nothing-0 email nothing-1"
-                         "nothing-0 comment nothing-1"
-                         "nothing-0 send nothing-1";
+        "nothing-0 email nothing-1"
+        "nothing-0 comment nothing-1"
+        "nothing-0 send nothing-1";
 }
 
 
-.form-post-comments .email-area{
+.form-post-comments .email-area {
     grid-area: email;
 }
 
-.form-post-comments .name-area{
+.form-post-comments .name-area {
     grid-area: name;
 }
 
-.form-post-comments .matter-area{
+.form-post-comments .matter-area {
     grid-area: matter;
 }
 
-.form-post-comments .comment-area{
+.form-post-comments .comment-area {
     grid-area: comment;
 }
 
-.form-post-comments .send-area{
-   grid-area: send; 
+.form-post-comments .send-area {
+    grid-area: send;
 }
 
-button[type=submit]:hover
-{
+button[type=submit]:hover {
     background-color: #fff;
     color: #41b089;
 }
@@ -58,43 +56,43 @@ button[type=submit]:hover
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-   .form-post-comments{
-    grid-template-areas: "name name name"
-        "email email email"
-        "comment comment comment"
-        "send send send";
-}
+    .form-post-comments {
+        grid-template-areas: "name name name"
+            "email email email"
+            "comment comment comment"
+            "send send send";
+    }
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
- .form-post-comments{
-    grid-template-areas: "name name name"
-        "email email email"
-        "comment comment comment"
-        "send send send";
-}
+    .form-post-comments {
+        grid-template-areas: "name name name"
+            "email email email"
+            "comment comment comment"
+            "send send send";
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-.form-post-comments{
-    grid-template-areas: "name name name"
-        "email email email"
-        "comment comment comment"
-        "send send send";
-}
+    .form-post-comments {
+        grid-template-areas: "name name name"
+            "email email email"
+            "comment comment comment"
+            "send send send";
+    }
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .form-post-comments{
-     grid-template-areas: "nothing-0 name nothing-1"
-                         "nothing-0 email nothing-1"
-                         "nothing-0 comment nothing-1"
-                         "nothing-0 send nothing-1";
+    .form-post-comments {
+        grid-template-areas: "nothing-0 name nothing-1"
+            "nothing-0 email nothing-1"
+            "nothing-0 comment nothing-1"
+            "nothing-0 send nothing-1";
     }
 }

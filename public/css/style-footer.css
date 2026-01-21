@@ -1,23 +1,21 @@
-
 footer {
-  /* background-color: #034247; */
-  background-color:#323232;
-  display: block;
-  color: white;
-  opacity: 85%;
-  bottom:0;
+    /* background-color: #034247; */
+    background-color: #323232;
+    display: block;
+    color: white;
+    opacity: 85%;
+    bottom: 0;
 }
-h6,h3{
+
+h6,
+h3 {
     word-break: break-word;
 }
 
-.container-footer .brand-area{
+.container-footer .brand-area {
     grid-area: brand;
 }
 
-.container-footer .contact-area{
+.container-footer .contact-area {
     grid-area: contact;
 }
-
-
-

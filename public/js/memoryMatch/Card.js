@@ -8,58 +8,58 @@ class Card extends Phaser.Physics.Arcade.Sprite {
     this.isMatch = false;
 
   } //end constructor
-  flipCards(){
+  flipCards() {
     var card = this;
-      const timeline = this.scene.tweens.timeline();
-      timeline.add({
-         targets: this,
+    const timeline = this.scene.tweens.timeline();
+    timeline.add({
+      targets: this,
       scaleX: 0,
       duration: 200,
       ease: "Linear",
-      });
+    });
     timeline.add({
-       //paused: true,
+      //paused: true,
       targets: this,
       scaleX: 0.9,
       duration: 200,
       ease: "Linear",
-       onComplete: ()=>{
-           card.faceUp();
-           timeline.destroy();
-       }
-   });
-   
-   timeline.play();
+      onComplete: () => {
+        card.faceUp();
+        timeline.destroy();
+      }
+    });
+
+    timeline.play();
   }
-  flipCardDown(){
-     var card = this;
-      const timeline2 = this.scene.tweens.timeline();
-      timeline2.add({
+  flipCardDown() {
+    var card = this;
+    const timeline2 = this.scene.tweens.timeline();
+    timeline2.add({
       targets: this,
       scaleX: 0,
       duration: 200,
       ease: "Linear",
-      });
+    });
     timeline2.add({
-       //paused: true,
+      //paused: true,
       targets: this,
       scaleX: 0.9,
       duration: 100,
       ease: "Linear",
-       onComplete: ()=>{
-           card.PutDown();
-           timeline2.destroy();
-       }
-   });
-   
-   timeline2.play();
+      onComplete: () => {
+        card.PutDown();
+        timeline2.destroy();
+      }
+    });
+
+    timeline2.play();
   }
 
   PutDown() {
-  
+
     this.setTexture('cardBack');
     this.isActive = false;
-    
+
   } //end put down pone las cartas hacia abajo y solamente se ve la parte de atras
 
 

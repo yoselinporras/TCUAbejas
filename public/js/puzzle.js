@@ -7,9 +7,9 @@ var puzzleName = "";
 
 
 
-$(document).ready( function () {
-    
-   
+$(document).ready(function () {
+
+
 
     puzzleImage = 'public/img/puzzles/fondos/puzzle1.png';
     puzzleName = 'puzzle1';
@@ -37,7 +37,7 @@ $(document).ready( function () {
 
     $('.campo-piezas').css('width', ($('.movil').width() * 3) + 'px');
     $('.campo-piezas').css('height', ($('.movil').width() * 3) + 'px');
-    
+
 
 
     randomizarPosicionDePiezas();
@@ -45,7 +45,8 @@ $(document).ready( function () {
 
     $('.movil').draggable({
         containment: $("#campo-fondo"),
-        scroll: false});
+        scroll: false
+    });
 
 
 
@@ -212,7 +213,7 @@ function comprobar_piezas(pieza) {
     piezasUbicadas.push(pieza);
 
     if (piezasUbicadas.length == 9) {
-        win.volume =0.6;
+        win.volume = 0.6;
         win.play();
 
         Swal.fire({
@@ -245,8 +246,8 @@ function randomizarPosicionDePiezas() {
         });
 
     });
-    
-    
+
+
 }
 
 function reiniciar(puzzleName) {

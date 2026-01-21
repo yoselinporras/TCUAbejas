@@ -38,7 +38,7 @@ class Scene1 extends Phaser.Scene {
         this.load.image('front4', 'public/img/memoria/Cards/card4.png');
         this.load.image('front5', 'public/img/memoria/Cards/card5.png');
         this.load.image('front6', 'public/img/memoria/Cards/card6.png');
-        
+
 
         this.load.audio("match", ["public/img/memoria/sounds/match.wav"]);
         this.load.audio("fail", ["public/img/memoria/sounds/fail.mp3"]);
@@ -86,14 +86,14 @@ class Scene1 extends Phaser.Scene {
         for (let row = 0; row < this.cards.length; row++) {
             if (this.cards[row].onClick(mousePointer.x, mousePointer.y)) { //verifica si se selecciona la carta deseada
                 if (this.canMove && !this.cards[row].isMatch && !this.cards[row].isActive) { //si aun se puede mover va a poder voltearse
-                  
+
                     this.cards[row].flipCards();
                     this.SelectedCards.push(this.cards[row]); //ingresa a las cartas seleccionadas
                 }
                 ///    console.log("choca con " + this.cards[row].id); //es verdad
             }
         } //
-//
+        //
 
         if (this.SelectedCards.length > 1) { //cuando existan al menos dos cartas dentro del arreglo
             this.canMove = false; //evita que si se toca otra carta esta se vuelva
@@ -109,7 +109,7 @@ class Scene1 extends Phaser.Scene {
                 this.SelectedCards[1].isMatch = true;
                 this.SelectedCards.length = 0; //se borran los datos del array
                 // this.numMatches++;
-              
+
                 this.canMove = true;
                 this.match.play();
                 this.Score = this.contMatch + "/6";
@@ -136,18 +136,18 @@ class Scene1 extends Phaser.Scene {
 
             let scene2 = this.scene;
             this.add.text(game.config.width * 0.5, game.config.height * 0.5, '¡Ganaste!', {
-                    fontSize: 48,
-                    // fontSize: '48px',
-                    color: '#fff',
-                    backgroundColor: '#69B896',
-                    padding: {
-                        right: 10,
-                        left: 10,
-                        top: 10,
-                        bottom: 10
-                    },
-                    autoRound:true
-                })
+                fontSize: 48,
+                // fontSize: '48px',
+                color: '#fff',
+                backgroundColor: '#69B896',
+                padding: {
+                    right: 10,
+                    left: 10,
+                    top: 10,
+                    bottom: 10
+                },
+                autoRound: true
+            })
                 .setOrigin(0.5);
             this.time.addEvent({
                 delay: 2500,
@@ -222,52 +222,52 @@ var createLabel = function (scene, text) {
 var dialoGameOver = function (scene, p_x, p_y) {
     var dialog = scene.rexUI.add.dialog({
 
-            x: p_x,
-            y: p_y,
+        x: p_x,
+        y: p_y,
 
-            background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
+        background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
 
-            title: scene.rexUI.add.label({
-                background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
-                text: scene.add.text(0, 0, 'Perdiste', {
-                    fontSize: '24px'
-                }),
-                space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
-                }
-            }),
-
-            content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+        title: scene.rexUI.add.label({
+            background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
+            text: scene.add.text(0, 0, 'Perdiste', {
                 fontSize: '24px'
             }),
-
-            actions: [
-                createLabel(scene, 'Si'),
-                createLabel(scene, 'No')
-            ],
-
             space: {
-                title: 25,
-                content: 25,
-                action: 15,
-
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-            },
-
-            align: {
-                actions: 'right', // 'center'|'left'|'right'
-            },
-
-            expand: {
-                content: false, // Content is a pure text object
+                left: 15,
+                right: 15,
+                top: 10,
+                bottom: 10
             }
-        })
+        }),
+
+        content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+            fontSize: '24px'
+        }),
+
+        actions: [
+            createLabel(scene, 'Si'),
+            createLabel(scene, 'No')
+        ],
+
+        space: {
+            title: 25,
+            content: 25,
+            action: 15,
+
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 20,
+        },
+
+        align: {
+            actions: 'right', // 'center'|'left'|'right'
+        },
+
+        expand: {
+            content: false, // Content is a pure text object
+        }
+    })
         .layout()
         //.drawBounds(this.add.graphics(), 0xff0000)
         .popUp(1000);

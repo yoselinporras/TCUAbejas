@@ -1,6 +1,6 @@
-  
-  class Level2 extends Phaser.Scene {
-    
+
+class Level2 extends Phaser.Scene {
+
     constructor() {
         super("Level2");
     }
@@ -31,7 +31,7 @@
     preload() {
 
         this.x = game.config.width / 2;
-        this.y = ((game.config.height / 2) - (this.maxImageHeight / 2)) -40;
+        this.y = ((game.config.height / 2) - (this.maxImageHeight / 2)) - 40;
         this.load.image('cardBack', 'public/img/memoria/Cards/back.png');
 
         this.load.image('front1', 'public/img/memoria/Cards/card1.png');
@@ -49,11 +49,11 @@
 
     }
     create() {
-       
-        const timerLabel = this.add.text(game.config.width * 0.5, 50, '45',{fontSize: 48}).setOrigin(0.5);
+
+        const timerLabel = this.add.text(game.config.width * 0.5, 50, '45', { fontSize: 48 }).setOrigin(0.5);
         this.countdown = new CountDown(this, timerLabel);
         this.countdown.start(this.handleCountdownFinished.bind(this));
-       
+
         //score Label
         this.Score = "0/7";
         this.ScoreLabel = this.add.bitmapText(10, 5, "carrier_command", "Parejas Ganadas", 14);
@@ -68,7 +68,7 @@
             let cont = 1;
             for (let col = 0; col < 6; col++) {
 
-                this.x = this.offsetX + (this.maxImageWidth * col) + (this.maxImageWidth /2);
+                this.x = this.offsetX + (this.maxImageWidth * col) + (this.maxImageWidth / 2);
                 let cardBack = new Card(this, this.x, this.y, 'cardBack', cont);
 
                 this.shuffleArray.push(cardBack.setInteractive());
@@ -81,7 +81,7 @@
             let cont = 1;
             for (let col = 0; col < 6; col++) {
 
-                this.x = this.offsetX + (this.maxImageWidth * col) + (this.maxImageWidth /2);
+                this.x = this.offsetX + (this.maxImageWidth * col) + (this.maxImageWidth / 2);
                 let cardBack = new Card(this, this.x, this.y, 'cardBack', cont);
 
                 this.shuffleArray.push(cardBack.setInteractive());
@@ -95,11 +95,11 @@
             let cont = 7;
             for (let col = 0; col < 2; col++) {
 
-                this.x = this.offsetX + (this.maxImageWidth * col) + (this.maxImageWidth/0.4);
+                this.x = this.offsetX + (this.maxImageWidth * col) + (this.maxImageWidth / 0.4);
                 let cardBack = new Card(this, this.x, this.y, 'cardBack', cont);
 
                 this.shuffleArray.push(cardBack.setInteractive());
-               // cont++;
+                // cont++;
             } //for 2
             this.y += this.maxImageHeight;
 
@@ -113,7 +113,7 @@
 
 
         this.input.on('pointerdown', this.handleMouseDown, this);
-     
+
     }
 
     handleMouseDown(mousePointer) {
@@ -121,7 +121,7 @@
 
         for (let row = 0; row < this.cards.length; row++) {
             if (this.cards[row].onClick(mousePointer.x, mousePointer.y)) { //verifica si se selecciona la carta deseada
-                if (this.canMove && !this.cards[row].isMatch  && !this.cards[row].isActive) { //si aun se puede mover va a poder voltearse
+                if (this.canMove && !this.cards[row].isMatch && !this.cards[row].isActive) { //si aun se puede mover va a poder voltearse
 
                     this.cards[row].flipCards();
                     this.SelectedCards.push(this.cards[row]); //ingresa a las cartas seleccionadas
@@ -145,7 +145,7 @@
                 this.SelectedCards[1].isMatch = true;
                 this.SelectedCards.length = 0; //se borran los datos del array
                 // this.numMatches++;
-              
+
                 this.canMove = true;
                 this.match.play();
                 this.Score = this.contMatch + "/7";
@@ -169,21 +169,21 @@
         }
 
         if (this.contMatch == this.numAnimals) {
-           this.countdown.stop();
+            this.countdown.stop();
             let scene2 = this.scene;
             this.add.text(game.config.width * 0.5, game.config.height * 0.5, '¡Ganaste!', {
-                    fontSize: 48,
-                    // fontSize: '48px',
-                    color: '#fff',
-                    backgroundColor: '#69B896',
-                    padding: {
-                        right: 10,
-                        left: 10,
-                        top: 10,
-                        bottom: 10
-                    },
-                    autoRound:true
-                })
+                fontSize: 48,
+                // fontSize: '48px',
+                color: '#fff',
+                backgroundColor: '#69B896',
+                padding: {
+                    right: 10,
+                    left: 10,
+                    top: 10,
+                    bottom: 10
+                },
+                autoRound: true
+            })
                 .setOrigin(0.5);
             this.time.addEvent({
                 delay: 2500,
@@ -221,8 +221,8 @@
 
     }
     update() {
-          this.countdown.update();
-      
+        this.countdown.update();
+
     } //end update
     shuffle(array) {
         let currentIndex = array.length,
@@ -242,39 +242,38 @@
         return array;
     }
 
-    handleCountdownFinished()
-    {
+    handleCountdownFinished() {
 
-	this.add.text(game.config.width * 0.5, game.config.height * 0.5, '¡Perdiste!',{
-        fontSize: 48,
-        color: '#fff',
-        backgroundColor: '#69B896',
-        padding: {
-            right: 10,
-            left: 10,
-            top: 10,
-            bottom: 10
-        },
-        autoRound:true
-    }).setOrigin(0.5);
-    
-    this.time.addEvent({
-        delay: 5500,
-        callbackScope: this,
-        callback: function () {
+        this.add.text(game.config.width * 0.5, game.config.height * 0.5, '¡Perdiste!', {
+            fontSize: 48,
+            color: '#fff',
+            backgroundColor: '#69B896',
+            padding: {
+                right: 10,
+                left: 10,
+                top: 10,
+                bottom: 10
+            },
+            autoRound: true
+        }).setOrigin(0.5);
 
-    
-            this.registry.destroy();
-            this.events.off();
-            this.contMatch = 0;
-            this.SelectedCards = [];
-            this.cards = [];
-            this.shuffleArray = [];
-            this.scene.restart();
-            // this.reinicio();
+        this.time.addEvent({
+            delay: 5500,
+            callbackScope: this,
+            callback: function () {
 
-        },
-    });
+
+                this.registry.destroy();
+                this.events.off();
+                this.contMatch = 0;
+                this.SelectedCards = [];
+                this.cards = [];
+                this.shuffleArray = [];
+                this.scene.restart();
+                // this.reinicio();
+
+            },
+        });
     }
 } //fin clase 
 var createLabel = function (scene, text) {
@@ -298,52 +297,52 @@ var createLabel = function (scene, text) {
 var dialoGameOver = function (scene, p_x, p_y) {
     var dialog = scene.rexUI.add.dialog({
 
-            x: p_x,
-            y: p_y,
+        x: p_x,
+        y: p_y,
 
-            background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
+        background: scene.rexUI.add.roundRectangle(0, 0, 100, 100, 20, 0x1565c0),
 
-            title: scene.rexUI.add.label({
-                background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
-                text: scene.add.text(0, 0, 'Perdiste', {
-                    fontSize: '24px'
-                }),
-                space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
-                }
-            }),
-
-            content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+        title: scene.rexUI.add.label({
+            background: scene.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0x003c8f),
+            text: scene.add.text(0, 0, 'Perdiste', {
                 fontSize: '24px'
             }),
-
-            actions: [
-                createLabel(scene, 'Si'),
-                createLabel(scene, 'No')
-            ],
-
             space: {
-                title: 25,
-                content: 25,
-                action: 15,
-
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-            },
-
-            align: {
-                actions: 'right', // 'center'|'left'|'right'
-            },
-
-            expand: {
-                content: false, // Content is a pure text object
+                left: 15,
+                right: 15,
+                top: 10,
+                bottom: 10
             }
-        })
+        }),
+
+        content: scene.add.text(0, 0, 'Desea volver a Jugar?', {
+            fontSize: '24px'
+        }),
+
+        actions: [
+            createLabel(scene, 'Si'),
+            createLabel(scene, 'No')
+        ],
+
+        space: {
+            title: 25,
+            content: 25,
+            action: 15,
+
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 20,
+        },
+
+        align: {
+            actions: 'right', // 'center'|'left'|'right'
+        },
+
+        expand: {
+            content: false, // Content is a pure text object
+        }
+    })
         .layout()
         //.drawBounds(this.add.graphics(), 0xff0000)
         .popUp(1000);

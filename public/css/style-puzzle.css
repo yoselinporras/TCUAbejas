@@ -4,19 +4,20 @@
     height: auto;
 }
 
-#matriz{
-/*    background: linear-gradient(rgba(200,200,200,.5), rgba(200,200,200,.5)) , url(../img/puzzles/fondos/abeja1.jpg);
+#matriz {
+    /*    background: linear-gradient(rgba(200,200,200,.5), rgba(200,200,200,.5)) , url(../img/puzzles/fondos/abeja1.jpg);
     background-repeat: no-repeat;
     background-size: contain;*/
 }
 
 
-#logos{
+#logos {
     position: absolute;
     height: auto;
 }
-.campo-piezas{
-/*   box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.68);
+
+.campo-piezas {
+    /*   box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.68);
     -webkit-box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.68);
     -moz-box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.68);*/
     position: relative;
@@ -24,8 +25,8 @@
 }
 
 
-.pieza{
-    padding: unset;    
+.pieza {
+    padding: unset;
     margin: unset;
     border-radius: unset;
     z-index: 2;
@@ -38,16 +39,14 @@
 
 
 
-#campo-fondo{
-    box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.68);
-    -webkit-box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.68);
-    -moz-box-shadow: 1px -5px 42px -6px rgba(0,0,0,0.68);
+#campo-fondo {
+    box-shadow: 1px -5px 42px -6px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: 1px -5px 42px -6px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 1px -5px 42px -6px rgba(0, 0, 0, 0.68);
     text-align: center;
 }
 
-#img-fondo{
-
-}
+#img-fondo {}
 
 
 
@@ -58,32 +57,27 @@
     text-align: center;
     height: unset;
     border-radius: unset;
-    padding: unset ;
-    margin: unset; 
+    padding: unset;
+    margin: unset;
     border-radius: unset;
 
 }
 
-.movil{
+.movil {
     border-radius: unset;
-    padding: unset ;
-    margin: unset; 
+    padding: unset;
+    margin: unset;
     height: unset;
     object-fit: cover;
     position: absolute;
 }
 
-@keyframes animatedBee{
-    from{
+@keyframes animatedBee {
+    from {
         background-position-x: -84px;
     }
-    
-    to{
+
+    to {
         background-position-x: -252px;
     }
 }
-
-
-
-
-

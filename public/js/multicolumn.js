@@ -137,171 +137,171 @@
 */
 
 //Some stuff needs to be maintained in a global variable.
-MultiColumnResizeTimer=null;
-MultiColumnList=null;
+MultiColumnResizeTimer = null;
+MultiColumnList = null;
 
 function MultiColumnSettings() {
-	this.extraHeight=50;		//Add extra height to a column. Increase this if the last column 'sticks out' too much.
-	this.minSplitHeight=0;		//If the base column is smaller than minSplitHeight, the column does not split.
-	this.minHeight=0;			//Minimum height of a column
-	this.readOnText=null;		//Add the "read on" notice a the bottom of each column
-	this.classNameScreen=null;	//Set the classname of *container* of the rendered columns for screen-media. Use to differentiate between JS/non-JS base column widths.
-	this.classNamePrint=null;	//Set the classname of *container* of the rendered columns for print-media. (optional, may be null)
-	this.numberOfColumns=null; 	//null: calculate number of columns based on minimum width. Number >0: use specified number of columns, always adapt width.
+	this.extraHeight = 50;		//Add extra height to a column. Increase this if the last column 'sticks out' too much.
+	this.minSplitHeight = 0;		//If the base column is smaller than minSplitHeight, the column does not split.
+	this.minHeight = 0;			//Minimum height of a column
+	this.readOnText = null;		//Add the "read on" notice a the bottom of each column
+	this.classNameScreen = null;	//Set the classname of *container* of the rendered columns for screen-media. Use to differentiate between JS/non-JS base column widths.
+	this.classNamePrint = null;	//Set the classname of *container* of the rendered columns for print-media. (optional, may be null)
+	this.numberOfColumns = null; 	//null: calculate number of columns based on minimum width. Number >0: use specified number of columns, always adapt width.
 }
 
-function MultiColumn(columnContainerIn,settingsIn) {
+function MultiColumn(columnContainerIn, settingsIn) {
 	//IE6 doesn't support HTMLElement prototyping. IE7 probably won't too. Let's aim for IE8! *sigh*	
 	//But thank you, www.quirksmode.org!
-	this.getStyle= function (element,stylePropW3,stylePropIE) {
+	this.getStyle = function (element, stylePropW3, stylePropIE) {
 		var y = null;
 		if (element.currentStyle)
 			y = element.currentStyle[stylePropIE];
-		else if (window.getComputedStyle && document.defaultView.getComputedStyle(element,null)) {
-			y = document.defaultView.getComputedStyle(element,null).getPropertyValue(stylePropW3);
+		else if (window.getComputedStyle && document.defaultView.getComputedStyle(element, null)) {
+			y = document.defaultView.getComputedStyle(element, null).getPropertyValue(stylePropW3);
 		}
 		return y;
 	}
-		
-	this.generateColumns= function () {
-		var i=0;
+
+	this.generateColumns = function () {
+		var i = 0;
 		var numColumns;
-		
+
 		//Obtain the base column. This column contains the original text.
-		var baseColumn=this.columnContainer.getElementsByTagName('div').item(0);
-		
+		var baseColumn = this.columnContainer.getElementsByTagName('div').item(0);
+
 		//Add a node with style: "clear: both;" to stretch the container-node.
-		var clearingNode=document.createElement('span');
-		clearingNode.style.display="block";
-		clearingNode.style.clear="both";
-		clearingNode.style.zoom="1"; //yet another work-around for a certain obsolete browser.
+		var clearingNode = document.createElement('span');
+		clearingNode.style.display = "block";
+		clearingNode.style.clear = "both";
+		clearingNode.style.zoom = "1"; //yet another work-around for a certain obsolete browser.
 		this.columnContainer.appendChild(clearingNode);
-		
+
 		//Use specified number of columns, or calculate number based on minimum width?
-		if (this.settings.numberOfColumns!=null) {
+		if (this.settings.numberOfColumns != null) {
 			//Use specified number of columns
-			numColumns=this.settings.numberOfColumns;
-		}	else {
+			numColumns = this.settings.numberOfColumns;
+		} else {
 			//Calculate the number of columns that can be added, based on width.
-			numColumns=Math.floor(this.columnContainer.offsetWidth/(baseColumn.offsetWidth)); //baseColumn.getStyle('width') gives wrong value in Opera
+			numColumns = Math.floor(this.columnContainer.offsetWidth / (baseColumn.offsetWidth)); //baseColumn.getStyle('width') gives wrong value in Opera
 		}
-		
+
 		//Calculate the available width for one column.
-		var availableWidth=Math.floor((this.columnContainer.offsetWidth-10)/numColumns)-parseInt(this.getStyle(baseColumn,'padding-right','paddingRight'))-parseInt(this.getStyle(baseColumn,'padding-left','paddingLeft'));
-		
+		var availableWidth = Math.floor((this.columnContainer.offsetWidth - 10) / numColumns) - parseInt(this.getStyle(baseColumn, 'padding-right', 'paddingRight')) - parseInt(this.getStyle(baseColumn, 'padding-left', 'paddingLeft'));
+
 		//Add new columns
-		for (i=1;i<numColumns;i++) {
-			this.columnContainer.insertBefore(baseColumn.cloneNode(false),this.columnContainer.firstChild);
+		for (i = 1; i < numColumns; i++) {
+			this.columnContainer.insertBefore(baseColumn.cloneNode(false), this.columnContainer.firstChild);
 		}
-				
+
 		//First, set the new width for the existing column..
-		baseColumn.style.width=availableWidth+'px';
-		
+		baseColumn.style.width = availableWidth + 'px';
+
 		//Get all columns in the container
-		var columns=this.columnContainer.getElementsByTagName('div');
-		
+		var columns = this.columnContainer.getElementsByTagName('div');
+
 		//..then calculate the average needed height for other .
 		var minHeight;
-		
-		if (baseColumn.offsetHeight<=this.settings.minSplitHeight) {
-			var minHeight=baseColumn.offsetHeight;
+
+		if (baseColumn.offsetHeight <= this.settings.minSplitHeight) {
+			var minHeight = baseColumn.offsetHeight;
 		} else {
-			var minHeight=Math.max(parseInt((baseColumn.offsetHeight+numColumns*this.settings.extraHeight)/columns.length),this.settings.minHeight);
+			var minHeight = Math.max(parseInt((baseColumn.offsetHeight + numColumns * this.settings.extraHeight) / columns.length), this.settings.minHeight);
 		}
 
 		//Cut/paste blocks from the baseColumn to the new columns, until the reached the minHeight.
-		for (i=0;i<columns.length-1;i++) {
-			var currentColumn=columns.item(i);
-			currentColumn.style.width=availableWidth+'px';
-			
+		for (i = 0; i < columns.length - 1; i++) {
+			var currentColumn = columns.item(i);
+			currentColumn.style.width = availableWidth + 'px';
+
 			//Cut/paste blocks from the baseColumn to the current column, while the
 			//current column has not reach the minHeight
-			while (currentColumn.offsetHeight<minHeight && baseColumn.hasChildNodes()) {
-				if (baseColumn.firstChild.nodeType==1) { //Node.ELEMENT_NODE Doesn't work in ^%@$#@$!!! IE6
+			while (currentColumn.offsetHeight < minHeight && baseColumn.hasChildNodes()) {
+				if (baseColumn.firstChild.nodeType == 1) { //Node.ELEMENT_NODE Doesn't work in ^%@$#@$!!! IE6
 					currentColumn.appendChild(baseColumn.firstChild);
 				} else {
 					baseColumn.removeChild(baseColumn.firstChild);
 				}
 			}
-			
+
 			//Some elements can be split and wrapped to the next column
-			
-			var lastChild=currentColumn.lastChild;
-			var nextColumn=columns.item(i+1);
+
+			var lastChild = currentColumn.lastChild;
+			var nextColumn = columns.item(i + 1);
 			switch (lastChild.nodeName.toLowerCase()) {
-				case 'p': 
-					new ParapgraphWrapper(currentColumn,lastChild,nextColumn,minHeight);
+				case 'p':
+					new ParapgraphWrapper(currentColumn, lastChild, nextColumn, minHeight);
 					break;
 				case 'ul':
 				case 'ol':
-					new ListWrapper(currentColumn,lastChild,nextColumn,minHeight);					
-					break;				
+					new ListWrapper(currentColumn, lastChild, nextColumn, minHeight);
+					break;
 				default:
-					//don't know what to do with this element. Let it stick out.
+				//don't know what to do with this element. Let it stick out.
 			}
-			
+
 			//Move headings at the bottom to next column. (this implies a proper usage of headings!)
-			new HeadingWrapper(currentColumn,nextColumn);
+			new HeadingWrapper(currentColumn, nextColumn);
 
 			//add the 'read on' text.
-			if (this.settings.readOnText!=null) {
+			if (this.settings.readOnText != null) {
 				currentColumn.appendChild(this.readOnNode.cloneNode(true));
 			}
 		}
-			
+
 		//Stretch all columns to equal height
-		var maxHeight=0;
-		
-		for (i=0;i<columns.length;i++) {
-			maxHeight=Math.max(maxHeight,columns.item(i).offsetHeight);
-		}			
-		for (i=0;i<columns.length;i++) {
-			columns.item(i).style.height=maxHeight+"px";
+		var maxHeight = 0;
+
+		for (i = 0; i < columns.length; i++) {
+			maxHeight = Math.max(maxHeight, columns.item(i).offsetHeight);
+		}
+		for (i = 0; i < columns.length; i++) {
+			columns.item(i).style.height = maxHeight + "px";
 		}
 	}
-	
+
 	//Initialisation starts here
-	this.settings=settingsIn;
-	
-	if (this.settings.readOnText!=null) {					
-		this.readOnNode=document.createElement('p');
-		this.readOnNode.className="readOn";
+	this.settings = settingsIn;
+
+	if (this.settings.readOnText != null) {
+		this.readOnNode = document.createElement('p');
+		this.readOnNode.className = "readOn";
 		this.readOnNode.appendChild(document.createTextNode(this.settings.readOnText));
 	}
-	
-	this.columnContainer=columnContainerIn;
-	
+
+	this.columnContainer = columnContainerIn;
+
 	//If a screen class name is set, 
-	if (this.settings.classNameScreen!=null) {
+	if (this.settings.classNameScreen != null) {
 		//assign the classname.
-		this.columnContainer.className=this.settings.classNameScreen;
+		this.columnContainer.className = this.settings.classNameScreen;
 	}
-	
+
 	//Store a copy of the original column	
-	this.originalContent=columnContainerIn.cloneNode(true);
-		
+	this.originalContent = columnContainerIn.cloneNode(true);
+
 	//If a print class name is set, 
-	if (this.settings.classNamePrint!=null) {
+	if (this.settings.classNamePrint != null) {
 		//make a copy of the original node,
-		var printNode=this.originalContent.cloneNode(true);
+		var printNode = this.originalContent.cloneNode(true);
 		//assign the classname
-		printNode.className=this.settings.classNamePrint;
+		printNode.className = this.settings.classNamePrint;
 		//and insert it into the dom.
-		this.columnContainer.parentNode.insertBefore(printNode,this.columnContainer);
-	}	
-	
+		this.columnContainer.parentNode.insertBefore(printNode, this.columnContainer);
+	}
+
 	//Add this MultiColumn to the listener.
-	if (MultiColumnList === null) {		
+	if (MultiColumnList === null) {
 		MultiColumnList = new Array;
 		if (window.addEventListener) {
-			window.addEventListener('resize',multiColumnSetResizeTimer,false);		
+			window.addEventListener('resize', multiColumnSetResizeTimer, false);
 		} else {
-			window.attachEvent('onresize',multiColumnSetResizeTimer);
+			window.attachEvent('onresize', multiColumnSetResizeTimer);
 		}
 	}
-	
+
 	MultiColumnList.push(this);
-	
+
 	//And do the magic!
 	this.generateColumns();
 }
@@ -311,69 +311,69 @@ function multiColumnSetResizeTimer() {
 	if (MultiColumnResizeTimer) {
 		clearTimeout(MultiColumnResizeTimer);
 	}
-	MultiColumnResizeTimer=setTimeout(multiColumnResize,100);	
+	MultiColumnResizeTimer = setTimeout(multiColumnResize, 100);
 }
-	
+
 //Called when window is resized.
 function multiColumnResize() {
 	if (!window.addEventListener && window.attachEvent) { //Damned IE keeps fireing events when reflowing the text!
-		window.detachEvent('onresize',multiColumnSetResizeTimer);
+		window.detachEvent('onresize', multiColumnSetResizeTimer);
 	}
-	for (var i=0; i<MultiColumnList.length;i++) {
+	for (var i = 0; i < MultiColumnList.length; i++) {
 		var object = MultiColumnList[i];
-		
+
 		//Restore original situation
-		var newCopy=object.originalContent.cloneNode(true);
-		object.columnContainer.parentNode.replaceChild(newCopy,object.columnContainer);
-		object.columnContainer=newCopy;
-		
+		var newCopy = object.originalContent.cloneNode(true);
+		object.columnContainer.parentNode.replaceChild(newCopy, object.columnContainer);
+		object.columnContainer = newCopy;
+
 		//Regenerate columns
 		object.generateColumns();
 	}
-	
-	if (!window.addEventListener && window.attachEvent) { 
-		setTimeout("window.attachEvent('onresize',multiColumnSetResizeTimer)",0);
+
+	if (!window.addEventListener && window.attachEvent) {
+		setTimeout("window.attachEvent('onresize',multiColumnSetResizeTimer)", 0);
 	}
 }
 
 function ParapgraphWrapper(sourceColumnIn, sourceParagraphIn, destinationColumnIn, heightIn) {
-	this.sourceColumn=sourceColumnIn;
-	this.height=heightIn;
-	
+	this.sourceColumn = sourceColumnIn;
+	this.height = heightIn;
+
 	/**
 	* Recursively loops over given <source>, moving text from <source> to <dest>
 	* until the column height is less or equal to the target height.
 	*
 	* Preconditions: <source> and <dest> are element nodes.
 	*/
-	this.processElement=function (source,dest) {
+	this.processElement = function (source, dest) {
 		var lastSourceChild;
-		
-		while (lastSourceChild=source.lastChild) {
-			if (lastSourceChild.nodeType==1) {
+
+		while (lastSourceChild = source.lastChild) {
+			if (lastSourceChild.nodeType == 1) {
 				//Make a shalow clone copy of this element to the destination
 				//node, to preserve styles and attributes.
-				var newDest=lastSourceChild.cloneNode(false);
-				dest.insertBefore(newDest,dest.firstChild);				
+				var newDest = lastSourceChild.cloneNode(false);
+				dest.insertBefore(newDest, dest.firstChild);
 				//recursively process this node.
-				if (this.processElement(lastSourceChild,newDest)) {
+				if (this.processElement(lastSourceChild, newDest)) {
 					return true;
-				}							
-			} else if (lastSourceChild.nodeType==3) {
+				}
+			} else if (lastSourceChild.nodeType == 3) {
 				//Wrap this text node..
-				if (this.wrapTextNode(lastSourceChild,dest)) {
+				if (this.wrapTextNode(lastSourceChild, dest)) {
 					//..and return when the target has been reached.
 					return true;
 				}
 			}
-			
+
 			//This node has been cleaned out. Remove it.
 			source.removeChild(lastSourceChild);
-		} 
-				
+		}
+
 		return false;
 	}
-	
+
 	/**
 	* Cuts words at the end of <source>, until the column height
 	* is less or equal to target-height.
@@ -381,83 +381,83 @@ function ParapgraphWrapper(sourceColumnIn, sourceParagraphIn, destinationColumnI
 	*
 	* Preconditions: <source> is a text node. <dest> is an element node.
 	*/
-	this.wrapTextNode=function (source,dest) {	
-		var sourceText=source.nodeValue;
-		
+	this.wrapTextNode = function (source, dest) {
+		var sourceText = source.nodeValue;
+
 		//Split the text at spaces.
-		var sourceTextAray=sourceText.split(/\s/);
-		var destTextArray=new Array();
-		
+		var sourceTextAray = sourceText.split(/\s/);
+		var destTextArray = new Array();
+
 		//Keep removing words form the source until the column fits.
-		while (this.sourceColumn.offsetHeight>this.height && sourceTextAray.length>0) {
+		while (this.sourceColumn.offsetHeight > this.height && sourceTextAray.length > 0) {
 			destTextArray.push(sourceTextAray.pop());
-			source.nodeValue=sourceTextAray.join(' ');
+			source.nodeValue = sourceTextAray.join(' ');
 		}
-		
+
 		//Add spaces at the front and end, if there are spaces in the original.
-		var newText=(/^\s/.test(sourceText)?' ':'') + (destTextArray.reverse().join(' ')) + (/\s$/.test(sourceText)?' ':'');
-		
+		var newText = (/^\s/.test(sourceText) ? ' ' : '') + (destTextArray.reverse().join(' ')) + (/\s$/.test(sourceText) ? ' ' : '');
+
 		//Put the text into the destination node in the next column.
-		dest.insertBefore(document.createTextNode(newText),dest.firstChild);		
-		
+		dest.insertBefore(document.createTextNode(newText), dest.firstChild);
+
 		//return true if the target has been reached.
-		return this.sourceColumn.offsetHeight<=this.height;
+		return this.sourceColumn.offsetHeight <= this.height;
 	}
 
 	//Duplicate the current paragraph by shallow copy
-	destinationColumnIn.insertBefore(sourceParagraphIn.cloneNode(false),destinationColumnIn.firstChild);	
-	
-	this.processElement(sourceParagraphIn,destinationColumnIn.firstChild);
-	
+	destinationColumnIn.insertBefore(sourceParagraphIn.cloneNode(false), destinationColumnIn.firstChild);
+
+	this.processElement(sourceParagraphIn, destinationColumnIn.firstChild);
+
 	//check if the origal paragraph is emtpy
-	if (sourceParagraphIn.offsetHeight==0) { //Check to see if normalized text is "" would be better..
+	if (sourceParagraphIn.offsetHeight == 0) { //Check to see if normalized text is "" would be better..
 		//Yes it's empty. Remove the empty paragraph.
-		this.sourceColumn.removeChild(sourceParagraphIn);		
+		this.sourceColumn.removeChild(sourceParagraphIn);
 	}
 }
 
 function ListWrapper(sourceColumnIn, sourceListIn, destinationColumnIn, heightIn) {
 	//Duplicate the current paragraph by shallow copy
-	var newList=sourceListIn.cloneNode(false);
-	
-	destinationColumnIn.insertBefore(newList,destinationColumnIn.firstChild);
-		
+	var newList = sourceListIn.cloneNode(false);
+
+	destinationColumnIn.insertBefore(newList, destinationColumnIn.firstChild);
+
 	//Loop over all elements in this list.
-	while (currentElement=sourceListIn.lastChild) {
-		if (sourceColumnIn.offsetHeight<=heightIn) {
+	while (currentElement = sourceListIn.lastChild) {
+		if (sourceColumnIn.offsetHeight <= heightIn) {
 			break;
 		}
-		
-		if (currentElement.nodeName.toLowerCase()=='li') {
-			newList.insertBefore(currentElement,newList.firstChild);			
-		} else {		
+
+		if (currentElement.nodeName.toLowerCase() == 'li') {
+			newList.insertBefore(currentElement, newList.firstChild);
+		} else {
 			//remove the last element.
 			sourceListIn.removeChild(currentElement);
 		}
 	}
-		
+
 	//Count current number of items.
-	var numItems=1;
-	var elementList=sourceListIn.childNodes;
+	var numItems = 1;
+	var elementList = sourceListIn.childNodes;
 	//count remaining items.
-	for (var i=0;i<elementList.length;i++) {
-		if (elementList[i].nodeName.toLowerCase()=='li') {
+	for (var i = 0; i < elementList.length; i++) {
+		if (elementList[i].nodeName.toLowerCase() == 'li') {
 			numItems++;
 		}
 	}
-	
-	newList.start=numItems;
-	
+
+	newList.start = numItems;
+
 	//check if the origal list is emtpy
-	if (sourceListIn.offsetHeight==0) { //Check to see if normalized text is "" would be better..
+	if (sourceListIn.offsetHeight == 0) { //Check to see if normalized text is "" would be better..
 		//Yes it's empty. Remove the empty list.
-		sourceColumnIn.removeChild(sourceListIn);		
+		sourceColumnIn.removeChild(sourceListIn);
 	}
 }
 
-function HeadingWrapper(currentColumn,nextColumn) {
+function HeadingWrapper(currentColumn, nextColumn) {
 	//Wrap a heading, if there was one. 
-	if (/^h[1-6]$/i.test(currentColumn.lastChild.nodeName)) {			
-		nextColumn.insertBefore(currentColumn.lastChild,nextColumn.firstChild);	
+	if (/^h[1-6]$/i.test(currentColumn.lastChild.nodeName)) {
+		nextColumn.insertBefore(currentColumn.lastChild, nextColumn.firstChild);
 	}
 }
