@@ -1,22 +1,51 @@
+/* CONTENEDOR PRINCIPAL */
 .container-header {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
     gap: 1rem;
     padding: 0 16px;
-    grid-auto-rows: 80px;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    justify-items: center;
+    width: 100%;
 }
 
+/* FONDO DEL ENCABEZADO */
 #encabezado {
-    background-size: 100%;
+    background: #005DA4;
     width: 100%;
-    /* background: #41ade7; */
-    background: #00c0f3;
+    padding: 0.5rem 0;
 }
+
+/* ENLACES */
+.container-header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+}
+
+/* IMÁGENES */
+.img-encabezado {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* cambia a cover si quieres que rellene completamente */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container-header {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .container-header a {
+        height: 60px;
+    }
+}
+
 
 #navbar_top {
     /* background: #f2f2f2; */
-    background: white;
+    background: #005DA4;
     /*opacity: .85;*/
     padding: 0;
     text-align: center;
@@ -28,9 +57,10 @@
 }
 
 nav {
-    color: black;
-    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-family:  Arial;
     font-weight: 500;
+
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
@@ -89,4 +119,51 @@ nav {
         top: 100%;
         transform: rotateX(0deg);
     }
+}
+/* TEXTO BLANCO EN EL NAVBAR */
+#navbar_top .nav-link,
+#navbar_top .navbar-brand,
+#navbar_top .dropdown-item {
+    color: white !important;
+}
+
+/* ICONOS DEL NAVBAR */
+#navbar_top .nav-link i,
+#navbar_top .dropdown-item i {
+    color: white;
+}
+
+/* HOVER */
+#navbar_top .nav-link:hover,
+#navbar_top .dropdown-item:hover {
+    color: #FFD700 !important; 
+}
+
+/* FONDO DEL DROPDOWN */
+#navbar_top .dropdown-menu {
+    background-color: #005DA4;
+    border: none;
+}
+
+#navbar_top {
+    border-top: 3px solid #8ED8F8; 
+}
+/* QUITAR FONDO GRIS DEL NAVBAR (ACTIVE / HOVER / FOCUS) */
+#navbar_top .nav-link,
+#navbar_top .nav-link:hover,
+#navbar_top .nav-link:focus,
+#navbar_top .nav-link:active,
+#navbar_top .nav-link.active,
+#navbar_top .nav-item.show > .nav-link {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+/* QUITAR FONDO GRIS DE LOS ITEMS DEL DROPDOWN */
+#navbar_top .dropdown-item,
+#navbar_top .dropdown-item:hover,
+#navbar_top .dropdown-item:focus,
+#navbar_top .dropdown-item:active {
+    background-color: transparent !important;
+    color: white !important;
 }
