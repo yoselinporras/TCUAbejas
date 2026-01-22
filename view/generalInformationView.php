@@ -1,0 +1,139 @@
+<?php
+
+include_once 'public/header.php';
+?>
+
+
+<script>
+    $(document).ready(function () {
+        showMazegame();
+        showMemorygame();
+    });
+</script>
+
+<div class="container-lg container-inicio">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <p>
+                    <h1>Abejas nativas sin aguijón</h1>
+                    </p>
+                </div> 
+
+                <div class="col-sm-12">
+
+                    <p>
+                        Las abejas meliponas son abejas que no tienen aguijón, estas son originarias del continente americano mientras que la abeja común es originaria de África. Las meliponas son un grupo de insectos sociales que habitan en áreas con un clima cálido por ejemplo en zonas tropicales. Existen más de 350 especies identificadas alrededor de todo el continente americano y algunas de estas especies tienen la capacidad de producir miel de excelente calidad. Además desempeñan una función fundamental como la polinización; en su búsqueda de alimento como el polen y néctar de las flores, trabajan como agentes polinizadores.<br>
+                        Por lo que cumplen un papel muy importante en el desarrollo de la agricultura, bosques y en la supervivencia de las especies que polinizan.
+                    </p>
+
+                </div>
+
+                <div class="col-sm-12">
+                    <p>
+                        Las abejas tienen características físicas muy diferentes a otros insectos que permiten identificarlas fácilmente, dentro de las características principales se encuentran las siguientes: Las abejas tienen dos pares de alas mientras que las moscas tienen un solo par de esta manera se pueden diferenciar. 
+
+                    </p>
+                </div>
+
+                <div class="col-sm-12">
+                    <p>
+                        También se diferencian de las avispas por la contextura de su cuerpo, ya que las avispas son menos robustas y no presentan pelos en el cuerpo.
+                    </p>
+                </div>
+
+                <div class="col-sm-12">
+                    <p>
+                        También se diferencian de las avispas por la contextura de su cuerpo, ya que las avispas son menos robustas y no presentan pelos en el cuerpo.
+                        Existen especies de abejas sin aguijón, estas se pueden diferenciar de las demás en el comportamiento, ya que las meliponas no pican, sin embargo; tienen otros mecanismos de defensa como cortar alas de otros insectos, las colmenas están cubiertos con materiales resistentes y con una estructura de difícil acceso para insectos intrusos, estos nidos pueden ser largos y estrechos además de esto pueden estar fabricados con resinas y semillas repelentes, también en la entrada de la colmena tienen abejas guardianas y cuando se sienten amenazadas pueden esconderse dentro del nido o con un ataque masivo como enredándose en el pelo o expulsando resinas pegajosas. 
+                    </p>
+                </div>
+
+
+                <div class="col-sm-12">
+                    <p>
+                        Actualmente, las abejas meliponas se encuentran en peligro debido a la destrucción de los bosques nativos los cuales son hábitats naturales de estas abejas, esto a raíz de la producción agrícola e industrial, por lo que el objetivo de este proyecto es identificar las especies de abejas meliponas que se encuentran dentro del campus de la Universidad de Costa Rica Sede del Atlántico en el recinto de Turrialba para dar a conocer y comprender su comportamiento y desarrollo en espacios semiurbanos.
+                    </p>
+                </div>
+
+
+                <div class="col-sm-12">
+                    <p>
+                    <h2 class="h2">¿Cómo podemos proteger a los polinizadores?</h2>
+                    </p>
+                </div> 
+                <div class="col-sm-12">
+                    <p>
+                        Se puede crear un espacio agradable para los polinizadores, para esto se recomienda disminuir el uso de agroquímicos utilizando productos amigables con el ambiente como por ejemplo abonos orgánicos y el control de plagas con combate biológico. Otra forma de proteger a los polinizadores es promoviendo el uso de sistemas agroforestales en donde exista variedad de plantas y flores atrayentes de los polinizadores.
+                    </p>
+                </div> 
+                <div class="col-sm-12">
+                    <p>
+                    <h2 class="h2">¿Qué tipo de flores?</h2>
+                    </p>
+                </div> 
+                <div class="col-sm-12">
+                    <p>
+                        Pueden ser de diversos colores, tamaños y formas. Generalmente, las flores moradas, amarillas, anaranjadas y en forma de campana atraen a diferentes tipos de abejas; por eso, se recomienda sembrar diversos tipos de flores para atraer una mayor variedad de polinizadores. Además, es importante sembrar plantas de diferentes tamaños. Las abejas de mayor tamaño frecuentan recursos alimenticios a mayor altura en las copas de los árboles, así que es recomendable sembrar plantas herbáceas, arbustivas y arbóreas. Por último, pero no menos relevante, es preferible buscar especies nativas que favorezcan la biodiversidad local y provean fuentes alimenticias más ricas y diversas. En nuestro país las especies que se recomiendan para atraer las abejas meliponas son: Rabo de zorro 
+                        (<i>Verbenaceae: Stachytarpheta jamaicensis</i>), abejoncillo (<i>Fabaceae: Senna pallida</i>), Santa Lucía 
+                        (<i>Asteraceae: Ageratum conyzoides</i>), flor amarilla (<i>Asteraceae: Melampodium divaricatum</i>), Paira 
+                        (<i>Asteraceae: Melanthera</i>), bejuco de agua (<i>Vitaceae: Cissus verticillata</i>), menta, lavanda, romero, 
+                        albahaca, tomillo, margaritas y girasoles. 
+
+                    </p>
+                </div> 
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-5">
+
+            <div class="col-sm-10" style="margin: 0 0 16px; margin-right: unset; text-align: center;
+                 margin-left: auto; text-align: center">
+                <img src="./public/img/partesabeja.png" alt="Partes de abeja" style="width: 100%; padding: 0;">
+            </div>
+
+            <div class="col-sm-10" style="margin: 0 0 16px; margin-right: unset; text-align: center;
+                 margin-left: auto; text-align: center">
+                <input type="button" id="vermapabutton" value="Ver mapa" onclick=" location.href = '?controlador=Map&accion=mostrar'"/>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <p style="font-weight: 200; font-size: 0.8rem"> Referencias: 
+
+                    Anguebes, F; Pat, L; Pat, J; Hernández, P; Ramos, R. (2018). Condición y perspectivas de la meliponicultura en comunidades mayas de la reserva de la biósfera Los Petenes, Campeche, México. Estudios de Cultura Maya LII: 227-254 (2018). Disponible en: http://www.scielo.org.mx/pdf/ecm/v52/0185-2574-ecm-52-227.pdf 
+
+                    Barquero, L; Stamatti, G. (2014). Cría y manejo de abejas sin aguijón. Ediciones del Subtrópico. Fundación ProYungas. Disponible en: <a href="http://proyungas.org.ar/wp-content/uploads/2014/12/criaymanejodeabejassinaguijon.pdf" target="_blank">Aquí</a>
+                </p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="beee-container">
+        <img src="./public/img/abj.png" class="beee">
+    </div>
+
+</div>
+
+
+
+<?php
+
+include_once 'public/footer.php';
+?>
