@@ -60,36 +60,26 @@
 
 
         <header>
-
-<div class="container-header" id="encabezado"> 
-
-    <a href="https://www.ucr.ac.cr/">
-        <img class="img-encabezado" src="./public/img/header/firmaU.png" alt="Logo Universidad de Costa Rica">
-    </a>
-
-    <a href="http://www.sa.ucr.ac.cr/web/">
-        <img class="img-encabezado" src="./public/img/header/logoSede.png" alt="Logo Sede del Atlántico">
-    </a>
-
-    <a>
-        <img class="img-encabezado" src="./public/img/header/logoTC-627.png" alt="Logo TCU-627 Gestión Ambiental">
-    </a>
-
-    <a>
-        <img class="img-encabezado" src="./public/img/header/logoED.png" alt="Partes de abeja">
-    </a>
-
-</div>
-
+            <div class="container-header" id="encabezado"> 
+                <a href="https://www.ucr.ac.cr/">
+                    <img class="img-encabezado" src="./public/img/header/firmaU.png" alt="Logo Universidad de Costa Rica">
+                </a>
+                <a href="http://www.sa.ucr.ac.cr/web/">
+                    <img class="img-encabezado" src="./public/img/header/logoSede.png" alt="Logo Sede del Atlántico">
+                </a>
+                <a>
+                    <img class="img-encabezado" src="./public/img/header/logoTC-627.png" alt="Logo TCU-627 Gestión Ambiental">
+                </a>
+                <a>
+                    <img class="img-encabezado" src="./public/img/header/logoED.png" alt="Partes de abeja">
+                </a>
+            </div>
 
             <div class="col-sm-12">
-
                 <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
-
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                           
+                            <span class="navbar-toggler-icon"></span>                           
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <div class="container">
@@ -98,15 +88,21 @@
                                         <div id='pagina-inicio' class="col-sm-4">
                                             <li class="nav-item">
                                                 <a  class="fa fa-home nav-link"  href="?controlador=Index&accion=mostrar"> Inicio</a>
-                                                 
+                                            </li>
+                                        </div>
+                                        <div id='pagina-juegos' class="col-sm-4">
+                                            <li class="nav-item">
+                                                <a  class="fa fa-home nav-link"  href="?controlador=Games&accion=mostrar"> Juegos</a>
+                                            </li>
+                                        </div>
+                                        <div id='pagina-infoGeneral' class="col-sm-4">
+                                            <li class="nav-item">
+                                                <a  class="fa fa-home nav-link"  href="?controlador=GeneralInformation&accion=mostrar"> Informacion</a>
                                             </li>
                                         </div>
 
-
                                         <div id='juegos' class="col-sm-4">
                                             <li class="nav-item dropdown"  >
-
-
                                                 <div class="col-sm-12">
                                                     <a class="fa fa-gamepad nav-link dropdown-toggle "  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                         Juegos
@@ -114,9 +110,7 @@
                                                     <ul class="dropdown-menu fade-down" style="width: 100%"  aria-labelledby="navbarDropdownMenuLink">
                                                         <li><a class="dropdown-item" id="puzzle" href="?controlador=Puzzle&accion=mostrar">Rompecabezas</a></li>
                                                         <li><a class="dropdown-item" id="pollen" href="?controlador=PollenCatcher&accion=mostrar">Atrapa polen</a></li>
-                                                       
                                                         <li><a class="dropdown-item" href="?controlador=CatchBee&accion=mostrar">Atrapa abejas</a></li>
-
                                                     </ul>
                                                 </div>
                                             </li>
@@ -130,7 +124,6 @@
                                                     <li><a class="dropdown-item" href="?controlador=About&accion=mostrar">Creadores</a></li>
                                                     <li><a class="dropdown-item" href="?controlador=PostComments&accion=mostrar">Enviar comentarios</a></li>
                                                 </ul>
-
                                             </li>
                                         </div>
                                     </ul>
@@ -140,6 +133,5 @@
                     </div>
                 </nav>
             </div>
-
         </header>
 
