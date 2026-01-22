@@ -1,0 +1,158 @@
+/* Contenedor principal de la pantalla de inicio */
+/* Contenedor general */
+.container-inicio {
+   width: 100%;
+    padding: 0 10px;
+
+}
+
+/* Caja de bienvenida */
+.bienvenida {
+    background-color: #00c0f3;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* Textos uno sobre otro */
+.texto-bienvenida {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Imagen */
+.bienvenida img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Texto */
+.bienvenida h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.bienvenida h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.bienvenida h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+/* Imagen al lado derecho */
+.bienvenida img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+/* Estilo común para los bloques blancos */
+.infoGeneral,
+.mapa,
+.juegos {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Texto a la izquierda */
+.infoGeneral h1,
+.mapa h1,
+.juegos h1 {
+    font-size: 1.6rem;
+    color: #8DC63F;
+    flex: 1;
+    text-align: center;
+}
+
+/* Imagen a la derecha */
+.infoGeneral img,
+.mapa img,
+.juegos img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+     border-width: 4px;
+        border-style: solid;
+        border-color: #FDB912;
+}
+.link-imagen {
+    display: inline-block;
+}
+
+.link-imagen img {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-imagen img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .bienvenida,
+    .infoGeneral,
+    .mapa,
+    .juegos {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    /* Texto más pequeño */
+    .bienvenida h1,
+    .infoGeneral h1,
+    .mapa h1,
+    .juegos h1 {
+        font-size: 1.2rem;
+    }
+
+    .bienvenida h2 {
+        font-size: 1rem;
+    }
+
+    .bienvenida h3 {
+        font-size: 0.95rem;
+    }
+
+    /* Imagen más pequeña */
+    .bienvenida img,
+    .infoGeneral img,
+    .mapa img,
+    .juegos img {
+        max-width: 120px;
+       
+
+    }
+}

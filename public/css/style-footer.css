@@ -1,21 +1,73 @@
 footer {
-    /* background-color: #034247; */
     background-color: #323232;
-    display: block;
     color: white;
-    opacity: 85%;
-    bottom: 0;
+    opacity: 0.85;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* columnas del footer */
+.footer-col {
+    padding: 0.4em 0.8em;
+}
+
+/* textos */
+.footer-brand {
+    color: white;
+}
+
+.footer-title {
+    color: white;
+}
+
+.footer-subtitle {
+    color: white;
+    padding-left: 20px;
+}
+
+.footer-item {
+    color: white;
+    padding-left: 40px;
+    word-break: break-word;
+}
+
+/* iconos */
+.footer-item i {
+    margin-right: 6px;
+}
+
+
+.empty-title {
+    min-height: 1.5em;
+}
+
+/* títulos generales */
 h6,
 h3 {
     word-break: break-word;
 }
 
-.container-footer .brand-area {
-    grid-area: brand;
+footer h3,
+footer h5,
+footer h6 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+footer .h3 {
+    font-size: 1.05rem;
 }
 
-.container-footer .contact-area {
-    grid-area: contact;
+footer .h5 {
+    font-size: 0.9rem;
+}
+
+footer .h6 {
+    font-size: 0.8rem;
+}
+.footer-subtitle {
+    padding-left: 12px;
+}
+
+.footer-item {
+    padding-left: 24px;
 }
