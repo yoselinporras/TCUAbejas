@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,6 +47,7 @@
         <link rel="stylesheet" href="public/css/sweetalert2.min.css">
         <link rel="stylesheet" href="public/css/style.css" type="text/css">
         <link rel="stylesheet" href="public/css/style-footer.css" type="text/css">
+        <link rel="stylesheet" href="public/css/style-games.css" type="text/css">
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" href="/public/css/inicio.css">
         <link rel="stylesheet" href="/public/css/animationBee.css">  
