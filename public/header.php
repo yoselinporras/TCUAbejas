@@ -84,49 +84,53 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <div class="container">
                                 <div class="row">
-                                    <ul class="navbar-nav" style="align-items: center">
-                                        <div id='pagina-inicio' class="col-sm-4">
-                                            <li class="nav-item">
-                                                <a  class="fa fa-home nav-link"  href="?controlador=Index&accion=mostrar"> Inicio</a>
-                                            </li>
-                                        </div>
-                                        <div id='pagina-juegos' class="col-sm-4">
-                                            <li class="nav-item">
-                                                <a  class="fa fa-home nav-link"  href="?controlador=Games&accion=mostrar"> Juegos</a>
-                                            </li>
-                                        </div>
-                                        <div id='pagina-infoGeneral' class="col-sm-4">
-                                            <li class="nav-item">
-                                                <a  class="fa fa-home nav-link"  href="?controlador=GeneralInformation&accion=mostrar"> Informacion</a>
-                                            </li>
-                                        </div>
+                                    <ul class="navbar-nav w-100 d-flex justify-content-around align-items-center">
 
-                                        <div id='juegos' class="col-sm-4">
-                                            <li class="nav-item dropdown"  >
-                                                <div class="col-sm-12">
-                                                    <a class="fa fa-gamepad nav-link dropdown-toggle "  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Juegos
-                                                    </a>
-                                                    <ul class="dropdown-menu fade-down" style="width: 100%"  aria-labelledby="navbarDropdownMenuLink">
-                                                        <li><a class="dropdown-item" id="puzzle" href="?controlador=Puzzle&accion=mostrar">Rompecabezas</a></li>
-                                                        <li><a class="dropdown-item" id="pollen" href="?controlador=PollenCatcher&accion=mostrar">Atrapa polen</a></li>
-                                                        <li><a class="dropdown-item" href="?controlador=CatchBee&accion=mostrar">Atrapa abejas</a></li>
-                                                    </ul>
-                                                </div>
+                                            <li class="nav-item">
+                                                <a class="fa fa-home nav-link" href="?controlador=Index&accion=mostrar">
+                                                    Inicio
+                                                </a>
                                             </li>
-                                        </div>
 
-                                        <div id='sobre-nosotros' class="col-sm-4">
+                                            <li class="nav-item">
+                                                <a class="fa fa-gamepad nav-link" href="?controlador=Games&accion=mostrar">
+                                                    Juegos
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="fa fa-info-circle nav-link" href="?controlador=GeneralInformation&accion=mostrar">
+                                                    Información
+                                                </a>
+                                            </li>
+
                                             <li class="nav-item dropdown">
-                                                <a class=" fa fa-info-circle nav-link nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> Acerca del proyecto</a>
+                                                <a class="fa fa-gamepad nav-link dropdown-toggle"
+                                                href="#"
+                                                data-bs-toggle="dropdown">
+                                                    Juegos
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="?controlador=Puzzle&accion=mostrar">Rompecabezas</a></li>
+                                                    <li><a class="dropdown-item" href="?controlador=PollenCatcher&accion=mostrar">Atrapa polen</a></li>
+                                                    <li><a class="dropdown-item" href="?controlador=CatchBee&accion=mostrar">Atrapa abejas</a></li>
+                                                </ul>
+                                            </li>
 
-                                                <ul class="dropdown-menu fade-down" style="width: 100%"  aria-labelledby="navbarDropdownMenuLink">
+                                            <li class="nav-item dropdown">
+                                                <a class="fa fa-info-circle nav-link dropdown-toggle"
+                                                href="#"
+                                                data-bs-toggle="dropdown">
+                                                    Acerca del proyecto
+                                                </a>
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" href="?controlador=About&accion=mostrar">Creadores</a></li>
                                                     <li><a class="dropdown-item" href="?controlador=PostComments&accion=mostrar">Enviar comentarios</a></li>
                                                 </ul>
                                             </li>
-                                        </div>
+
                                     </ul>
+
                                 </div>
                             </div>
                         </div>
