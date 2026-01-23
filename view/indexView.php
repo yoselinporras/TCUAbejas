@@ -16,62 +16,106 @@ include_once 'public/header.php';
              <h1>Información general sobre las abejas nativas sin aguijón</h1>
                     <div class="animationBee">
 
-                        <svg class="bee-path" viewBox="0 0 300 100" preserveAspectRatio="none">
+                      <svg class="bee-path" viewBox="10 0 300 110" preserveAspectRatio="xMidYMid meet">
 
                             <defs>
                                 <mask id="beeMask">
-                                    <!-- máscara animada -->
-                                    <rect class="mask-rect" x="0" y="0" width="0" height="100%" fill="white" />
+                                    <rect x="0" y="0" width="0" height="100%" fill="white">
+                                        <animate
+                                            attributeName="width"
+                                            from="0"
+                                            to="300"
+                                            dur="5s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </rect>
                                 </mask>
                             </defs>
 
-                            <!-- Path visible -->
                             <path
+                                id="beeRoute"
                                 class="draw-path"
-                                d="M0,50 C100,0 200,100 300,50"
+                                d="M0,60
+                                    C40,10 90,140 150,60
+                                    C200,20 250,120 310,60"
                                 mask="url(#beeMask)"
                             />
 
-                        </svg>
+                            <image
+                                href="/public/img/abj.png"
+                                width="40"
+                                height="40"
+                                y="-16"
+                            >
+                                <animateMotion
+                                    dur="5s"
+                                    repeatCount="indefinite"
+                                    rotate="auto"
+                                >
+                                    <mpath href="#beeRoute" />
+                                </animateMotion>
+                            </image>
 
-                        <img src="/public/img/abj.png" class="beee">
+                    </svg>
 
                     </div>
 
               
              <a href="?controlador=GeneralInformation&accion=mostrar" class="link-imagen">
-            <img src="/public/img/partesabeja.png" alt="Partes de abeja">
+            <img src="/public/img/partesabeja.png" alt="Partes de abeja" class="link-imagen">
              </a>
         </div>
 
         <div class= "mapa">
              <h1>Mapa de la Sede UCR  con la ubicación de cada colmena</h1>
-                <div class="animationBee">
+               <div class="animationBee">
 
-                        <svg class="bee-path" viewBox="0 0 300 100" preserveAspectRatio="none">
+                      <svg class="bee-path" viewBox="0 0 300 110" preserveAspectRatio="xMidYMid meet">
 
                             <defs>
                                 <mask id="beeMask">
-                                    <!-- máscara animada -->
-                                    <rect class="mask-rect" x="0" y="0" width="0" height="100%" fill="white" />
+                                    <rect x="0" y="0" width="0" height="100%" fill="white">
+                                        <animate
+                                            attributeName="width"
+                                            from="0"
+                                            to="300"
+                                            dur="5s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </rect>
                                 </mask>
                             </defs>
 
-                            <!-- Path visible -->
                             <path
+                                id="beeRoute"
                                 class="draw-path"
-                                d="M0,50 C100,0 200,100 300,50"
+                                d="M0,60
+                                    C40,10 90,140 150,60
+                                    C200,20 250,120 310,60"
                                 mask="url(#beeMask)"
                             />
 
-                        </svg>
+                            <image
+                                href="/public/img/abj.png"
+                                width="40"
+                                height="40"
+                                y="-16"
+                            >
+                                <animateMotion
+                                    dur="5s"
+                                    repeatCount="indefinite"
+                                    rotate="auto"
+                                >
+                                    <mpath href="#beeRoute" />
+                                </animateMotion>
+                            </image>
 
-                        <img src="/public/img/abj.png" class="beee">
+                    </svg>
 
                     </div>
 
             <a href="?controlador=Map&accion=mostrar" class="link-imagen">
-            <img src="/public/img/partesabeja.png" alt="Partes de abeja">
+            <img src="/public/img/partesabeja.png" alt="Partes de abeja" class="link-imagen">
              </a>
 
         </div>
@@ -79,30 +123,52 @@ include_once 'public/header.php';
              <h1>Juegos</h1>
              <div class="animationBee">
 
-                        <svg class="bee-path" viewBox="0 0 300 100" preserveAspectRatio="none">
+                      <svg class="bee-path" viewBox="0 0 300 110" preserveAspectRatio="xMidYMid meet">
 
                             <defs>
                                 <mask id="beeMask">
-                                    <!-- máscara animada -->
-                                    <rect class="mask-rect" x="0" y="0" width="0" height="100%" fill="white" />
+                                    <rect x="0" y="0" width="0" height="100%" fill="white">
+                                        <animate
+                                            attributeName="width"
+                                            from="0"
+                                            to="300"
+                                            dur="5s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </rect>
                                 </mask>
                             </defs>
 
-                            <!-- Path visible -->
                             <path
+                                id="beeRoute"
                                 class="draw-path"
-                                d="M0,50 C100,0 200,100 300,50"
+                                d="M0,60
+                                    C40,10 90,140 150,60
+                                    C200,20 250,120 310,60"
                                 mask="url(#beeMask)"
                             />
 
-                        </svg>
+                            <image
+                                href="/public/img/abj.png"
+                                width="40"
+                                height="40"
+                                y="-16"
+                            >
+                                <animateMotion
+                                    dur="5s"
+                                    repeatCount="indefinite"
+                                    rotate="auto"
+                                >
+                                    <mpath href="#beeRoute" />
+                                </animateMotion>
+                            </image>
 
-                        <img src="/public/img/abj.png" class="beee">
+                    </svg>
 
                     </div>
 
             <a href="?controlador=Games&accion=mostrar" class="link-imagen">
-            <img src="/public/img/partesabeja.png" alt="Partes de abeja">
+            <img src="/public/img/partesabeja.png" alt="Partes de abeja" class="link-imagen">
              </a>
 
         </div>

@@ -8,10 +8,10 @@
 
 /* Caja de bienvenida */
 .bienvenida {
-    background-color: #00c0f3;
+    background-color: #01bcee;
     border-radius: 20px;
     padding: 30px;
-    max-width: 1000px;
+    max-width: auto;
     margin: 30px auto;
 
     display: flex;
@@ -21,13 +21,15 @@
 
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical */
 }
 
 /* Textos uno sobre otro */
 .texto-bienvenida {
     display: flex;
     flex-direction: column;
-    
+     text-align: center;
 }
 
 /* Imagen */
@@ -40,19 +42,20 @@
 
 /* Texto */
 .bienvenida h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
     color: #ffffff;
+   
 }
 
 .bienvenida h2 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
     color: #ffffff;
 }
 
 .bienvenida h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: normal;
     color: #ffffff;
 }
@@ -70,7 +73,7 @@
     background-color: #ffffff;
     border-radius: 20px;
     padding: 30px;
-    max-width: 1000px;
+    max-width: auto;
     margin: 30px auto;
 
     display: flex;
@@ -91,22 +94,19 @@
     text-align: center;
 }
 
-/* Imagen a la derecha */
-.infoGeneral img,
-.mapa img,
-.juegos img {
-    max-width: 280px;
+
+.link-imagen {
+   
+    display: inline-block;
+}
+
+.link-imagen img {
+     max-width: 280px;
     width: 100%;
     height: auto;
      border-width: 4px;
         border-style: solid;
         border-color: #FDB912;
-}
-.link-imagen {
-    display: inline-block;
-}
-
-.link-imagen img {
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -135,15 +135,15 @@
     .infoGeneral h1,
     .mapa h1,
     .juegos h1 {
-        font-size: 1.2rem;
+        font-size: 0.90rem;
     }
 
     .bienvenida h2 {
-        font-size: 1rem;
+        font-size: 0.70rem;
     }
 
     .bienvenida h3 {
-        font-size: 0.95rem;
+        font-size: 0.60rem;
     }
 
     /* Imagen más pequeña */
@@ -151,8 +151,9 @@
     .infoGeneral img,
     .mapa img,
     .juegos img {
-        max-width: 120px;
+        max-width: 110px;
        
 
     }
+    
 }
