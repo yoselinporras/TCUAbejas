@@ -1,0 +1,106 @@
+.responsables {
+    padding: 40px 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.bloque-anio {
+    margin-bottom: 60px;
+}
+
+.anio {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: grid;
+    gap: 30px;
+    justify-items: center;
+}
+
+.cards-container.tres {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cards-container.cuatro {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-creador {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    overflow: hidden;
+    max-width: 300px;   
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+
+.card-creador:hover {
+    transform: translateY(-6px);
+}
+
+.card-creador img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    margin: 20px auto 0;
+    display: block;
+}
+
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body h4 {
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: #000000;
+    font-family: Arial;
+}
+
+.card-body span {
+    font-size: 14px;
+    color: #666;
+    font-family: Arial;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #444;
+    font-family: Arial;
+}
+
+@media (max-width: 1000px) {
+    .cards-container.cuatro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .cards-container.tres {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards-container.tres,
+    .cards-container.cuatro {
+        grid-template-columns: 1fr;
+    }
+}
+

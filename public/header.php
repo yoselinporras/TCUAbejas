@@ -50,7 +50,8 @@
         <link rel="stylesheet" href="public/css/style-games.css" type="text/css">
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" href="/public/css/inicio.css">
-        <link rel="stylesheet" href="/public/css/animationBee.css">  
+        <link rel="stylesheet" href="/public/css/animationBee.css"> 
+        <link rel="stylesheet" href="/public/css/creadores.css">  
 
 
 
