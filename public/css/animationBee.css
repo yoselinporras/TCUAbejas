@@ -2,9 +2,10 @@
 .animationBee {
     position: relative;
     flex: 1;
-    height: 140px;
-    margin: 10px 20px;
-    overflow: visible;
+    height: 120px;
+    max-width: 100%;
+    overflow: hidden;
+    
 }
 
 .animationBee .bee-path {
@@ -25,24 +26,24 @@
     
 }
 
+.animationBee .bee-svg {
+  
 
-
- .animationBee .beee {
-   
-    position: absolute;
-    top: 35%;
-    left: 10;
-    width: 65px;           /* más grande */
-    height: auto;
-    border: none !important; /* sin borde */
+    /* limpieza total */
+    border: none;
+    outline: none;
     box-shadow: none;
-    transform: translateY(-50%);
-    offset-path: path("M0,50 C100,0 200,100 300,50");
-    offset-distance: 0%;
-    offset-rotate: auto;
+    
+    /* centra la abeja en el camino */
+    transform-box: fill-box;
+    transform-origin: center;
 
-    animation: beeFly 6s linear infinite;
+    image-rendering: auto;
+
 }
+
+
+ 
 
 .mask-rect {
     animation: revealPath 6s linear infinite;
@@ -69,39 +70,16 @@
     }
 }
 
-@keyframes beeMove {
-    to {
-        offset-distance: 100%;
-    }
-}
 
-@keyframes beeDraw {
-    from {
-        stroke-dashoffset: 200;
+@media (max-width: 768px) {
+    .animationBee {
+        height: 180px;
     }
-    to {
-        stroke-dashoffset: 0;
+
+    .animationBee .bee-path {
+        transform: translateY(-50%) scale(2);
     }
 }
 
 
- @keyframes beeFly {
-    0% {
-        offset-distance: 0%;
-        opacity: 0;
-    }
 
-    10% {
-        opacity: 1;
-    }
-
-    80% {
-        offset-distance: 100%;
-        opacity: 1;
-    }
-
-    100% {
-        offset-distance: 100%;
-        opacity: 0;
-    }
-}
