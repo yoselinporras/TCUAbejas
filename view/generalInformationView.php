@@ -1,6 +1,5 @@
 <?php
-
-include_once 'public/header.php';
+    include_once 'public/header.php';
 ?>
 
 
@@ -18,17 +17,15 @@ include_once 'public/header.php';
 
                 <div class="col-sm-12">
                     <p>
-                    <h1>Abejas nativas sin aguijón</h1>
+                        <h1>Abejas nativas sin aguijón</h1>
                     </p>
                 </div> 
 
                 <div class="col-sm-12">
-
                     <p>
                         Las abejas meliponas son abejas que no tienen aguijón, estas son originarias del continente americano mientras que la abeja común es originaria de África. Las meliponas son un grupo de insectos sociales que habitan en áreas con un clima cálido por ejemplo en zonas tropicales. Existen más de 350 especies identificadas alrededor de todo el continente americano y algunas de estas especies tienen la capacidad de producir miel de excelente calidad. Además desempeñan una función fundamental como la polinización; en su búsqueda de alimento como el polen y néctar de las flores, trabajan como agentes polinizadores.<br>
                         Por lo que cumplen un papel muy importante en el desarrollo de la agricultura, bosques y en la supervivencia de las especies que polinizan.
                     </p>
-
                 </div>
 
                 <div class="col-sm-12">
@@ -51,17 +48,15 @@ include_once 'public/header.php';
                     </p>
                 </div>
 
-
                 <div class="col-sm-12">
                     <p>
                         Actualmente, las abejas meliponas se encuentran en peligro debido a la destrucción de los bosques nativos los cuales son hábitats naturales de estas abejas, esto a raíz de la producción agrícola e industrial, por lo que el objetivo de este proyecto es identificar las especies de abejas meliponas que se encuentran dentro del campus de la Universidad de Costa Rica Sede del Atlántico en el recinto de Turrialba para dar a conocer y comprender su comportamiento y desarrollo en espacios semiurbanos.
                     </p>
                 </div>
 
-
                 <div class="col-sm-12">
                     <p>
-                    <h2 class="h2">¿Cómo podemos proteger a los polinizadores?</h2>
+                        <h2 class="h2">¿Cómo podemos proteger a los polinizadores?</h2>
                     </p>
                 </div> 
                 <div class="col-sm-12">
@@ -71,7 +66,7 @@ include_once 'public/header.php';
                 </div> 
                 <div class="col-sm-12">
                     <p>
-                    <h2 class="h2">¿Qué tipo de flores?</h2>
+                        <h2 class="h2">¿Qué tipo de flores?</h2>
                     </p>
                 </div> 
                 <div class="col-sm-12">
@@ -84,16 +79,10 @@ include_once 'public/header.php';
 
                     </p>
                 </div> 
-
-
-
             </div>
-
-
         </div>
 
         <div class="col-md-5">
-
             <div class="col-sm-10" style="margin: 0 0 16px; margin-right: unset; text-align: center;
                  margin-left: auto; text-align: center">
                 <img src="./public/img/partesabeja.png" alt="Partes de abeja" style="width: 100%; padding: 0;">
@@ -104,10 +93,7 @@ include_once 'public/header.php';
                 <input type="button" id="vermapabutton" value="Ver mapa" onclick=" location.href = '?controlador=Map&accion=mostrar'"/>
             </div>
 
-
-
         </div>
-
 
         <div class="col-md-12">
             <div class="col-sm-6">
@@ -118,15 +104,7 @@ include_once 'public/header.php';
                     Barquero, L; Stamatti, G. (2014). Cría y manejo de abejas sin aguijón. Ediciones del Subtrópico. Fundación ProYungas. Disponible en: <a href="http://proyungas.org.ar/wp-content/uploads/2014/12/criaymanejodeabejassinaguijon.pdf" target="_blank">Aquí</a>
                 </p>
             </div>
-
-
         </div>
-
-
-    </div>
-
-    <div class="beee-container">
-        <img src="./public/img/abj.png" class="beee">
     </div>
 
 </div>
