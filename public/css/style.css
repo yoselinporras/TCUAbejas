@@ -194,6 +194,7 @@ h1{
 .h2{
     font-weight: 800;
 }
+
 h2{
     font-size: 46pt;
 }
@@ -330,14 +331,10 @@ h2{
 }
 
 
-
-
-
 @media (max-width: 360px){
 
 
 }
-
 
 
 @media (max-width: 2585px) and (min-width: 1349px){

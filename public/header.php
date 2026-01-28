@@ -29,8 +29,6 @@
         <script type="text/javascript" src="public/js/leaflet-sidebar.js"></script>
         <script type="text/javascript" src="public/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="public/js/jquery.ui.touch-punch.min.js"></script>
-     
-
 
         <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css"/>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
@@ -52,6 +50,7 @@
         <link rel="stylesheet" href="/public/css/inicio.css">
         <link rel="stylesheet" href="/public/css/animationBee.css"> 
         <link rel="stylesheet" href="/public/css/creadores.css">  
+        <link rel="stylesheet" href="/public/css/style-generalInfo.css">  
         <link rel="stylesheet" href="/public/css/style-map.css"> 
 
 
