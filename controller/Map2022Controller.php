@@ -1,6 +1,6 @@
 <?php
 
-class MapController {
+class Map2022Controller {
 
     public $view; 
     

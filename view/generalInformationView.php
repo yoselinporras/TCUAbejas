@@ -110,7 +110,7 @@
                     <img src="img/solitarias.png" alt="Abejas solitarias">
                     <p>Abejas solitarias<br>no identificadas</p>
                 </div>
-            </div>
+            
         </section>
 
         <div class="ver-mapa-container">
