@@ -2,12 +2,7 @@
 include_once 'public/header.php';
 ?>
 
-<script>
-    $(document).ready(function () {
-        showMazegame();
-        showMemorygame();
-    });
-</script>
+
 
 <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledly="Informacion" aria-hidden=true>
     <div class="modal-dialog">
@@ -163,7 +158,7 @@ include_once 'public/header.php';
     </div>
 </div>
 
-
+<!-- TUTORIAL
 <div class="modal fade" id="mymodalTutorial" tabindex="-1" aria-labelledly="Tutorial" aria-hidden=true>
     <div class="modal-dialog">
         <div class="modal-content">
@@ -198,7 +193,7 @@ include_once 'public/header.php';
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 
@@ -210,7 +205,8 @@ include_once 'public/header.php';
         <div class="leaflet-sidebar-tabs">
             <ul role="tablist"> <!-- top aligned tabs -->
                 <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
-               <li><a href="https://goo.gl/maps/xuRgDLER1Y4gzFFT8"  role="tab" target="_blank"><i class="fas fa-map-marked-alt"></i></a></li>
+                <li><a href="?controlador=Map2026&accion=mostrar#home" role="tab"><i class="far fa-clock">26</i></a></li>
+                <li><a href="https://goo.gl/maps/xuRgDLER1Y4gzFFT8"  role="tab" target="_blank"><i class="fas fa-map-marked-alt"></i></a></li>
                 <li><a href="#referencias-boton"  role="tab"><i class="fa fa-info"></i></a></li>
             </ul>
         </div>

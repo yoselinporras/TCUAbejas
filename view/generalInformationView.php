@@ -90,7 +90,7 @@
 
             <div class="col-sm-10" style="margin: 0 0 16px; margin-right: unset; text-align: center;
                  margin-left: auto; text-align: center">
-                <input type="button" id="vermapabutton" value="Ver mapa" onclick=" location.href = '?controlador=Map&accion=mostrar'"/>
+                <input type="button" id="vermapabutton" value="Ver mapa" onclick=" location.href = '?controlador=Map2022&accion=mostrar'"/>
             </div>
 
         </div>

@@ -114,7 +114,7 @@ include_once 'public/header.php';
 
                     </div>
 
-            <a href="?controlador=Map&accion=mostrar" class="link-imagen">
+            <a href="?controlador=Map2026&accion=mostrar" class="link-imagen">
             <img src="/public/img/partesabeja.png" alt="Partes de abeja" class="link-imagen">
              </a>
 

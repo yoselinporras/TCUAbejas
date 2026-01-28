@@ -52,6 +52,7 @@
         <link rel="stylesheet" href="/public/css/inicio.css">
         <link rel="stylesheet" href="/public/css/animationBee.css"> 
         <link rel="stylesheet" href="/public/css/creadores.css">  
+        <link rel="stylesheet" href="/public/css/style-map.css"> 
 
 
 
@@ -107,19 +108,7 @@
                                                 </a>
                                             </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="fa fa-gamepad nav-link dropdown-toggle"
-                                                href="#"
-                                                data-bs-toggle="dropdown">
-                                                    Juegos
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="?controlador=Puzzle&accion=mostrar">Rompecabezas</a></li>
-                                                    <li><a class="dropdown-item" href="?controlador=PollenCatcher&accion=mostrar">Atrapa polen</a></li>
-                                                    <li><a class="dropdown-item" href="?controlador=CatchBee&accion=mostrar">Atrapa abejas</a></li>
-                                                </ul>
-                                            </li>
-
+                                           
                                             <li class="nav-item dropdown">
                                                 <a class="fa fa-info-circle nav-link dropdown-toggle"
                                                 href="#"

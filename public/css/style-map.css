@@ -1,0 +1,252 @@
+/* Reset básico */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-y: auto; /* el scroll vive aquí */
+}
+
+/* Contenedor general */
+#container {
+    width: 100%;
+    min-height: 100vh; /* ocupa al menos la pantalla */
+    display: block;
+}
+
+/* MAPA: ocupa la pantalla, el footer queda debajo */
+#map {
+    width: 100%;
+    height: 100vh; /* altura exacta de pantalla */
+}
+
+/* Sidebar no afecta el flujo */
+#species-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Evita problemas con Bootstrap */
+.modal-body {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+
+/* ===============================
+   SIDEBAR DE ESPECIES
+   =============================== */
+
+#species-sidebar {
+  position: fixed;
+  top: 140px;               /* debajo del header */
+  right: 10px;
+  z-index: 1000;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: width 0.25s ease;
+  font-family: inherit;
+}
+
+/* ---------- Estados ---------- */
+
+#species-sidebar.collapsed {
+  width: 56px;
+}
+
+#species-sidebar.expanded {
+  width: 220px;
+}
+#species-sidebar {
+  position: fixed;
+  top: 140px;
+  right: 10px;
+  max-height: calc(100vh - 160px); /* viewport - header */
+  display: flex;
+  flex-direction: column;
+}
+.species-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  overflow-y: auto;
+  flex: 1;                 /* ocupa el espacio disponible */
+}
+
+
+/* ---------- Botón flecha ---------- */
+
+.sidebar-toggle {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: 1px solid #eaeaea;
+  background: #f8f9fa;
+}
+
+.sidebar-toggle i {
+  font-size: 16px;
+  color: #333;
+}
+
+/* ---------- Lista ---------- */
+
+.species-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+}
+
+
+/* ---------- Ícono ---------- */
+.species-item i {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+  
+  color: #333;
+  flex-shrink: 0;
+   gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 2px 6px;
+  transition: background 0.2s ease;
+}
+
+
+
+
+/* ---------- Texto ---------- */
+.species-name {
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+/* ---------- Colapsado ---------- */
+#species-sidebar.collapsed .species-name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#species-sidebar.collapsed .species-item {
+  justify-content: center;
+}
+
+
+/* ---------- Activo (filtro aplicado) ---------- */
+
+.species-item.active {
+  background: #e6f2ff;
+}
+
+.species-item.active .species-icon {
+  color: #0d6efd;
+}
+
+/* ===============================
+   Panel referencias
+   =============================== */
+  .referencias-panel {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #eaeaea;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 13px;
+}
+
+.referencias-panel h4 {
+  margin: 6px 0 10px;
+  font-size: 14px;
+}
+
+.referencias-list {
+  padding-left: 16px;
+}
+
+.referencias-list li {
+  margin-bottom: 8px;
+}
+
+.referencias-list a {
+  display: inline-block;
+  margin-left: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.referencias-panel.show {
+  display: block;
+}
+
+
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+
+@media (max-width: 576px) {
+  #species-sidebar {
+    top: 120px;
+    right: 6px;
+    max-height: calc(100vh - 130px);
+  }
+
+  #species-sidebar.expanded {
+    width: 190px;
+  }
+
+  .species-name {
+    font-size: 13px;
+  }
+   /* El mapa NO ocupa toda la pantalla */
+    #map {
+        height: 80vh;
+    }
+
+    /* Sidebar más cómodo */
+    #species-sidebar {
+        height: 80vh;
+        width: 85%;
+        max-width: 320px;
+        background: #fff;
+        box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    }
+
+    /* Lista con scroll */
+    .species-list {
+        max-height: calc(80vh - 120px);
+        overflow-y: auto;
+    }
+
+    /* Modales más usables */
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    .modal-body {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
+
+
+.species-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.species-list::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+
