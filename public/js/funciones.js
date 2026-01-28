@@ -759,371 +759,458 @@ function initmarkers() {
 
 
 }
+function quitarTodosLosMarcadores() {
+  [
+    especie1,
+    especie2,
+    especie3,
+    especie4,
+    especie5,
+    especie6,
+    especie7,
+    especie8
+  ].forEach(quitarMarcadoresDeArray);
+}
+
+function quitarMarcadoresDeArray(arr) {
+  if (!Array.isArray(arr)) return;
+
+  arr.forEach(marker => {
+    if (marker && map.hasLayer(marker)) {
+      map.removeLayer(marker);
+    }
+  });
+}
+
 
 function showMarkers(map) {
 
     $('#especie1').on('click', function (e) {
 
-        especie1[1].addTo(map);
+        quitarTodosLosMarcadores()
 
-        if (map.hasLayer(especie2[1])) {
-            map.removeLayer(especie2[1]);
+        
+      for (var i = 1; i < especie1.length; i++) {
+        if (especie1[i]) {
+            especie1[i].addTo(map);
+        }
         }
 
-        if (map.hasLayer(especie3[1])) {
-            map.removeLayer(especie3[1]);
-        }
+        // especie1[1].addTo(map);
+        // if (map.hasLayer(especie2[1])) {
+        //     map.removeLayer(especie2[1]);
+        // }
 
-        if (map.hasLayer(especie4[1])) {
-            map.removeLayer(especie4[1]);
-        }
+        // if (map.hasLayer(especie3[1])) {
+        //     map.removeLayer(especie3[1]);
+        // }
 
-        if (map.hasLayer(especie8[1])) {
-            map.removeLayer(especie8[1]);
-        }
+        // if (map.hasLayer(especie4[1])) {
+        //     map.removeLayer(especie4[1]);
+        // }
 
-        for (var i = 1; i <= 24; i++) {
-            if (map.hasLayer(especie5[i])) {
-                map.removeLayer(especie5[i]);
-            }
-        }
+        // if (map.hasLayer(especie8[1])) {
+        //     map.removeLayer(especie8[1]);
+        // }
+
+        // for (var i = 1; i <= 24; i++) {
+        //     if (map.hasLayer(especie5[i])) {
+        //         map.removeLayer(especie5[i]);
+        //     }
+        // }
 
 
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie6[i])) {
-                map.removeLayer(especie6[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie6[i])) {
+        //         map.removeLayer(especie6[i]);
+        //     }
+        // }
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie7[i])) {
-                map.removeLayer(especie7[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie7[i])) {
+        //         map.removeLayer(especie7[i]);
+        //     }
+        // }
 
     });
 
     $('#especie2').on('click', function (e) {
+         quitarTodosLosMarcadores()
 
-        especie2[1].addTo(map);
-
-        if (map.hasLayer(especie1[1])) {
-            map.removeLayer(especie1[1]);
+        
+      for (var i = 1; i < especie2.length; i++) {
+        if (especie2[i]) {
+            especie2[i].addTo(map);
+        }
         }
 
-        if (map.hasLayer(especie3[1])) {
-            map.removeLayer(especie3[1]);
-        }
+        // especie2[1].addTo(map);
 
-        if (map.hasLayer(especie4[1])) {
-            map.removeLayer(especie4[1]);
-        }
+        // if (map.hasLayer(especie1[1])) {
+        //     map.removeLayer(especie1[1]);
+        // }
 
-        if (map.hasLayer(especie8[1])) {
-            map.removeLayer(especie8[1]);
-        }
+        // if (map.hasLayer(especie3[1])) {
+        //     map.removeLayer(especie3[1]);
+        // }
 
-        for (var i = 1; i <= 24; i++) {
-            if (map.hasLayer(especie5[i])) {
-                map.removeLayer(especie5[i]);
-            }
-        }
+        // if (map.hasLayer(especie4[1])) {
+        //     map.removeLayer(especie4[1]);
+        // }
+
+        // if (map.hasLayer(especie8[1])) {
+        //     map.removeLayer(especie8[1]);
+        // }
+
+        // for (var i = 1; i <= 24; i++) {
+        //     if (map.hasLayer(especie5[i])) {
+        //         map.removeLayer(especie5[i]);
+        //     }
+        // }
 
 
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie6[i])) {
-                map.removeLayer(especie6[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie6[i])) {
+        //         map.removeLayer(especie6[i]);
+        //     }
+        // }
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie7[i])) {
-                map.removeLayer(especie7[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie7[i])) {
+        //         map.removeLayer(especie7[i]);
+        //     }
+        // }
 
 
     });
 
     $('#especie3').on('click', function (e) {
+         quitarTodosLosMarcadores()
 
-        especie3[1].addTo(map);
-
-        if (map.hasLayer(especie1[1])) {
-            map.removeLayer(especie1[1]);
+        
+      for (var i = 1; i < especie3.length; i++) {
+        if (especie3[i]) {
+            especie3[i].addTo(map);
+        }
         }
 
-        if (map.hasLayer(especie2[1])) {
-            map.removeLayer(especie2[1]);
-        }
+        // especie3[1].addTo(map);
 
-        if (map.hasLayer(especie4[1])) {
-            map.removeLayer(especie4[1]);
-        }
+        // if (map.hasLayer(especie1[1])) {
+        //     map.removeLayer(especie1[1]);
+        // }
 
-        if (map.hasLayer(especie8[1])) {
-            map.removeLayer(especie8[1]);
-        }
+        // if (map.hasLayer(especie2[1])) {
+        //     map.removeLayer(especie2[1]);
+        // }
 
-        for (var i = 1; i <= 24; i++) {
-            if (map.hasLayer(especie5[i])) {
-                map.removeLayer(especie5[i]);
-            }
-        }
+        // if (map.hasLayer(especie4[1])) {
+        //     map.removeLayer(especie4[1]);
+        // }
+
+        // if (map.hasLayer(especie8[1])) {
+        //     map.removeLayer(especie8[1]);
+        // }
+
+        // for (var i = 1; i <= 24; i++) {
+        //     if (map.hasLayer(especie5[i])) {
+        //         map.removeLayer(especie5[i]);
+        //     }
+        // }
 
 
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie6[i])) {
-                map.removeLayer(especie6[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie6[i])) {
+        //         map.removeLayer(especie6[i]);
+        //     }
+        // }
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie7[i])) {
-                map.removeLayer(especie7[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie7[i])) {
+        //         map.removeLayer(especie7[i]);
+        //     }
+        // }
 
 
     });
 
     $('#especie4').on('click', function (e) {
 
-        especie4[1].addTo(map);
+         quitarTodosLosMarcadores()
 
-        if (map.hasLayer(especie1[1])) {
-            map.removeLayer(especie1[1]);
+        
+      for (var i = 1; i < especie4.length; i++) {
+        if (especie4[i]) {
+            especie4[i].addTo(map);
         }
-
-        if (map.hasLayer(especie2[1])) {
-            map.removeLayer(especie2[1]);
         }
+        // especie4[1].addTo(map);
 
-        if (map.hasLayer(especie3[1])) {
-            map.removeLayer(especie3[1]);
-        }
+        // if (map.hasLayer(especie1[1])) {
+        //     map.removeLayer(especie1[1]);
+        // }
 
-        if (map.hasLayer(especie8[1])) {
-            map.removeLayer(especie8[1]);
-        }
+        // if (map.hasLayer(especie2[1])) {
+        //     map.removeLayer(especie2[1]);
+        // }
 
-        for (var i = 1; i <= 23; i++) {
-            if (map.hasLayer(especie5[i])) {
-                map.removeLayer(especie5[i]);
-            }
-        }
+        // if (map.hasLayer(especie3[1])) {
+        //     map.removeLayer(especie3[1]);
+        // }
+
+        // if (map.hasLayer(especie8[1])) {
+        //     map.removeLayer(especie8[1]);
+        // }
+
+        // for (var i = 1; i <= 23; i++) {
+        //     if (map.hasLayer(especie5[i])) {
+        //         map.removeLayer(especie5[i]);
+        //     }
+        // }
 
 
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie6[i])) {
-                map.removeLayer(especie6[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie6[i])) {
+        //         map.removeLayer(especie6[i]);
+        //     }
+        // }
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie7[i])) {
-                map.removeLayer(especie7[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie7[i])) {
+        //         map.removeLayer(especie7[i]);
+        //     }
+        // }
 
 
     });
 
     $('#especie5').on('click', function (e) {
+         quitarTodosLosMarcadores()
 
-        if (map.hasLayer(especie4[1])) {
-            map.removeLayer(especie4[1]);
-        }
-
-        if (map.hasLayer(especie1[1])) {
-            map.removeLayer(especie1[1]);
-        }
-
-        if (map.hasLayer(especie2[1])) {
-            map.removeLayer(especie2[1]);
-        }
-
-        if (map.hasLayer(especie3[1])) {
-            map.removeLayer(especie3[1]);
-        }
-
-        if (map.hasLayer(especie8[1])) {
-            map.removeLayer(especie8[1]);
-        }
-
-        for (var i = 1; i <= 23; i++) {
+        
+      for (var i = 1; i < especie5.length; i++) {
+        if (especie5[i]) {
             especie5[i].addTo(map);
         }
-
-
-
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie6[i])) {
-                map.removeLayer(especie6[i]);
-            }
         }
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie7[i])) {
-                map.removeLayer(especie7[i]);
-            }
-        }
+        // if (map.hasLayer(especie4[1])) {
+        //     map.removeLayer(especie4[1]);
+        // }
+
+        // if (map.hasLayer(especie1[1])) {
+        //     map.removeLayer(especie1[1]);
+        // }
+
+        // if (map.hasLayer(especie2[1])) {
+        //     map.removeLayer(especie2[1]);
+        // }
+
+        // if (map.hasLayer(especie3[1])) {
+        //     map.removeLayer(especie3[1]);
+        // }
+
+        // if (map.hasLayer(especie8[1])) {
+        //     map.removeLayer(especie8[1]);
+        // }
+
+        // for (var i = 1; i <= 23; i++) {
+        //     especie5[i].addTo(map);
+        // }
+
+
+
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie6[i])) {
+        //         map.removeLayer(especie6[i]);
+        //     }
+        // }
+
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie7[i])) {
+        //         map.removeLayer(especie7[i]);
+        //     }
+        // }
 
 
     });
 
     $('#especie6').on('click', function (e) {
 
-        if (map.hasLayer(especie4[1])) {
-            map.removeLayer(especie4[1]);
-        }
+         quitarTodosLosMarcadores()
 
-        if (map.hasLayer(especie1[1])) {
-            map.removeLayer(especie1[1]);
-        }
-
-        if (map.hasLayer(especie2[1])) {
-            map.removeLayer(especie2[1]);
-        }
-
-        if (map.hasLayer(especie3[1])) {
-            map.removeLayer(especie3[1]);
-        }
-
-        if (map.hasLayer(especie8[1])) {
-            map.removeLayer(especie8[1]);
-        }
-
-        for (var i = 1; i <= 24; i++) {
-            if (map.hasLayer(especie5[i])) {
-                map.removeLayer(especie5[i]);
-            }
-        }
-
-
-
-        for (var i = 1; i <= 5; i++) {
+        
+      for (var i = 1; i < especie6.length; i++) {
+        if (especie6[i]) {
             especie6[i].addTo(map);
         }
-
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie7[i])) {
-                map.removeLayer(especie7[i]);
-            }
         }
+
+        // if (map.hasLayer(especie4[1])) {
+        //     map.removeLayer(especie4[1]);
+        // }
+
+        // if (map.hasLayer(especie1[1])) {
+        //     map.removeLayer(especie1[1]);
+        // }
+
+        // if (map.hasLayer(especie2[1])) {
+        //     map.removeLayer(especie2[1]);
+        // }
+
+        // if (map.hasLayer(especie3[1])) {
+        //     map.removeLayer(especie3[1]);
+        // }
+
+        // if (map.hasLayer(especie8[1])) {
+        //     map.removeLayer(especie8[1]);
+        // }
+
+        // for (var i = 1; i <= 24; i++) {
+        //     if (map.hasLayer(especie5[i])) {
+        //         map.removeLayer(especie5[i]);
+        //     }
+        // }
+
+
+
+        // for (var i = 1; i <= 5; i++) {
+        //     especie6[i].addTo(map);
+        // }
+
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie7[i])) {
+        //         map.removeLayer(especie7[i]);
+        //     }
+        // }
 
 
     });
 
     $('#especie7').on('click', function (e) {
+         quitarTodosLosMarcadores()
 
-        if (map.hasLayer(especie4[1])) {
-            map.removeLayer(especie4[1]);
-        }
-
-        if (map.hasLayer(especie1[1])) {
-            map.removeLayer(especie1[1]);
-        }
-
-        if (map.hasLayer(especie2[1])) {
-            map.removeLayer(especie2[1]);
-        }
-
-        if (map.hasLayer(especie3[1])) {
-            map.removeLayer(especie3[1]);
-        }
-
-        if (map.hasLayer(especie8[1])) {
-            map.removeLayer(especie8[1]);
-        }
-
-        for (var i = 1; i <= 24; i++) {
-            if (map.hasLayer(especie5[i])) {
-                map.removeLayer(especie5[i]);
-            }
-        }
-
-
-
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie6[i])) {
-                map.removeLayer(especie6[i]);
-            }
-        }
-
-        for (var i = 1; i <= 5; i++) {
+        
+      for (var i = 1; i < especie7.length; i++) {
+        if (especie7[i]) {
             especie7[i].addTo(map);
         }
+        }
+
+        // if (map.hasLayer(especie4[1])) {
+        //     map.removeLayer(especie4[1]);
+        // }
+
+        // if (map.hasLayer(especie1[1])) {
+        //     map.removeLayer(especie1[1]);
+        // }
+
+        // if (map.hasLayer(especie2[1])) {
+        //     map.removeLayer(especie2[1]);
+        // }
+
+        // if (map.hasLayer(especie3[1])) {
+        //     map.removeLayer(especie3[1]);
+        // }
+
+        // if (map.hasLayer(especie8[1])) {
+        //     map.removeLayer(especie8[1]);
+        // }
+
+        // for (var i = 1; i <= 24; i++) {
+        //     if (map.hasLayer(especie5[i])) {
+        //         map.removeLayer(especie5[i]);
+        //     }
+        // }
+
+
+
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie6[i])) {
+        //         map.removeLayer(especie6[i]);
+        //     }
+        // }
+
+        // for (var i = 1; i <= 5; i++) {
+        //     especie7[i].addTo(map);
+        // }
 
 
     });
 
     $('#especie8').on('click', function (e) {
+         quitarTodosLosMarcadores()
 
-        if (map.hasLayer(especie4[1])) {
-            map.removeLayer(especie4[1]);
+        
+      for (var i = 1; i < especie8.length; i++) {
+        if (especie8[i]) {
+            especie8[i].addTo(map);
+        }
         }
 
-        if (map.hasLayer(especie1[1])) {
-            map.removeLayer(especie1[1]);
-        }
+        // if (map.hasLayer(especie4[1])) {
+        //     map.removeLayer(especie4[1]);
+        // }
 
-        if (map.hasLayer(especie2[1])) {
-            map.removeLayer(especie2[1]);
-        }
+        // if (map.hasLayer(especie1[1])) {
+        //     map.removeLayer(especie1[1]);
+        // }
 
-        if (map.hasLayer(especie3[1])) {
-            map.removeLayer(especie3[1]);
-        }
+        // if (map.hasLayer(especie2[1])) {
+        //     map.removeLayer(especie2[1]);
+        // }
 
-        especie8[1].addTo(map);
+        // if (map.hasLayer(especie3[1])) {
+        //     map.removeLayer(especie3[1]);
+        // }
 
-        for (var i = 1; i <= 23; i++) {
-            if (map.hasLayer(especie5[i])) {
-                map.removeLayer(especie5[i]);
-            }
-        }
+        // especie8[1].addTo(map);
+
+        // for (var i = 1; i <= 23; i++) {
+        //     if (map.hasLayer(especie5[i])) {
+        //         map.removeLayer(especie5[i]);
+        //     }
+        // }
 
 
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie6[i])) {
-                map.removeLayer(especie6[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie6[i])) {
+        //         map.removeLayer(especie6[i]);
+        //     }
+        // }
 
-        for (var i = 1; i <= 5; i++) {
-            if (map.hasLayer(especie7[i])) {
-                map.removeLayer(especie7[i]);
-            }
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     if (map.hasLayer(especie7[i])) {
+        //         map.removeLayer(especie7[i]);
+        //     }
+        // }
 
 
     });
 
     $('#todas').on('click', function (e) {
 
+         quitarTodosLosMarcadores()
 
-        especie1[1].addTo(map);
-        especie3[1].addTo(map);
-        especie4[1].addTo(map);
-        especie8[1].addTo(map);
+         initmarkers()
 
-        for (var i = 1; i <= 24; i++) {
-            especie5[i].addTo(map);
-        }
 
-        for (var i = 1; i <= 5; i++) {
-            especie6[i].addTo(map);
-        }
+        // for (var i = 1; i <= 24; i++) {
+        //     especie5[i].addTo(map);
+        // }
 
-        for (var i = 1; i <= 5; i++) {
-            especie7[i].addTo(map);
-        }
+        // for (var i = 1; i <= 5; i++) {
+        //     especie6[i].addTo(map);
+        // }
+
+        // for (var i = 1; i <= 5; i++) {
+        //     especie7[i].addTo(map);
+        // }
 
     });
 
