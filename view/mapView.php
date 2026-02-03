@@ -232,7 +232,7 @@ include_once 'public/header.php';
                                 <p class="plist">
                                 <div class="btn-group">
 
-                                    <button type="button" id="todas" class="btn btn-list btnactive btn-sm activelistbutton">Todas</button>
+                                    <button type="button" id="todas2022" class="btn btn-list btnactive btn-sm activelistbutton">Todas</button>
 
 
                                 </div>
@@ -469,7 +469,7 @@ include_once 'public/header.php';
 
     $(document).ready(function () {
         activebuttons();
-        initmarkers();
+        initmarkers2022();
         popups();
         iniModalSidebar();
         alertsColmenas();

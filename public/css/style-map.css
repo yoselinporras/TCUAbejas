@@ -153,41 +153,8 @@ html, body {
   color: #0d6efd;
 }
 
-/* ===============================
-   Panel referencias
-   =============================== */
-  .referencias-panel {
-  display: none;
-  padding: 10px;
-  border-top: 1px solid #eaeaea;
-  max-height: 200px;
-  overflow-y: auto;
-  font-size: 13px;
-}
 
-.referencias-panel h4 {
-  margin: 6px 0 10px;
-  font-size: 14px;
-}
-
-.referencias-list {
-  padding-left: 16px;
-}
-
-.referencias-list li {
-  margin-bottom: 8px;
-}
-
-.referencias-list a {
-  display: inline-block;
-  margin-left: 6px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.referencias-panel.show {
-  display: block;
-}
-
+  
 
 
 /* ===============================
@@ -250,3 +217,48 @@ html, body {
   border-radius: 6px;
 }
 
+.modal-colmena {
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+.carousel-inner img {
+  max-height: 360px;
+  object-fit: contain;
+}
+
+/* Flechas del carrusel – Modal Colmena */
+#modalColmena .carousel-control-prev-icon,
+#modalColmena .carousel-control-next-icon {
+  filter: invert(85%);
+}
+
+
+
+#btnInfoEspecie {
+  font-weight: 600;
+  
+  border-radius: 25px;
+  background-color: #FDB912;
+}
+
+#mymodals .carousel-item img {
+          /* tamaño distinto */
+  object-fit: cover;   /* se adapta mejor */
+}
+
+/* Títulos */
+/* Títulos */
+#mymodals  h2,
+#mymodals  h3 {
+  color: #013e6d ; /* verde abeja */
+}
+
+/* Texto */
+#mymodals p {
+  color: #333;
+}
+
+.modal-title{
+  color: #8DC63F;
+}
