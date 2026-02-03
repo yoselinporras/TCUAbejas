@@ -12,4 +12,4 @@ class GamesController {
          $this->view->show("gamesView.php", null);
      } // listar
      
-} // fin clase
+} // fin clase 

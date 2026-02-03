@@ -1,10 +1,10 @@
 .page--inicio {
    width: 100%;
-   padding: 0 10px;
+   padding: 0 50px;
 }
 
 .page--inicio .inicio-banner{
-  background-color: #01bcee;
+    background-color: #01bcee;
     border-radius: 20px;
     padding: 30px;
     margin: 30px auto;
@@ -38,20 +38,12 @@
 .page--inicio .inicio__contenido{
     padding: 0 16px;
     margin: 0 auto;
-    max-width: 90%;
-}
-
-.page--inicio .inicio__titulo{
-    font-family: Arial, sans-serif;
-    font-size: 30pt;      
-    font-weight: bold;
-    color: #034247;
-    margin-bottom: 1rem;
+    max-width: 100%;
 }
 
 .page--inicio .inicio__box{
     background: #ffffff;
-    max-width: 1200px;
+    max-width: auto;
     margin: 30px auto;
     padding: 30px;
     border-radius: 20px;
@@ -60,9 +52,9 @@
 
 .page--inicio h2{
     font-family: Arial, sans-serif;
-    font-size: 21px;   
+    font-size: 26px;   
     font-weight: bold;
-    color: #034247;
+    color: #8DC63F;
     margin-bottom: 1rem;
 }
 
@@ -80,21 +72,28 @@
 }
 
 .page--inicio .inicio__imagen img{
-    max-width: 310px;
+    max-width: 350px;
     height: auto;
     margin: 10px 0 20px;
+    animation: beeFloat 4s ease-in-out infinite;
+}
+
+@keyframes beeFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
 }
 
 .page--inicio .ver-mapa-container{
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    margin: 10px 0;
 }
 
 .page--inicio input[type=button]{
     border-radius: 2em;
-    background-color: #41b089;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #f2b705;
+    font-family: 'Arial', sans-serif;
     font-weight: 800;
     color: #fff;
     font-size: 2.2em;
@@ -105,11 +104,11 @@
 
 .page--inicio input[type=button]:hover{
     background-color: #fff;
-    color: #41b089;
+    color: #f2b705;
 }
 
 .page--inicio .colmenas{
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 .page--inicio .colmenas__contenido{
@@ -121,10 +120,11 @@
 }
 
 .page--inicio .colmenas__titulo{
-    color: #034247;
+    color: #8DC63F;
     font-size: 26px;
     margin-bottom: 40px;
     justify-content: center;
+    text-align: center;
 }
 
 .page--inicio .grid-colmenas{
@@ -142,17 +142,23 @@
 }
 
 .page--inicio .colmena-card img{
-    width: 160px;
-    height: 120px;
+    width: 260px;
+    height: 220px;
     object-fit: cover;
     border: 5px solid #f2b705;
     background: #fff;
 }
 
+.page--inicio .colmena-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
 .page--inicio .colmena-card p{
     margin-top: 10px;
     font-weight: bold;
-    color: #0a8f3c;
+    color: #8DC63F;
+    font-size: 20px; 
 }
 
 .page--inicio .colmena-card--center{

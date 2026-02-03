@@ -1,0 +1,123 @@
+.main-banner-wrapper {
+    max-width: auto;   
+    margin: 20px auto;
+    padding: 0 55px;     
+}
+
+.main-banner {
+    background: linear-gradient(
+        135deg,
+        #4fc3f7 0%,
+        #29b6f6 50%,
+        #81d4fa 100%
+    );
+    border-radius: 32px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+    padding: 40px 20px;
+    width: 100%;         
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2; 
+    border-radius: 32px;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.25),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+/* Contenido interno */
+.main-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Texto */
+.main-banner__text {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.main-banner__title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.main-banner__subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Imagen opcional */
+.main-banner__image img {
+    max-width: 220px;
+    height: auto;
+    display: block;
+    animation: beeFloat 4s ease-in-out infinite;
+}
+
+@keyframes beeFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+
+@media (max-width: 992px) {
+    .main-banner__title {
+        font-size: 38px;
+    }
+
+    .main-banner__subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-banner {
+        padding: 40px 15px;
+    }
+
+    .main-banner__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-banner__image img {
+        max-width: 160px;
+    }
+
+    .main-banner__title {
+        font-size: 32px;
+    }
+
+    .main-banner__subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-banner__title {
+        font-size: 26px;
+    }
+
+    .main-banner__subtitle {
+        font-size: 16px;
+    }
+}

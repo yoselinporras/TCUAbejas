@@ -1,7 +1,9 @@
 <?php
     include_once 'public/header.php';
+    $bannerTitle = "Abejas nativas sin aguijón";
+    include 'view/bannerView.php';
 ?>
-
+ 
 
 <script>
     $(document).ready(function () {
@@ -11,12 +13,6 @@
 </script>
 
 <div class="page page--inicio">
-    <section class="inicio-banner">
-        <h1 class="inicio-banner__titulo">
-            Abejas nativas sin aguijón
-        </h1>
-    </section>
-
     <div class="inicio__box">
         <section class="inicio">
             <div class="inicio__contenido">
@@ -24,6 +20,14 @@
                     <div class="col-lg-7 col-12 inicio__texto">
                         <p class="inicio__parrafo">
                             Las abejas meliponas son abejas que no tienen aguijón, estas son originarias del continente americano mientras que la abeja común es originaria de África. Las meliponas son un grupo de insectos sociales que habitan en áreas con un clima cálido por ejemplo en zonas tropicales. Existen más de 350 especies identificadas alrededor de todo el continente americano y algunas de estas especies tienen la capacidad de producir miel de excelente calidad. Además desempeñan una función fundamental como la polinización; en su búsqueda de alimento como el polen y néctar de las flores, trabajan como agentes polinizadores.<br>
+                        </p>
+                        
+                        <p class="inicio__parrafo">
+                            Por lo que cumplen un papel muy importante en el desarrollo de la agricultura, bosques y en la supervivencia de las   especies que polinizan.
+                        </p>
+
+                        <p class="inicio__parrafo">
+                            Las abejas tienen características físicas muy diferentes a otros insectos que permiten identificarlas fácilmente, dentro de las características principales se encuentran las siguientes: Las abejas tienen dos pares de alas mientras que las moscas tienen un solo par de esta manera se pueden diferenciar.
                         </p>
                     </div>
 
@@ -34,13 +38,7 @@
                     </div>
 
                     <div class="col-12 mt-3">
-                        <p>
-                            Por lo que cumplen un papel muy importante en el desarrollo de la agricultura, bosques y en la supervivencia de las   especies que polinizan.
-                        </p>
-
-                        <p>
-                            Las abejas tienen características físicas muy diferentes a otros insectos que permiten identificarlas fácilmente, dentro de las características principales se encuentran las siguientes: Las abejas tienen dos pares de alas mientras que las moscas tienen un solo par de esta manera se pueden diferenciar.
-                        </p>
+                        
 
                         <p>
                             También se diferencian de las avispas por la contextura de su cuerpo, ya que las avispas son menos robustas y no presentan pelos en el cuerpo.
@@ -115,7 +113,7 @@
 
         <div class="ver-mapa-container">
             <input type="button" id="vermapabutton" value="Ver mapa"
-                   onclick="location.href='?controlador=Map&accion=mostrar'"/>
+                   onclick="location.href='?controlador=Map2026&accion=mostrar'"/>
         </div>
     
     </div>
