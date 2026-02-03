@@ -236,6 +236,7 @@
     <script type="text/javascript" src="public/js/leaflet-sidebar.js"></script>
     <script type="text/javascript" src="public/js/sweetalert2.min.js"></script>
     <script type="text/javascript" src="public/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="public/js/modalInfo.js"></script>
 
     <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
