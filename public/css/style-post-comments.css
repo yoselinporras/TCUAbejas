@@ -1,98 +1,165 @@
-.send-button {
 
-    border-radius: 2em;
-    background-color: #41b089;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    color: #fff;
-    align-content: center;
-
+.post-comments {
+    padding: 3rem 1rem 4rem;
+    background-color: #f2f4f8;
 }
 
+.post-comments .content-box {
+    max-width: auto;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    padding: 3.5rem 3rem;
+
+    border-radius: 22px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+.post-comments {
+    padding: 3rem 1rem 4rem;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.post-comments .historia {
+    max-width: 900px;
+    margin: 0 auto 3.5rem auto;
+    margin-bottom: 3rem;
+}
+
+.post-comments .historia h2 {
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+
+    color: #8DC63F;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.post-comments .historia p {
+    margin-bottom: 1rem;
+
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.post-comments .historia ul {
+    padding-left: 1.2rem;
+}
+
+.post-comments .historia li {
+    margin-bottom: 0.6rem;
+
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.post-comments .divider {
+    text-align: center;
+    margin: 4rem auto 3.5rem;
+    max-width: 600px;
+}
+
+.post-comments .divider p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #8DC63F;
+}
+
+.post-comments .divider::before,
+.post-comments .divider::after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 3px;
+    background-color: #FFD700;
+    margin: 0.8rem auto;
+    border-radius: 2px;
+}
+
+.post-comments .comentarios {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.post-comments .comentarios h2 {
+    color: #8DC63F;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.post-comments .comentarios p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
 
 .form-post-comments {
-    display: grid;
-    padding: 1em;
-    grid-gap: 1em;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "nothing-0 name nothing-1"
-        "nothing-0 email nothing-1"
-        "nothing-0 comment nothing-1"
-        "nothing-0 send nothing-1";
+    max-width: 600px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
 }
 
+.form-post-comments .form-control {
+    border: none;
+    border-radius: 14px;
+    padding: 14px 16px;
 
-.form-post-comments .email-area {
-    grid-area: email;
+    background-color: #f5f7fa;
+    box-shadow: inset 0 0 0 1px #ddd;
+
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
 }
 
-.form-post-comments .name-area {
-    grid-area: name;
+.form-post-comments .form-control:focus {
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 2px #8ED8F8;
 }
 
-.form-post-comments .matter-area {
-    grid-area: matter;
+.form-post-comments .send-button {
+    margin-top: 0.5rem;
+
+    border-radius: 2em;
+    background-color: #f2b705;
+
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
 }
 
-.form-post-comments .comment-area {
-    grid-area: comment;
+.form-post-comments .send-button:hover {
+    background-color: #f2b705;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(65, 176, 137, 0.35);
 }
 
-.form-post-comments .send-area {
-    grid-area: send;
-}
-
-button[type=submit]:hover {
-    background-color: #fff;
-    color: #41b089;
-}
-
-
-
-
-
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-    .form-post-comments {
-        grid-template-areas: "name name name"
-            "email email email"
-            "comment comment comment"
-            "send send send";
+@media (max-width: 576px) {
+    .post-comments {
+        padding: 2rem 1rem 3rem;
     }
 
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
     .form-post-comments {
-        grid-template-areas: "name name name"
-            "email email email"
-            "comment comment comment"
-            "send send send";
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .form-post-comments {
-        grid-template-areas: "name name name"
-            "email email email"
-            "comment comment comment"
-            "send send send";
-    }
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .form-post-comments {
-        grid-template-areas: "nothing-0 name nothing-1"
-            "nothing-0 email nothing-1"
-            "nothing-0 comment nothing-1"
-            "nothing-0 send nothing-1";
+        padding: 2rem 1.5rem;
     }
 }

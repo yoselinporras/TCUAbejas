@@ -28,7 +28,7 @@
 .img-encabezado {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* cambia a cover si quieres que rellene completamente */
+    object-fit: contain; 
 }
 
 /* RESPONSIVE */
@@ -58,13 +58,13 @@
 
 nav {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;    
     font-weight: 500;
-
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
     text-align: center;
+    font-family: Arial; 
 }
 
 .navbar>.container-fluid {
@@ -81,10 +81,6 @@ nav {
         grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
         justify-items: center;
     }
-
-
-
-
 }
 
 
@@ -120,6 +116,7 @@ nav {
         transform: rotateX(0deg);
     }
 }
+
 /* TEXTO BLANCO EN EL NAVBAR */
 #navbar_top .nav-link,
 #navbar_top .navbar-brand,
@@ -148,6 +145,7 @@ nav {
 #navbar_top {
     border-top: 3px solid #8ED8F8; 
 }
+
 /* QUITAR FONDO GRIS DEL NAVBAR (ACTIVE / HOVER / FOCUS) */
 #navbar_top .nav-link,
 #navbar_top .nav-link:hover,
@@ -167,3 +165,4 @@ nav {
     background-color: transparent !important;
     color: white !important;
 }
+

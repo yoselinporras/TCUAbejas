@@ -1,70 +1,30 @@
-.header-full {
-    width: 100%;
-    padding: 0 40px;
-}
- 
-.header {
-    background-color: #8ed8f8;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: auto;
-    margin: 30px auto;
+/* ===============================
+   CONTENEDOR
+   =============================== */
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    justify-content: center; /* centra horizontal */
-    align-items: center;     /* centra vertical */
-}
-
-/* TEXTO CENTRADO */
-.header h1 {
-    text-align: center;
-    margin: 0;
-    flex: 1;
-    color: white;
-}
-
-/* IMAGEN AL LADO */
-.abeja-header {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
-}
-
-
-/* =========================
-   CONTENEDOR GENERAL
-========================= */
 .contenedor {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin-bottom: 40px;
-    
 }
 
-/* =========================
-   TARJETAS DE JUEGOS
-========================= */
+
+/* ===============================
+   CARD
+   =============================== */
+
 .card {
     background-color: #ffffff;
     border-radius: 20px;
     padding: 30px;
-    margin: 0 auto;
 
-    max-width: auto;
     width: 100%;
-
     display: flex;
-    flex-direction: row;   /* siempre horizontal */
-    flex-wrap: nowrap;     /* nunca se apilan */
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
@@ -72,9 +32,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   COLUMNAS LATERALES
-========================= */
+
+/* ===============================
+   LADOS
+   =============================== */
+
 .lado {
     flex: 1;
     text-align: center;
@@ -82,16 +44,22 @@
 
 .lado h2 {
     color: #8DC63F;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
-/* =========================
-   IMÁGENES
-========================= */
+
+/* ===============================
+   LINKS E IMÁGENES
+   =============================== */
+
+.link-imagen {
+    display: inline-block;
+}
+
 .img-juego,
 .img-tutorial {
-    max-width: 200px;
+    max-width: 50px;
     width: 100%;
     height: auto;
 
@@ -99,14 +67,8 @@
     border-radius: 15px;
 }
 
-/* CONTENEDOR DEL LINK */
-.link-imagen {
-    display: inline-block;
-}
-
-/* IMAGEN DENTRO DEL LINK */
 .link-imagen img {
-    max-width: 280px;
+    max-width: 200px;
     width: 100%;
     height: auto;
 
@@ -117,32 +79,41 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* HOVER */
 .link-imagen img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 
+/* ===============================
+   ANIMACIÓN ABEJA
+   =============================== */
 
-/* =========================
-   RESPONSIVE 
-========================= */
+.animationBee {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bee-path {
+    width: 100%;
+    max-width: 300px;
+}
+
+.draw-path {
+    fill: none;
+    stroke: #FDB912;
+    stroke-width: 3;
+    stroke-dasharray: 6 6;
+}
+
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
 @media (max-width: 768px) {
-
-    .header {
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .header h1 {
-        font-size: 1.1rem;
-    }
-
-    .abeja-header {
-        max-width: 120px;
-    }
-
     .card {
         padding: 15px;
         gap: 15px;
@@ -150,23 +121,11 @@
 
     .lado h2 {
         font-size: 0.9rem;
+        margin-bottom: 6px;
     }
 
     .img-juego,
     .img-tutorial {
         max-width: 100px;
     }
-}
-.card {
-    padding: 10px 23px;
-    gap: 15px;
-}
-
-.lado h2 {
-    margin-bottom: 6px;
-}
-
-.img-juego,
-.img-tutorial {
-    max-width: 100px;
 }

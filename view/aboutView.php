@@ -1,5 +1,7 @@
 <?php
     include_once 'public/header.php';
+    $bannerTitle = "Responsables del proyecto";
+    include 'view/bannerView.php';
 
     $creadores = [
         "creadores"=>[
@@ -61,12 +63,23 @@
                 "info" => "Encargada de la nueva imagen de la página web",
                 "foto" => "./public/img/fotosIntegrantes/Silvia.jpeg"
             ],
+            [
+                "nombre" => "Angie",
+                "rol" => "Estudiante de Diseño Gráfico",
+                "info" => "Encargada de la nueva imagen de la página web",
+                "foto" => "./public/img/fotosIntegrantes/Yoselin.jpeg"
+            ],
+            [
+                "nombre" => "Keyri",
+                "rol" => "Estudiante de Agronomía",
+                "info" => "Encargada de la nueva imagen de la página web",
+                "foto" => "./public/img/fotosIntegrantes/Silvia.jpeg"
+            ],
         ],
     ];
 ?>
 
 <section class="responsables">
-    <h2 class="titulo-seccion">Responsables del proyecto</h2>
 
     <div class="bloque-anio">
         <h3 class="anio">Creadores del proyecto</h3>
