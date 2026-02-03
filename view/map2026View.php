@@ -2,154 +2,41 @@
 include_once 'public/header.php';
 ?>
 
+<!-- Modal colmenas -->
+<div class="modal fade" id="modalColmena" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content modal-colmena">
 
+      <div class="modal-header border-0">
+        <h3 id="tituloColmena" class="modal-title w-100 text-center"></h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
 
-<div class="modal fade" id="mymodal" tabindex="-1" aria-labelledly="Informacion" aria-hidden=true>
-    <div class="modal-dialog">
-        <div class="modal-content">
+      <div class="modal-body text-center">
 
-            <div class="modal-body">
+        <!-- Carrusel -->
+        <div id="carouselColmena" class="carousel slide carousel-fade">
+          <div class="carousel-inner" id="carouselContenido"></div>
 
-                <div class="container">
+          <button class="carousel-control-prev" type="button"
+            data-bs-target="#carouselColmena" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
 
-                    <div class="row" style="margin-bottom:1%; ">
-
-                        <div class="col-sm-10"></div>
-
-                        <div class="col-sm-2" style="text-align: end;">
-                            <button type="button" id="close-tutorial"  data-bs-dismiss="modal" aria-label="Close" > <i class="fas fa-times-circle"></i></button>
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-
-                        <div class="col-sm-6">
-                            <h2 id="nombrecientifico" class="col-sm-12"></h2>
-                            <h3 id="nombrecomun" class="col-sm-12"> Nombre común</h3>
-                            <br class="col-sm-12">
-                            <br class="col-sm-12">
-                            <h3  class="col-sm-12"> Morfología</h3>
-
-                            <p id="morfologia" class="col-sm-12">Lorem Ipsum is simply dummy text of the printing 
-                                and typesetting industry. Lorem Ipsum has been the 
-                                industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled 
-                                it to make a type specimen book. It has survived not only five 
-                                centuries, but also the leap into electronic typesetting, remaining 
-                                essentially unchanged.</p>
-
-                            <h3  class="col-sm-12"> Comportamiento</h3>
-                            <p id="comportamiento" class="col-sm-12">Aqui va el texto dinamico</p>
-
-                            <h3  class="col-sm-12"> Característica de la colmena</h3>
-                            <p id="caracteristica" class="col-sm-12">Lorem Ipsum is simply dummy text of the printing 
-                                and typesetting industry. Lorem Ipsum has been the 
-                                industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled 
-                                it to make a type specimen book. It has survived not only five 
-                                centuries, but also the leap into electronic typesetting, remaining 
-                                essentially unchanged.</p>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="col-sm-12">
-                                <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-                                    <div id="contenidocarousel" class="carousel-inner">
-
-                                    </div>
-
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                        <span  aria-hidden="true"><i class="fas fa-arrow-left fa-2x"></i></span>
-                                        <span class="visually-hidden">Anterior</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                        <span  aria-hidden="true"><i class="fas fa-arrow-right fa-2x" style="color: white"></i></span>
-                                        <span class="visually-hidden">Siguiente</span>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12">
-                                <h3  class="col-sm-12" style="padding-top: 16px; text-align: center;"> Ubicación geográfica:</h3>
-                                <img id="img-ubicacion" alt="Ubicación geografica" style="width: 100%;">
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-sm-12">
-                            <h3 id="referencias"  class="col-sm-12" style="padding-top: 16px; text-align: center;"> Referencias: </h3>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-
+          <button class="carousel-control-next" type="button"
+            data-bs-target="#carouselColmena" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
+
+        <!-- Botón info -->
+        <button id="btnInfoEspecie" class="btn btn-warning">
+          Ver información de la especie
+        </button>
+
+      </div>
     </div>
-</div>
-
-
-
-<div class="modal fade" id="mymodalColmena" tabindex="-1" aria-labelledly="Informacion" aria-hidden=true>
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div class="modal-body">
-
-                <div class="container">
-
-                    <div class="row" style="margin-bottom:1%; ">
-                        <div class="col-sm-10"></div>
-
-                        <div class="col-sm-2" style="text-align: end;">
-                            <button type="button" id="close-tutorial"  data-bs-dismiss="modal" aria-label="Close" > <i class="fas fa-times-circle"></i></button>
-                        </div>
-
-                    </div>
-
-
-                    <div class="row" style="display: flex;
-                         align-items: center;
-                         justify-content: center;
-                         align-content: center;">
-                        <div class="col-sm-8">
-                            <div class="col-sm-12">
-                                <h3  class="col-sm-12" id="colmenatitulo" style="text-align:center"> Colmena</h3>
-
-
-                                <div id="carouselColmena" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-                                    <div id="contenidocarouselColmena" class="carousel-inner" style="height: 100%;">
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselColmena" data-bs-slide="prev">
-                                        <span  aria-hidden="true"><i class="fas fa-arrow-left fa-2x"></i></span>
-                                        <span class="visually-hidden">Anterior</span>
-                                    </button>
-
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselColmena" data-bs-slide="next">
-                                        <span  aria-hidden="true"><i class="fas fa-arrow-right fa-2x" style="color: white"></i></span>
-                                        <span class="visually-hidden">Siguiente</span>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 
 
@@ -176,7 +63,7 @@ include_once 'public/header.php';
             <!-- Lista de especies -->
             <ul class="species-list">
 
-            <li class="species-item filtro-especie" id="todas" >
+            <li class="species-item filtro-especie" id="todas2026" >
                     <i class="far fa-times-circle"></i>
                     <span class="species-name">Todas</span>
             </li>
@@ -215,46 +102,31 @@ include_once 'public/header.php';
                     <i class="fas fa-square"></i>
                     <span class="species-name">Euglossa</span>
                 </li>
-                    <!-- BOTÓN REFERENCIAS -->
-                <li class="species-item referencias-toggle">
-                    <i class="far fa-bookmark"></i>
-                    <span class="species-name">Referencias</span>
-                </li>
+              
 
             </ul>
 
-            <!-- PANEL DE REFERENCIAS -->
-            <div class="referencias-panel">
-                <h4>Referencias</h4>
-
-                <ol class="referencias-list">
-                    <li>
-                    Anguebes, F. et al. (2018).
-                    <a href="http://www.scielo.org.mx/pdf/ecm/v52/0185-2574-ecm-52-227.pdf" target="_blank">Ver</a>
-                    </li>
-
-                    <li>
-                    Barquero, L; Stamatti, G. (2014).
-                    <a href="http://proyungas.org.ar/wp-content/uploads/2014/12/criaymanejodeabejassinaguijon.pdf" target="_blank">Ver</a>
-                    </li>
-                </ol>
-            </div>
+        
   </div>
 
                                                 
 </div>
-    <?php
 
+ 
+
+    <?php
+    include_once 'view/modalInfo.php';
     include_once 'public/footer.php';
     ?>
 <script>
 
     $(document).ready(function () {
-        activebuttons();
-        initmarkers();
-        popups();
         iniModalSidebar();
-        alertsColmenas();
+        activebuttons();
+        initmarkers2026();
+        popups();
+        
+        alertsColmenas2026();
         $('#mymodalTutorial').modal('toggle');
         responsiveModals();
     });
@@ -298,13 +170,7 @@ include_once 'public/header.php';
         console.log(e.latlng.lat + "," + e.latlng.lng);
     });
 
-    // var sidebar = L.control.sidebar({
-    //     autopan: false, // whether to maintain the centered map point when opening the sidebar
-    //     closeButton: true, // whether t add a close button to the panes
-    //     container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
-    //     position: 'right' // left or right
-    // }).addTo(map);
-
+   
     L.control.attribution({
         position: 'bottomleft'
     }).addTo(map);
@@ -333,11 +199,6 @@ toggleBtn.addEventListener('click', () => {
   speciesSidebar.classList.toggle('collapsed');
 });
 
-document.querySelector('.referencias-toggle')
-  .addEventListener('click', () => {
-    document.querySelector('.referencias-panel')
-      .classList.toggle('show');
-  });
 
 
 </script>
