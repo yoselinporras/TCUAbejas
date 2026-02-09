@@ -1,5 +1,6 @@
 <?php
     include_once 'public/header.php';
+    include_once 'view/modalInfo.php';
     $bannerTitle = "Abejas nativas sin aguijón";
     include 'view/bannerView.php';
 ?>
@@ -74,37 +75,37 @@
 
             <div class="grid-colmenas">
 
-                <div class="colmena-card">
+                <div class="colmena-card" data-especie="modalespecie3">
                     <img src="./public/img/infoGeneral/enredaPelo.png" alt="Enreda Pelo">
                     <p>Enreda Pelo</p>
                 </div>
 
-                <div class="colmena-card">
+                <div class="colmena-card" data-especie="modalespecie4">
                     <img src="./public/img/infoGeneral/tetragona.png" alt="Mariolon">
                     <p>Mariolon</p>
                 </div>
 
-                <div class="colmena-card">
+                <div class="colmena-card" data-especie="modalespecie5">
                     <img src="./public/img/infoGeneral/Tetragonisca.png" alt="Mariola">
                     <p>Mariola</p>
                 </div>
 
-                <div class="colmena-card">
+                <div class="colmena-card" data-especie="modalespecie6">
                     <img src="./public/img/infoGeneral/chicopipe.png" alt="Chicopipe">
                     <p>Chicopipe</p>
                 </div>
 
-                <div class="colmena-card">
+                <div class="colmena-card" data-especie="modalespecie7">
                     <img src="./public/img/infoGeneral/soncuano.png" alt="Soncuano">
                     <p>Soncuano</p>
                 </div>
 
-                <div class="colmena-card">
+                <div class="colmena-card" data-especie="modalespecie8">
                     <img src="./public/img/infoGeneral/Euglossa.png" alt="Abejas de las orquídeas">
                     <p>Abejas de las orquídeas</p>
                 </div>
 
-                <div class="colmena-card colmena-card--center">
+                <div class="colmena-card colmena-card--center" data-especie="modalespecie1">
                     <img src="img/solitarias.png" alt="Abejas solitarias">
                     <p>Abejas solitarias<br>no identificadas</p>
                 </div>

@@ -15,7 +15,7 @@ function agregarBotonMapaANavbar() {
       "</li>" +
       "</div>",
   );
-
+ 
   $("#pagina-inicio").removeClass("col-sm-4");
   $("#pagina-inicio").addClass("col-sm-3");
   $("#juegos").removeClass("col-sm-4");

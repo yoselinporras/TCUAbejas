@@ -15,7 +15,7 @@ const infoEspecies = {
       "public/img/abejassolitarias/abejassolitarias1.jpg",
       "public/img/abejassolitarias/abejassolitarias2.jpg"
     ]
-  },
+  }, 
 
   modalespecie3: {
     nombreCientifico: "Partamonas orizabaensis",
@@ -204,4 +204,15 @@ function referenciasDinamicas(listaReferencias) {
     })
     .join("<br><br>");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!document.getElementById("mymodals")) return;
+
+  document.querySelectorAll(".colmena-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const especie = card.dataset.especie;
+      abrirModalEspecie(especie);
+    });
+  });
+});
 
