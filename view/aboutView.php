@@ -8,20 +8,20 @@
             [
                 "nombre" => "Dennis Barquero",
                 "rol" => "Responsable del proyecto",
-                "info" => "Responsable del proyecto ED-3514, Establecimiento de meliponarios en la finca experimental interdisciplinaria de modelos agricológicos en la Sede del Atlántico.",
+                "info" => "Responsable del proyecto ED-3514, Establecimiento de meliponarios en la finca experimental interdisciplinaria de modelos agroecológicos en la Sede del Atlántico.",
                 "foto" => "./public/img/fotosIntegrantes/Dennis.jpg"
             ],
             [
                 "nombre" => "Gerardo Pérez",
-                "rol" => "Responsable del proyecto",
-                "info" => "Responsable del proyecto ED-3514, Establecimiento de meliponarios en la finca experimental interdisciplinaria de modelos agricológicos en la Sede del Atlántico.",
+                "rol" => "Docente",
+                "info" => "Responsable Proyecto TC 627 Gestión Ambiental: Herramientas para el desarrollo de una cultura ambiental.",
                 "foto" => "./public/img/fotosIntegrantes/GPerez.jpg"
             ],
             [
                 "nombre" => "Jorge Salmeron",
-                "rol" => "Responsable del proyecto",
-                "info" => "Responsable del proyecto ED-3514, Establecimiento de meliponarios en la finca experimental interdisciplinaria de modelos agricológicos en la Sede del Atlántico.",
-                "foto" => "./public/img/fotosIntegrantes/Jorge.jpg"
+                "rol" => "Docente",
+                "info" => "Responsable Proyecto TC 627 Gestión Ambiental: Herramientas para el desarrollo de una cultura ambiental.",
+                "foto" => "./public/img/fotosIntegrantes/Jorge.jpeg"
             ],
         ],
         "2022" => [
