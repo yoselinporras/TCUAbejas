@@ -950,40 +950,7 @@ function showMarkers(map) {
       }
     }
 
-    // especie1[1].addTo(map);
-    // if (map.hasLayer(especie2[1])) {
-    //     map.removeLayer(especie2[1]);
-    // }
-
-    // if (map.hasLayer(especie3[1])) {
-    //     map.removeLayer(especie3[1]);
-    // }
-
-    // if (map.hasLayer(especie4[1])) {
-    //     map.removeLayer(especie4[1]);
-    // }
-
-    // if (map.hasLayer(especie8[1])) {
-    //     map.removeLayer(especie8[1]);
-    // }
-
-    // for (var i = 1; i <= 24; i++) {
-    //     if (map.hasLayer(especie5[i])) {
-    //         map.removeLayer(especie5[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie6[i])) {
-    //         map.removeLayer(especie6[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie7[i])) {
-    //         map.removeLayer(especie7[i]);
-    //     }
-    // }
+    
   });
 
   $("#especie2").on("click", function (e) {
@@ -995,41 +962,6 @@ function showMarkers(map) {
       }
     }
 
-    // especie2[1].addTo(map);
-
-    // if (map.hasLayer(especie1[1])) {
-    //     map.removeLayer(especie1[1]);
-    // }
-
-    // if (map.hasLayer(especie3[1])) {
-    //     map.removeLayer(especie3[1]);
-    // }
-
-    // if (map.hasLayer(especie4[1])) {
-    //     map.removeLayer(especie4[1]);
-    // }
-
-    // if (map.hasLayer(especie8[1])) {
-    //     map.removeLayer(especie8[1]);
-    // }
-
-    // for (var i = 1; i <= 24; i++) {
-    //     if (map.hasLayer(especie5[i])) {
-    //         map.removeLayer(especie5[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie6[i])) {
-    //         map.removeLayer(especie6[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie7[i])) {
-    //         map.removeLayer(especie7[i]);
-    //     }
-    // }
   });
 
   $("#especie3").on("click", function (e) {
@@ -1041,41 +973,7 @@ function showMarkers(map) {
       }
     }
 
-    // especie3[1].addTo(map);
-
-    // if (map.hasLayer(especie1[1])) {
-    //     map.removeLayer(especie1[1]);
-    // }
-
-    // if (map.hasLayer(especie2[1])) {
-    //     map.removeLayer(especie2[1]);
-    // }
-
-    // if (map.hasLayer(especie4[1])) {
-    //     map.removeLayer(especie4[1]);
-    // }
-
-    // if (map.hasLayer(especie8[1])) {
-    //     map.removeLayer(especie8[1]);
-    // }
-
-    // for (var i = 1; i <= 24; i++) {
-    //     if (map.hasLayer(especie5[i])) {
-    //         map.removeLayer(especie5[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie6[i])) {
-    //         map.removeLayer(especie6[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie7[i])) {
-    //         map.removeLayer(especie7[i]);
-    //     }
-    // }
+  
   });
 
   $("#especie4").on("click", function (e) {
@@ -1086,41 +984,7 @@ function showMarkers(map) {
         especie4[i].addTo(map);
       }
     }
-    // especie4[1].addTo(map);
-
-    // if (map.hasLayer(especie1[1])) {
-    //     map.removeLayer(especie1[1]);
-    // }
-
-    // if (map.hasLayer(especie2[1])) {
-    //     map.removeLayer(especie2[1]);
-    // }
-
-    // if (map.hasLayer(especie3[1])) {
-    //     map.removeLayer(especie3[1]);
-    // }
-
-    // if (map.hasLayer(especie8[1])) {
-    //     map.removeLayer(especie8[1]);
-    // }
-
-    // for (var i = 1; i <= 23; i++) {
-    //     if (map.hasLayer(especie5[i])) {
-    //         map.removeLayer(especie5[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie6[i])) {
-    //         map.removeLayer(especie6[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie7[i])) {
-    //         map.removeLayer(especie7[i]);
-    //     }
-    // }
+    
   });
 
   $("#especie5").on("click", function (e) {
@@ -1132,41 +996,7 @@ function showMarkers(map) {
       }
     }
 
-    // if (map.hasLayer(especie4[1])) {
-    //     map.removeLayer(especie4[1]);
-    // }
-
-    // if (map.hasLayer(especie1[1])) {
-    //     map.removeLayer(especie1[1]);
-    // }
-
-    // if (map.hasLayer(especie2[1])) {
-    //     map.removeLayer(especie2[1]);
-    // }
-
-    // if (map.hasLayer(especie3[1])) {
-    //     map.removeLayer(especie3[1]);
-    // }
-
-    // if (map.hasLayer(especie8[1])) {
-    //     map.removeLayer(especie8[1]);
-    // }
-
-    // for (var i = 1; i <= 23; i++) {
-    //     especie5[i].addTo(map);
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie6[i])) {
-    //         map.removeLayer(especie6[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie7[i])) {
-    //         map.removeLayer(especie7[i]);
-    //     }
-    // }
+   
   });
 
   $("#especie6").on("click", function (e) {
@@ -1178,41 +1008,7 @@ function showMarkers(map) {
       }
     }
 
-    // if (map.hasLayer(especie4[1])) {
-    //     map.removeLayer(especie4[1]);
-    // }
-
-    // if (map.hasLayer(especie1[1])) {
-    //     map.removeLayer(especie1[1]);
-    // }
-
-    // if (map.hasLayer(especie2[1])) {
-    //     map.removeLayer(especie2[1]);
-    // }
-
-    // if (map.hasLayer(especie3[1])) {
-    //     map.removeLayer(especie3[1]);
-    // }
-
-    // if (map.hasLayer(especie8[1])) {
-    //     map.removeLayer(especie8[1]);
-    // }
-
-    // for (var i = 1; i <= 24; i++) {
-    //     if (map.hasLayer(especie5[i])) {
-    //         map.removeLayer(especie5[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     especie6[i].addTo(map);
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie7[i])) {
-    //         map.removeLayer(especie7[i]);
-    //     }
-    // }
+   
   });
 
   $("#especie7").on("click", function (e) {
@@ -1224,41 +1020,7 @@ function showMarkers(map) {
       }
     }
 
-    // if (map.hasLayer(especie4[1])) {
-    //     map.removeLayer(especie4[1]);
-    // }
-
-    // if (map.hasLayer(especie1[1])) {
-    //     map.removeLayer(especie1[1]);
-    // }
-
-    // if (map.hasLayer(especie2[1])) {
-    //     map.removeLayer(especie2[1]);
-    // }
-
-    // if (map.hasLayer(especie3[1])) {
-    //     map.removeLayer(especie3[1]);
-    // }
-
-    // if (map.hasLayer(especie8[1])) {
-    //     map.removeLayer(especie8[1]);
-    // }
-
-    // for (var i = 1; i <= 24; i++) {
-    //     if (map.hasLayer(especie5[i])) {
-    //         map.removeLayer(especie5[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie6[i])) {
-    //         map.removeLayer(especie6[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     especie7[i].addTo(map);
-    // }
+   
   });
 
   $("#especie8").on("click", function (e) {
@@ -1270,76 +1032,23 @@ function showMarkers(map) {
       }
     }
 
-    // if (map.hasLayer(especie4[1])) {
-    //     map.removeLayer(especie4[1]);
-    // }
-
-    // if (map.hasLayer(especie1[1])) {
-    //     map.removeLayer(especie1[1]);
-    // }
-
-    // if (map.hasLayer(especie2[1])) {
-    //     map.removeLayer(especie2[1]);
-    // }
-
-    // if (map.hasLayer(especie3[1])) {
-    //     map.removeLayer(especie3[1]);
-    // }
-
-    // especie8[1].addTo(map);
-
-    // for (var i = 1; i <= 23; i++) {
-    //     if (map.hasLayer(especie5[i])) {
-    //         map.removeLayer(especie5[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie6[i])) {
-    //         map.removeLayer(especie6[i]);
-    //     }
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     if (map.hasLayer(especie7[i])) {
-    //         map.removeLayer(especie7[i]);
-    //     }
-    // }
+    
   });
 
   $("#todas2026").on("click", function (e) {
     quitarTodosLosMarcadores();
 
     initmarkers2026();
+    alertsColmenas2026();
 
-    // for (var i = 1; i <= 24; i++) {
-    //     especie5[i].addTo(map);
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     especie6[i].addTo(map);
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     especie7[i].addTo(map);
-    // }
   });
   $("#todas2022").on("click", function (e) {
     quitarTodosLosMarcadores();
 
     initmarkers2022();
+    alertsColmenas();
 
-    // for (var i = 1; i <= 24; i++) {
-    //     especie5[i].addTo(map);
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     especie6[i].addTo(map);
-    // }
-
-    // for (var i = 1; i <= 5; i++) {
-    //     especie7[i].addTo(map);
-    // }
+   
   });
 }
 
