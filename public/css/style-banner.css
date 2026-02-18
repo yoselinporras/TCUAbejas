@@ -114,10 +114,38 @@
 
 @media (max-width: 480px) {
     .main-banner__title {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .main-banner__subtitle {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    .main-banner-wrapper{
+        padding: 0 15px;
+    }
+
+    .main-banner__image img {
+        max-width: 100px;
+    }
+
+    .main-banner__content:has(.main-banner__image) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+    }
+
+    .main-banner__content:has(.main-banner__image) .main-banner__text {
+        max-width: 65%;
+    }
+
+    .main-banner__content:has(.main-banner__image) .main-banner__image img {
+        max-width: 90px;
+    }
+
+    .main-banner-wrapper {
+        margin: 10px auto 5px auto; 
     }
 }

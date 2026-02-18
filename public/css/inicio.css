@@ -90,5 +90,12 @@
        
 
     }
-    
+}
+
+@media (max-width: 480px) {
+    .container-inicio  {
+        padding: 0 15px; 
+    }
+
+   
 }

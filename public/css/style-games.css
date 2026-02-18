@@ -116,7 +116,7 @@
 
 @media (max-width: 768px) {
     .card {
-        padding: 15px;
+        padding:0 15px;
         gap: 15px;
     }
 
@@ -130,3 +130,15 @@
         max-width: 100px;
     }
 }
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 0 15px; 
+    }
+
+    .card{
+        padding: 20px 15px;
+    }
+}
+
+
