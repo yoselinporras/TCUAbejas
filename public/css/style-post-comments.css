@@ -1,5 +1,6 @@
 
 .post-comments {
+    width: 100%;
     padding: 3rem 1rem 4rem;
     background-color: #f2f4f8;
 }
@@ -18,12 +19,12 @@
 .post-comments {
     padding: 3rem 1rem 4rem;
     background-color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .post-comments .historia {
-    max-width: 900px;
-    margin: 0 auto 3.5rem auto;
+    max-width: 1300px;
+    margin: 0 auto 3rem auto;
     margin-bottom: 3rem;
 }
 
@@ -73,7 +74,8 @@
 .post-comments .divider::after {
     content: "";
     display: block;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 3px;
     background-color: #FFD700;
     margin: 0.8rem auto;
@@ -99,7 +101,8 @@
 }
 
 .form-post-comments {
-    max-width: 600px;
+    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
 
     background-color: #ffffff;
@@ -138,7 +141,7 @@
     background-color: #f2b705;
 
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
     border: none;
     padding: 14px;
     font-size: 1rem;
@@ -151,15 +154,34 @@
 .form-post-comments .send-button:hover {
     background-color: #f2b705;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(65, 176, 137, 0.35);
+    box-shadow: 0 8px 20px rgba(176, 150, 65, 0.35);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
+    
     .post-comments {
         padding: 2rem 1rem 3rem;
+        padding-top: 1rem;   
+    }
+
+    .post-comments .historia h2 {
+        margin-top: 0;  
+        font-size: 22px;
+    }
+
+    .post-comments .historia p {
+        font-size: 14px;
+    }
+
+    .post-comments .content-box {
+        padding: 2rem 1rem;
+        border-radius: 16px;
     }
 
     .form-post-comments {
-        padding: 2rem 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.8rem 1rem;
+        border-radius: 16px;
     }
 }

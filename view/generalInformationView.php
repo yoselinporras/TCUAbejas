@@ -11,7 +11,7 @@
         showMazegame();
         showMemorygame();
     });
-</script>
+</script> 
 
 <div class="page page--inicio">
     <div class="inicio__box">
@@ -116,7 +116,6 @@
             <input type="button" id="vermapabutton" value="Ver mapa"
                    onclick="location.href='?controlador=Map2026&accion=mostrar'"/>
         </div>
-    
     </div>
     <div class="col-md-12 referencias">
         <div class="col-12">
@@ -127,7 +126,7 @@
                 Condición y perspectivas de la meliponicultura en comunidades mayas
                 de la reserva de la biósfera Los Petenes, Campeche, México.
                 Estudios de Cultura Maya LII: 227-254 (2018).
-                Disponible en:
+                Disponible 
                 <a href="http://www.scielo.org.mx/pdf/ecm/v52/0185-2574-ecm-52-227.pdf" target="_blank">
                     aquí
                 </a>
@@ -136,8 +135,15 @@
                 Cría y manejo de abejas sin aguijón.
                 Ediciones del Subtrópico.
                 Fundación ProYungas.
-                Disponible en:
+                Disponible 
                 <a href="http://proyungas.org.ar/wp-content/uploads/2014/12/criaymanejodeabejassinaguijon.pdf" target="_blank">
+                    aquí
+                </a>
+                <br>
+                Hanson, P., Fernández Otárola, M., Lobo Segura, J., Frankie, G., Coville, R., Aguilar Monge, I., Acuña Cordero, M., & Herrera González, E. (2021). Abejas de Costa Rica (1.ª ed.). Editorial Universidad de Costa Rica. ISBN 978-9968-46-985-2. 
+                Disponible 
+                <a href="https://editorial.ucr.ac.cr/ciencias-naturales-y-exactas/item/2595-abejas-de-costa-rica.html"
+                target="_blank">
                     aquí
                 </a>
             </p>

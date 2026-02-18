@@ -94,17 +94,20 @@
     border-radius: 2em;
     background-color: #f2b705;
     font-family: 'Arial', sans-serif;
-    font-weight: 800;
-    color: #fff;
-    font-size: 2.2em;
-    padding: 0.3em;
+    font-weight: 700;
+    color: #000000;
+    /* font-size: 2.2em; */
+    padding: 14px 40px;
     border: none;
     
 }
 
 .page--inicio input[type=button]:hover{
-    background-color: #fff;
-    color: #f2b705;
+    /* background-color: #fff;
+    color: #f2b705; */
+    background-color: #f2b705;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(176, 150, 65, 0.35);
 }
 
 .page--inicio .colmenas{
@@ -211,3 +214,19 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 480px){
+
+    .page--inicio{
+        padding: 0 15px;
+    }
+
+    .page--inicio h2{
+        font-size: 22px; 
+    }
+
+    .page--inicio .inicio-banner__titulo{
+        font-size: 26px; 
+    }
+}
+
