@@ -175,7 +175,7 @@ class Level2 extends Phaser.Scene {
                 fontSize: 48,
                 // fontSize: '48px',
                 color: '#fff',
-                backgroundColor: '#69B896',
+                backgroundColor: '#b9d989',
                 padding: {
                     right: 10,
                     left: 10,
@@ -247,7 +247,7 @@ class Level2 extends Phaser.Scene {
         this.add.text(game.config.width * 0.5, game.config.height * 0.5, '¡Perdiste!', {
             fontSize: 48,
             color: '#fff',
-            backgroundColor: '#69B896',
+            backgroundColor: '#b9d989',
             padding: {
                 right: 10,
                 left: 10,

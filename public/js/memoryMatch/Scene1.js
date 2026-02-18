@@ -139,7 +139,7 @@ class Scene1 extends Phaser.Scene {
                 fontSize: 48,
                 // fontSize: '48px',
                 color: '#fff',
-                backgroundColor: '#69B896',
+                backgroundColor: '#b9d989',
                 padding: {
                     right: 10,
                     left: 10,

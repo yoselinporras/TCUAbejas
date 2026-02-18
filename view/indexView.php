@@ -103,7 +103,7 @@
             </div>
 
             <a href="?controlador=Map2026&accion=mostrar" class="link-imagen">
-                <img src="/public/img/partesabeja.png" alt="Partes de abeja" class="link-imagen">
+                <img src="/public/img/mapa2026.png" alt="img mapa" class="link-imagen">
             </a>
     </div>
     <div class= "juegos">
@@ -151,7 +151,7 @@
                 </svg>
             </div>
         <a href="?controlador=Games&accion=mostrar" class="link-imagen">
-            <img src="/public/img/partesabeja.png" alt="Partes de abeja" class="link-imagen">
+            <img src="/public/img/gamesControl.png" alt="img juegos" class="link-imagen">
         </a>
     </div> 
 </main>
