@@ -110,11 +110,11 @@ const referencias={
     url:" http://proyungas.org.ar/wp-content/uploads/2014/12/criaymanejodeabejassinaguijon.pdf "
   },
   3:{
-    referencia:"Caldero, L; Pinilla, M; Parra, G. (2017). Abejas Solitarias.   Universidad Nacional de Colombia. Bogotá. Colombia. Recuperado de:",
+    referencia:"3. Caldero, L; Pinilla, M; Parra, G. (2017). Abejas Solitarias.   Universidad Nacional de Colombia. Bogotá. Colombia. Recuperado de:",
     url:"https://www.researchgate.net/publication/317605207_Abejas_solitarias "
   },
   4:{
-    referencia:"Parra, G. (2005). Abejas silvestres y polinización. Manejo Integrado de Plagas y Agroecología. Universidad Nacional de Colombia, Bogotá. Colombia. Pp: 7-20. Recuperado de:",
+    referencia:"4. Parra, G. (2005). Abejas silvestres y polinización. Manejo Integrado de Plagas y Agroecología. Universidad Nacional de Colombia, Bogotá. Colombia. Pp: 7-20. Recuperado de:",
     url:"http://orton.catie.ac.cr/repdoc/A1865e/A1865e.pdf "
   },
     5: {
@@ -152,10 +152,7 @@ const referencias={
 
 }
 
-/**
- * Función pública para abrir el modal
- * Recibe: "modalespecie1", "modalespecie2", etc.
- */
+
 
 function abrirModalEspecie(modalKey) {
  
