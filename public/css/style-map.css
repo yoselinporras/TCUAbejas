@@ -262,3 +262,70 @@ html, body {
 .modal-title{
   color: #8DC63F;
 }
+
+
+@media (max-width: 1200px) {
+.modal-body {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+}
+
+ .game-wrapper {
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 95%;
+        max-width: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto 40px auto;
+
+    }
+
+    #game-container canvas {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+        border-radius: 10px;
+    }
+
+    /* Mejora en móvil */
+    @media (max-width: 768px) {
+        .game-wrapper {
+            padding: 10px;
+            border-radius: 15px;
+        }
+    }
+    .memory-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+
+    /* ---- SELECT ---- */
+    .level-selector {
+        margin-bottom: 20px;
+    }
+
+    .level-selector select {
+        padding: 10px 18px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 2px solid #b9d989;
+        background-color: #ffffff;
+        cursor: pointer;
+        outline: none;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .level-selector select:hover {
+        border-color: #8bbf50;
+    }

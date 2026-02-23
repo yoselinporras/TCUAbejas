@@ -2,17 +2,18 @@
 include_once 'public/header.php';
 ?>
 
+
 <!-- Modal colmenas -->
 <div class="modal fade" id="modalColmena" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content modal-colmena">
+    <div class="modal-content modal-colmena pb-2" >
 
       <div class="modal-header border-0">
         <h3 id="tituloColmena" class="modal-title w-100 text-center"></h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
-      <div class="modal-body text-center">
+      <div class="modal-body text-center  ">
 
         <!-- Carrusel -->
         <div id="carouselColmena" class="carousel slide carousel-fade">
@@ -27,12 +28,13 @@ include_once 'public/header.php';
             data-bs-target="#carouselColmena" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
           </button>
-        </div>
 
-        <!-- Botón info -->
-        <button id="btnInfoEspecie" class="btn btn-warning">
+          <button id="btnInfoEspecie" class="btn btn-warning  mt-5">
           Ver información de la especie
         </button>
+        </div>
+
+        
 
       </div>
     </div>

@@ -27,9 +27,18 @@ class Scene1 extends Phaser.Scene {
 
 
     preload() {
+        
 
         this.x = game.config.width / 2;
         this.y = (game.config.height / 2) - (this.maxImageHeight / 2);
+        // Eliminar texturas viejas si existen
+        for (let i = 1; i <= 8; i++) {
+            const key = 'front' + i;
+
+            if (this.textures.exists(key)) {
+                this.textures.remove(key);
+            }
+        }
         this.load.image('cardBack', 'public/img/memoria/Cards/back.png');
 
         this.load.image('front1', 'public/img/memoria/Cards/card1.png');
@@ -47,6 +56,16 @@ class Scene1 extends Phaser.Scene {
 
     }
     create() {
+     
+     this.cards = [];
+    this.shuffleArray = [];
+    this.SelectedCards = [];
+    this.contMatch = 0;
+    this.canMove = true;
+    this.y = (game.config.height / 2) - (this.maxImageHeight / 2);
+
+    
+
         //score Label
         this.Score = "0/6";
         this.ScoreLabel = this.add.bitmapText(10, 5, "carrier_command", "Parejas Ganadas", 14);
@@ -154,18 +173,12 @@ class Scene1 extends Phaser.Scene {
                 callbackScope: this,
                 callback: function () {
 
-                    this.registry.destroy();
-                    this.events.off();
-                    this.contMatch = 0;
-                    this.SelectedCards = [];
-                    this.cards = [];
-                    this.shuffleArray = [];
-                    this.scene.restart();
-                    // this.reinicio();
+                   
+                     this.scene.restart();
 
                 },
             });
-            //this.restart(this.scene);
+            
         }
     }
 
@@ -173,7 +186,7 @@ class Scene1 extends Phaser.Scene {
         this.registry.destroy();
         this.events.off();
         this.start("Scene1");
-        //  dialoGameOver(this, game.config.width * 0.5, game.config.height * 0.5);
+       
 
     }
     update() {
@@ -202,8 +215,7 @@ class Scene1 extends Phaser.Scene {
 } //fin clase 
 var createLabel = function (scene, text) {
     return scene.rexUI.add.label({
-        // width: 40,
-        // height: 40,
+        
 
         background: scene.rexUI.add.roundRectangle(0, 0, 0, 0, 20, 0x5e92f3),
 
@@ -269,14 +281,14 @@ var dialoGameOver = function (scene, p_x, p_y) {
         }
     })
         .layout()
-        //.drawBounds(this.add.graphics(), 0xff0000)
+       
         .popUp(1000);
 
     scene.print = scene.add.text(0, 0, '');
     dialog
         .on('button.click', function (button, groupName, index) {
             if (button.text == 'Si') {
-                // alert(isGameOver);
+               
                 this.isGameOver = false;
                 scene.registry.destroy(); // destroy registry
                 scene.events.off();

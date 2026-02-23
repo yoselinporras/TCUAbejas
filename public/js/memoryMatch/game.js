@@ -1,4 +1,3 @@
-//import Scene1 from './Scene1.js';
 const config = {
     type: Phaser.AUTO,
     width: 800,
@@ -11,10 +10,30 @@ const config = {
             debug: false
         }
     },
-    //zoom: 1, // Since we're working with 16x16 pixel tiles, let's scale up the canvas by 3x
-    pixelArt: false, // Force the game to scale images up crisply
+    pixelArt: false,
     parent: "game-container",
-    scene: [Scene1]
+    scene: [Scene1, Level2, level3]
 };
 
 const game = new Phaser.Game(config);
+
+//  Iniciar nivel por defecto
+game.scene.start("Scene1");
+
+//  Control del select
+const selector = document.getElementById("levelSelect");
+
+selector.addEventListener("change", function () {
+
+    const selectedLevel = this.value;
+
+    if (game.scene.isActive(selectedLevel)) return;
+
+    // detener todas las escenas activas
+    game.scene.getScenes(true).forEach(scene => {
+        scene.scene.stop();
+    });
+
+    game.scene.start(selectedLevel);
+
+});
