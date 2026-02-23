@@ -1,13 +1,21 @@
 <?php
 include_once 'public/header.php';
+
+$nivel = isset($nivel) ? $nivel : 1;
+$ruta = isset($ruta) ? $ruta : "public/img/puzzles/puzzle1";
+$totalPiezas = isset($totalPiezas) ? $totalPiezas : 9;
+
+$dimension = sqrt($totalPiezas);
 ?>
 
 <script>
     $(document).ready(function () {
         agregarBotonMapaANavbar();
     });
-</script>
 
+    const TOTAL_PIEZAS = <?php echo $totalPiezas; ?>;
+    const NIVEL_ACTUAL = "<?php echo $nivel; ?>";
+</script>
 
 <div id="entorno">
     <div class="container">   
@@ -15,59 +23,72 @@ include_once 'public/header.php';
 
             <div id="campo-fondo" class="col-sm-12"> 
                 <div class="row" style="padding: 16px;">
-                    <div  class="col-sm-12">
-                        <h3>Rompecabezas</h3>
+                    
+                    <div class="col-sm-12">
+                        <h3>Rompecabezas - Nivel <?php echo $nivel; ?></h3>
                     </div>
+
+                    <div id="cronometro">
+                        Tiempo: <span id="tiempo">00:00</span>
+                    </div>
+
+                    <!-- MATRIZ -->
                     <div id="img-fondo" class="col-sm-6">
-                        <center style="padding-top: 16px; padding-bottom: 16px;">
+                        <center style="padding: 16px;">
                             <table id="matriz">
-                                <tr>
-                                    <td id="pieza0"><img class="pieza" id="img_0" src="" onclick="" /></td>
-                                    <td id="pieza1"><img  class="pieza" id="img_1" src="" onclick="" /></td>
-                                    <td id="pieza2"><img class="pieza" id="img_2" src="" onclick="" /></td>
-                                </tr>
-                                <tr>
-                                    <td id="pieza3"><img class="pieza" id="img_3" src="" onclick="" /></td>
-                                    <td id="pieza4"><img class="pieza" id="img_4" src="" onclick="" /></td>
-                                    <td id="pieza5"><img class="pieza" id="img_5" src="" onclick="" /></td>
-                                </tr>
-                                <tr>
-                                    <td id="pieza6"><img class="pieza" id="img_6" src="" onclick="" /></td>
-                                    <td id="pieza7"><img class="pieza" id="img_7" src="" onclick="" /></td>
-                                    <td id="pieza8"><img class="pieza" id="img_8" src="" onclick="" /></td>
-                                </tr>
+                                <?php 
+                                $contador = 0;
+                                for ($fila = 0; $fila < $dimension; $fila++): ?>
+                                    <tr>
+                                        <?php for ($col = 0; $col < $dimension; $col++): ?>
+                                            <td id="pieza<?php echo $contador; ?>">
+                                                <img 
+                                                    class="pieza" 
+                                                    id="img_<?php echo $contador; ?>" 
+                                                    src=""
+                                                />
+                                            </td>
+                                        <?php 
+                                            $contador++;
+                                        endfor; ?>
+                                    </tr>
+                                <?php endfor; ?>
                             </table>
                         </center>
                     </div>
 
+                    <!-- PIEZAS -->
                     <div class="col-sm-6 campo-piezas"> 
-                        <image src="public/img/puzzles/puzzle1/0.png" id="0" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/1.png" id="1" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/2.png" id="2" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/3.png" id="3" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/4.png" id="4" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/5.png" id="5" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/6.png" id="6" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/7.png" id="7" class="movil" >
-                        <image src="public/img/puzzles/puzzle1/8.png" id="8" class="movil" >
+                        <?php for ($i = 0; $i < $totalPiezas; $i++): ?>
+                            <img 
+                                src="public/img/puzzles/puzzle<?php echo $nivel; ?>/<?php echo $i; ?>.png"
+                                id="<?php echo $i; ?>" 
+                                class="movil"
+                            >
+                        <?php endfor; ?>
                     </div>
 
-                    <div  class="col-sm-6" style="margin: 0 auto 0 auto;">
+                    <!-- CONTROLES -->
+                    <div class="col-sm-6" style="margin: 0 auto;">
                         <div class="row">
-                            <div  class="col-sm-6" style="margin: 16px 0 16px 0;">
-                                <select id="puzzles" class="form-select" aria-label="Default select example">
-                                    <option selected value="puzzle1">Puzzle 1</option>
-                                    <option value="puzzle2">Puzzle 2</option>
+
+                            <div class="col-sm-6" style="margin: 16px 0;">
+                                <select id="puzzles" class="form-select">
+                                    <option value="1" <?php echo ($nivel == 1) ? 'selected' : ''; ?>>Puzzle 1</option>
+                                    <option value="2" <?php echo ($nivel == 2) ? 'selected' : ''; ?>>Puzzle 2</option>
+                                    <option value="3" <?php echo ($nivel == 3) ? 'selected' : ''; ?>>Puzzle 3</option>
                                 </select>
                             </div>
 
-                            <div class="col-sm-6" style=" display: flex; flex-direction: column;
-                                 justify-content: center;
-                                 align-items: center;">
-                                <button type="button" id="reiniciar"  class="btn btn-list btn-colmena btn-sm">Reiniciar</button>
+                            <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                                <button type="button" id="reiniciar" class="btn btn-list btn-colmena btn-sm">
+                                    Reiniciar
+                                </button>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
             </div> 
         </div>               
@@ -76,10 +97,14 @@ include_once 'public/header.php';
 
 <audio id="win" src="public/mp3/sfx-victory4.mp3"></audio>
 
-<script type="text/javascript" src="public/js/puzzle.js"></script>
+<script src="public/js/puzzle.js"></script>
 
-</body>
-
+<script>
+document.getElementById("puzzles").addEventListener("change", function() {
+    let nivel = this.value;
+    window.location.href = "?controlador=Puzzle&accion=mostrar&nivel=" + nivel;
+});
+</script>
 
 <?php
 include_once 'public/footer.php';
