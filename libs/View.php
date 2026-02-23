@@ -15,12 +15,14 @@ class View {
              return FALSE;
          }
          
-         if(is_array($vars)){
-             foreach ($vars as $key=>$value){
-                 $key=$value;
-             } //  foreach
-         } // if(is_array($vars))
-         
+        //  if(is_array($vars)){
+        //      foreach ($vars as $key=>$value){
+        //          $key=$value;
+        //      } //  foreach
+        //  } // if(is_array($vars))
+        if(is_array($vars)){
+            extract($vars);
+        }
          
          
          include $path;

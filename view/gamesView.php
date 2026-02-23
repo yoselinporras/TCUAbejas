@@ -9,7 +9,7 @@
     <div class="card">
         <div class="lado">
             <h2>Rompecabezas</h2>
-            <a href="?controlador=Puzzle&accion=mostrar" class="link-imagen">
+            <a href="?controlador=Puzzle&accion=mostrar&nivel=1" class="link-imagen">
                 <img src="./public/img/games/rompecabezas.png" class="img-juego">
             </a>
         </div>
