@@ -29,6 +29,14 @@ class Level2 extends Phaser.Scene {
     countdown;
 
     preload() {
+        // Eliminar texturas viejas si existen
+        for (let i = 1; i <= 8; i++) {
+            const key = 'front' + i;
+
+            if (this.textures.exists(key)) {
+                this.textures.remove(key);
+            }
+        }
 
         this.x = game.config.width / 2;
         this.y = ((game.config.height / 2) - (this.maxImageHeight / 2)) - 40;
@@ -49,6 +57,23 @@ class Level2 extends Phaser.Scene {
 
     }
     create() {
+       
+
+    if (this.input) {
+        this.input.removeAllListeners();
+    }
+
+    if (this.time) {
+        this.time.removeAllEvents();
+    }
+     this.cards = [];
+    this.shuffleArray = [];
+    this.SelectedCards = [];
+    this.contMatch = 0;
+    this.canMove = true;
+    const topMargin = 180; // espacio seguro debajo del contador
+this.y = topMargin;
+
 
         const timerLabel = this.add.text(game.config.width * 0.5, 50, '45', { fontSize: 48 }).setOrigin(0.5);
         this.countdown = new CountDown(this, timerLabel);
@@ -190,14 +215,7 @@ class Level2 extends Phaser.Scene {
                 callbackScope: this,
                 callback: function () {
 
-                    // this.add.text(game.config.width * 0.5,( game.config.height * 0.3)/2, '¡Ganaste!', {
-                    //         fontSize: '48px',
-                    //         color:'#fff',
-                    //         backgroundColor:'#093975',
-                    //         padding:{right: 10 ,left: 10, top: 10, bottom: 10 }
-
-                    //     })
-                    //     .setOrigin(0.5,0.5);
+                   
                     this.registry.destroy();
                     this.events.off();
                     this.contMatch = 0;
