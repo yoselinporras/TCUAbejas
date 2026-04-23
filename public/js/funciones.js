@@ -418,7 +418,19 @@ function iniModalSidebar() {
 
 function initmarkers2026() {
   //    Abejas solitarias inicio
-  especie1[1] = L.marker([-211.40234375, 712.125], {
+  // especie1[1] = L.marker([-211.40234375, 712.125], {
+  //   icon: L.ExtraMarkers.icon({
+  //     icon: "fa-circle",
+  //     iconColor: "white",
+  //     markerColor: "blue",
+  //     shape: "circle",
+  //     prefix: "far",
+  //   }),
+  // }).addTo(map);
+  //    Abejas solitarias fin
+
+  //gicote gato
+especie1[1] = L.marker([-97.78125,456.8125], {
     icon: L.ExtraMarkers.icon({
       icon: "fa-circle",
       iconColor: "white",
@@ -427,38 +439,34 @@ function initmarkers2026() {
       prefix: "far",
     }),
   }).addTo(map);
-  //    Abejas solitarias fin
-
-  //soncuano ala roja o dorada inicio
-
-  //soncuano ala roja o dorada fin
+  //gicote gato
 
   //Enreda pelo inicio
-  especie3[1] = L.marker([-173.77734375, 546.875], {
-    icon: L.ExtraMarkers.icon({
-      icon: "fa-star",
-      iconColor: "white",
-      markerColor: "green",
-      shape: "penta",
-      prefix: "far",
-    }),
-  }).addTo(map);
+  // especie3[1] = L.marker([-173.77734375, 546.875], {
+  //   icon: L.ExtraMarkers.icon({
+  //     icon: "fa-star",
+  //     iconColor: "white",
+  //     markerColor: "green",
+  //     shape: "penta",
+  //     prefix: "far",
+  //   }),
+  // }).addTo(map);
   //Enreda pelo fin
 
   //Mariolon inicio
-  especie4[1] = L.marker([-216.15234375, 489.875], {
-    icon: L.ExtraMarkers.icon({
-      icon: "fa-play",
-      iconColor: "white",
-      markerColor: "violet",
-      shape: "penta",
-      prefix: "fas",
-    }),
-  }).addTo(map);
+  // especie4[1] = L.marker([-216.15234375, 489.875], {
+  //   icon: L.ExtraMarkers.icon({
+  //     icon: "fa-play",
+  //     iconColor: "white",
+  //     markerColor: "violet",
+  //     shape: "penta",
+  //     prefix: "fas",
+  //   }),
+  // }).addTo(map);
   //Mariolon fin
 
   //Mariola inicio
-  especie5[1] = L.marker([-193.52734375, 441.5], {
+  especie5[1] = L.marker([-98.59375,455.75], {
     icon: L.ExtraMarkers.icon({
       icon: "fa-certificate",
       iconColor: "white",
@@ -468,7 +476,7 @@ function initmarkers2026() {
     }),
   }).addTo(map);
 
-  especie5[2] = L.marker([-87.90234375, 478.75], {
+  especie5[2] = L.marker([-104.1875,454.9375], {
     icon: L.ExtraMarkers.icon({
       icon: "fa-certificate",
       iconColor: "white",
@@ -478,10 +486,218 @@ function initmarkers2026() {
     }),
   }).addTo(map);
 
+  especie5[3] = L.marker([-104.1875,454.9375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[4] = L.marker([-109.28125,458.125], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+especie5[5] = L.marker([-106.75,467.53125], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[6] = L.marker([-92.46875,492.3125], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[7] = L.marker([-89.9375,472.375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[8] = L.marker([-88.6875,487.9375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[9] = L.marker([-86.09375,493.9375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[10] = L.marker([-82.875,509.03125], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[11] = L.marker([-87.84375,502.4375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[12] = L.marker([-87.9375,521.78125], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[13] = L.marker([-99.03125,531.4375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[14] = L.marker([-99.6875,530.84375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[15] = L.marker([-90.90625,531.9375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[16] = L.marker([-89.0625,550.875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[17] = L.marker([-87.0625,561.625], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[18] = L.marker([-111.5,466.46875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[19] = L.marker([-111.78125,461.6875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[20] = L.marker([-189.84375,422.59375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[21] = L.marker([-196.84375,425.28125], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[22] = L.marker([-231.59375,597.34375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[23] = L.marker([-87.9375,462.1875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie5[24] = L.marker([-93.09375,559.9375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-certificate",
+      iconColor: "white",
+      markerColor: "yellow",
+      shape: "star",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  // especie5[25] = L.marker([-93.09375,559.9375], { perdida
+  //   icon: L.ExtraMarkers.icon({
+  //     icon: "fa-certificate",
+  //     iconColor: "white",
+  //     markerColor: "yellow",
+  //     shape: "star",
+  //     prefix: "fas",
+  //   }),
+  // }).addTo(map);
+  
   //Mariola fin
 
   //Chicopipe inicio
-  especie6[1] = L.marker([-88.02734375, 426.5], {
+  especie6[1] = L.marker([-89.0625,526.71875], {
     icon: L.ExtraMarkers.icon({
       icon: "fa-circle",
       iconColor: "white",
@@ -490,11 +706,55 @@ function initmarkers2026() {
       prefix: "fas",
     }),
   }).addTo(map);
-
+  especie6[2] = L.marker([-115.625,465.09375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-circle",
+      iconColor: "white",
+      markerColor: "black",
+      shape: "circle",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie6[3] = L.marker([-233.75,603.71875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-circle",
+      iconColor: "white",
+      markerColor: "black",
+      shape: "circle",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+especie6[4] = L.marker([-88.5,479.65625], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-circle",
+      iconColor: "white",
+      markerColor: "black",
+      shape: "circle",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie6[5] = L.marker([-96.4375,454.71875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-circle",
+      iconColor: "white",
+      markerColor: "black",
+      shape: "circle",
+      prefix: "fas",
+    }),
+  }).addTo(map);
+  especie6[6] = L.marker([-95.84375,455.1875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-circle",
+      iconColor: "white",
+      markerColor: "black",
+      shape: "circle",
+      prefix: "fas",
+    }),
+  }).addTo(map);
   //Chicopipe fin
 
   //Soncuano inicio
-  especie7[1] = L.marker([-131.15234375, 380.75], {
+  especie7[1] = L.marker([-98.8125,491.03125], {
     icon: L.ExtraMarkers.icon({
       icon: "fa-star",
       iconColor: "white",
@@ -503,7 +763,26 @@ function initmarkers2026() {
       prefix: "far",
     }),
     // recordar poner el numero del campo en el array
-  }).addTo(map);especie7[2] = L.marker([-145.15234375, 390.75], {
+  }).addTo(map);
+  especie7[2] = L.marker([-94.40625,493.375], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-star",
+      iconColor: "white",
+      markerColor: "cyan",
+      shape: "square",
+      prefix: "far",
+    }),
+  }).addTo(map);
+   especie7[3] = L.marker([-87.96875,487.6875], {
+    icon: L.ExtraMarkers.icon({
+      icon: "fa-star",
+      iconColor: "white",
+      markerColor: "cyan",
+      shape: "square",
+      prefix: "far",
+    }),
+  }).addTo(map);
+  especie7[4] = L.marker([-88.25,496.3125], {
     icon: L.ExtraMarkers.icon({
       icon: "fa-star",
       iconColor: "white",
@@ -517,15 +796,15 @@ function initmarkers2026() {
   //Soncuano fin
 
   //Euglossa inicio
-  especie8[1] = L.marker([-220.40234375, 395], {
-    icon: L.ExtraMarkers.icon({
-      icon: "fa-square",
-      iconColor: "white",
-      markerColor: "orange",
-      shape: "star",
-      prefix: "fas",
-    }),
-  }).addTo(map);
+  // especie8[1] = L.marker([-220.40234375, 395], {
+  //   icon: L.ExtraMarkers.icon({
+  //     icon: "fa-square",
+  //     iconColor: "white",
+  //     markerColor: "orange",
+  //     shape: "star",
+  //     prefix: "fas",
+  //   }),
+  // }).addTo(map);
   //Euglossa fin
 }
 function initmarkers2022() {
@@ -1444,55 +1723,101 @@ function getOffset(el) {
 }
 // 2026
 function alertsColmenas2026() {
-  especie1[1].on("click", function () {
-    abrirColmena(1, 1);
-  });
-
+  // especie1[1].on("click", function () {
+  //   abrirColmena(1, 1);
+  // });
+for (let i = 1; i < especie1.length; i++) {
+  if (especie1[i]) {
+    especie1[i].on("click", function () {
+      abrirColmena(1, i);
+    });
+  }
+}
   // especie2[1].on('click', function () {
   //   abrirColmena(2, 1);
   // });
+for (let i = 1; i < especie2.length; i++) {
+  if (especie2[i]) {
+    especie2[i].on("click", function () {
+      abrirColmena(2, i);
+    });
+  }
+}
+  // especie3[1].on("click", function () {
+  //   abrirColmena(3, 1);
+  // });
+  for (let i = 1; i < especie3.length; i++) {
+  if (especie3[i]) {
+    especie3[i].on("click", function () {
+      abrirColmena(3, i);
+    });
+  }
+}
 
-  especie3[1].on("click", function () {
-    abrirColmena(3, 1);
-  });
-
-  especie4[1].on("click", function () {
-    abrirColmena(4, 1);
-  });
+  // especie4[1].on("click", function () {
+  //   abrirColmena(4, 1);
+  // });
+  for (let i = 1; i < especie4.length; i++) {
+  if (especie4[i]) {
+    especie4[i].on("click", function () {
+      abrirColmena(4, i);
+    });
+  }
+}
 
   // 👇 ESPECIE 5 (DOS COLMENAS)
-  especie5[1].on("click", function () {
-    abrirColmena(5, 1);
-  });
+  for (let i = 1; i < especie5.length; i++) {
+  if (especie5[i]) {
+    especie5[i].on("click", function () {
+      abrirColmena(5, i);
+    });
+  }
+}
+  
 
-  // ejemplo futuro:
-  especie5[2].on("click", function () {
-    abrirColmena(5, 2);
-  });
+  // especie6[1].on("click", function () {
+  //   abrirColmena(6, 1);
+  // });
+for (let i = 1; i < especie6.length; i++) {
+  if (especie6[i]) {
+    especie6[i].on("click", function () {
+      abrirColmena(6, i);
+    });
+  }
+}
+  // especie7[1].on("click", function () {
+  //   abrirColmena(7, 1);
+  // });
+  // especie7[2].on("click", function () {
+  //   abrirColmena(7, 2);
+  // });
+  for (let i = 1; i < especie7.length; i++) {
+  if (especie7[i]) {
+    especie7[i].on("click", function () {
+      abrirColmena(7, i);
+    });
+  }
+}
 
-  especie6[1].on("click", function () {
-    abrirColmena(6, 1);
-  });
-
-  especie7[1].on("click", function () {
-    abrirColmena(7, 1);
-  });
-  especie7[2].on("click", function () {
-    abrirColmena(7, 2);
-  });
-
-  especie8[1].on("click", function () {
-    abrirColmena(8, 1);
-  });
+  // especie8[1].on("click", function () {
+  //   abrirColmena(8, 1);
+  // });
+  for (let i = 1; i < especie8.length; i++) {
+  if (especie8[i]) {
+    especie8[i].on("click", function () {
+      abrirColmena(8, i);
+    });
+  }
+}
 }
 
 const especies = {
   1: {
-    nombre: "Abejas Solitarias",
+    nombre: "Gicote Gato",
     modalInfo: "modalespecie1",
     colmenas: {
       1: {
-        nombre: "Colmena 1",
+        nombre: "Piquera A1",
         imagenes: [
           "public/img/abejassolitarias/abejassolitarias1.jpg",
           "public/img/abejassolitarias/abejassolitarias2.jpg",
@@ -1502,12 +1827,12 @@ const especies = {
   },
 
   2: {
-    nombre: "Especie 2",
-    modalInfo: "modalespecie2",
+    nombre: "Abejas Solitarias",
+    modalInfo: "Gicote Gato", //hay que hacerlo
 
     colmenas: {
       1: {
-        nombre: "Colmena Única",
+        nombre: "",
         imagenes: [],
       },
     },
@@ -1543,11 +1868,103 @@ const especies = {
     modalInfo: "modalespecie5",
     colmenas: {
       1: {
-        nombre: "Colmena Norte",
+        nombre: "Piquera A2",
         imagenes: ["public/img/mariola/mariola1.jpg"],
       },
       2: {
-        nombre: "Colmena Sur",
+        nombre: "Piquera A3",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      3: {
+        nombre: "Piquera A4",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      4: {
+        nombre: "Piquera A5",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      5: {
+        nombre: "Piquera A6",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      6: {
+        nombre: "Piquera A9",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      7: {
+        nombre: "Piquera A10",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      8: {
+        nombre: "Piquera A12",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      9: {
+        nombre: "Piquera A13",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      10: {
+        nombre: "Piquera A15",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      11: {
+        nombre: "Piquera A16",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      12: {
+        nombre: "Piquera A17",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      13: {
+        nombre: "Piquera A19",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      14: {
+        nombre: "Piquera A20",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      15: {
+        nombre: "Piquera A21",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      16: {
+        nombre: "Piquera A22",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      17: {
+        nombre: "Piquera A23",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      18: {
+        nombre: "Piquera A24",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      19: {
+        nombre: "Piquera A25",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      20: {
+        nombre: "Piquera A27",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      21: {
+        nombre: "Piquera A28",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      22: {
+        nombre: "Piquera A29",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      23: {
+        nombre: "Piquera A32",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      24: {
+        nombre: "Piquera A33",
+        imagenes: ["public/img/mariola/mariola2.jpg"],
+      },
+      25: {
+        nombre: "Piquera A24",
         imagenes: ["public/img/mariola/mariola2.jpg"],
       },
     },
@@ -1559,7 +1976,27 @@ const especies = {
 
     colmenas: {
       1: {
-        nombre: "Colmena Única",
+        nombre: "Piquera A18",
+        imagenes: ["public/img/chicopipe/chicopipe1.jpg"],
+      },
+      2: {
+        nombre: "Piquera A26",
+        imagenes: ["public/img/chicopipe/chicopipe1.jpg"],
+      },
+      3: {
+        nombre: "Piquera A30",
+        imagenes: ["public/img/chicopipe/chicopipe1.jpg"],
+      },
+      4: {
+        nombre: "Piquera A31",
+        imagenes: ["public/img/chicopipe/chicopipe1.jpg"],
+      },
+      5: {
+        nombre: "Piquera A35",
+        imagenes: ["public/img/chicopipe/chicopipe1.jpg"],
+      },
+      6: {
+        nombre: "Piquera A36",
         imagenes: ["public/img/chicopipe/chicopipe1.jpg"],
       },
     },
@@ -1570,13 +2007,22 @@ const especies = {
     modalInfo: "modalespecie7",
     colmenas: {
       1: {
-        nombre: "Colmena Única",
+        nombre: "Piquera A7",
         imagenes: ["public/img/soncuano/soncuano1.jpg"],
       },
       2: {
-        nombre: "Colmena Única",
+        nombre: "Piquera A8",
         imagenes: ["public/img/soncuano/soncuano2.jpg"],
       },
+      3: {
+        nombre: "Piquera A11",
+        imagenes: ["public/img/soncuano/soncuano2.jpg"],
+      },
+      4: {
+        nombre: "Piquera A14",
+        imagenes: ["public/img/soncuano/soncuano2.jpg"],
+      },
+
     },
   },
 

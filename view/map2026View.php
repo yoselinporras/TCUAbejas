@@ -72,7 +72,7 @@ include_once 'public/header.php';
 
                 <li class="species-item filtro-especie" id="especie1" >
                     <i class="far fa-circle"></i>
-                    <span class="species-name">Abejas no identificadas</span>
+                    <span class="species-name">Gicote Gato</span>
                 </li>
 
                 <li class="species-item" id="especie3">
