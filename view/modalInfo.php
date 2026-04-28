@@ -44,6 +44,7 @@
 
             <h3 class="text-center pt-3">Ubicación geográfica</h3>
             <img id="img-ubicacion" style="width:100%;" alt="Ubicación geográfica">
+            <img id="img-simbologia" style="width:50%; display:block; margin: 0 auto" alt="Simbologia">
           </div>
 
           <div class="col-sm-12 pt-3">
