@@ -70,20 +70,20 @@ include_once 'public/header.php';
                     <span class="species-name">Todas</span>
             </li>
 
-                <li class="species-item filtro-especie" id="especie1" >
+                <li class="species-item filtro-especie" id="especie2" >
                     <i class="far fa-circle"></i>
                     <span class="species-name">Gicote Gato</span>
                 </li>
 
-                <li class="species-item" id="especie3">
+                <!-- <li class="species-item" id="especie3">
                     <i class="far fa-star"></i>
                     <span class="species-name">Enreda Pelo</span>
-                </li>
+                </li> -->
 
-                <li class="species-item" id="especie4"  >
+                <!-- <li class="species-item" id="especie4"  >
                     <i class="fas fa-play"></i>
                     <span class="species-name">Mariolon, miel de leche...</span>
-                </li>
+                </li> -->
 
                 <li class="species-item" id="especie5">
                     <i class="fas fa-certificate"></i>
@@ -100,11 +100,11 @@ include_once 'public/header.php';
                     <span class="species-name">Soncuano</span>
                 </li>
 
-                <li class="species-item" id="especie8">
+                <!-- <li class="species-item" id="especie8">
                     <i class="fas fa-square"></i>
                     <span class="species-name">Euglossa</span>
                 </li>
-              
+               -->
 
             </ul>
 
@@ -123,8 +123,8 @@ include_once 'public/header.php';
 <script>
 
     $(document).ready(function () {
-        iniModalSidebar();
-        activebuttons();
+        // iniModalSidebar();
+        // activebuttons();
         initmarkers2026();
         popups();
         

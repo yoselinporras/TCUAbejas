@@ -18,7 +18,20 @@ const infoEspecies = {
     imagenes: [
       "public/img/abejassolitarias/abejassolitarias1.jpg",
       "public/img/abejassolitarias/abejassolitarias2.jpg",
-    ],
+    ]
+  }, 
+  modalespecie2: {
+    nombreCientifico: "",
+    nombreComun: "Jicote Gato",
+    morfologia: "",
+    comportamiento: "",
+    caracteristica: "",
+    ubicacion: "public/img/ubicaciongeografica/Especies-1-3-7-8.png",
+    referencias: [1,2],
+    imagenes: [
+      "public/img/abejassolitarias/abejassolitarias1.jpg",
+      "public/img/abejassolitarias/abejassolitarias2.jpg"
+    ]
   },
 
   modalespecie3: {
