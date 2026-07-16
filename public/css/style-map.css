@@ -329,3 +329,318 @@ html, body {
     .level-selector select:hover {
         border-color: #8bbf50;
     }
+
+/* Modal colmenas y zoom imagenes carrucel */
+/* ==========================================================================
+   1. CSS EXCLUSIVO PARA EL MODAL DE COLMENAS (#modalColmena)
+   ========================================================================== */
+
+/* Contenedor principal del modal */
+.colmena-modal-unique .modal-content {
+    height: auto !important;
+    max-height: 90vh !important;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Forzar que el modal use el flujo estándar de bloques para centrar elementos */
+.colmena-modal-unique .modal-body {
+    height: auto !important;
+    padding: 20px !important;
+    text-align: center;
+}
+
+/* Ajustes estructurales para el carrusel de Bootstrap */
+.colmena-modal-unique .colmena-carousel {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Contenedor de las diapositivas (Ancho completo y centrado) */
+.colmena-modal-unique .colmena-carousel-inner {
+    width: 100% !important;
+    height: 450px !important; /* Altura ideal fija para evitar saltos y recortes */
+    background-color: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block !important; /* Desactiva Flexbox conflictivo */
+}
+
+/* Diapositivas individuales */
+.colmena-modal-unique .colmena-carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Contenedor que gestiona el Zoom */
+.colmena-modal-unique .zoom-container {
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+    touch-action: none !important;
+}
+
+/* La Imagen (Siempre contenida, nunca desbordada) */
+.colmena-modal-unique .zoomable-img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important; /* Mantiene la proporción original */
+    transition: transform 0.15s ease-out;
+    transform-origin: center center;
+}
+
+/* Mandar los controles de Zoom arriba de la imagen de forma flotante */
+.colmena-zoom-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    display: flex;
+    gap: 6px;
+}
+
+.colmena-zoom-controls .btn {
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+.colmena-zoom-controls .btn:hover {
+    opacity: 1;
+}
+
+/* Asegurar visibilidad y posición correcta de las flechas de navegación */
+.colmena-modal-unique .carousel-control-prev,
+.colmena-modal-unique .carousel-control-next {
+    width: 10%;
+    z-index: 5;
+}
+
+.colmena-modal-unique .carousel-control-prev-icon,
+.colmena-modal-unique .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 15px;
+}
+/* ==========================================================================
+   1. CSS RESPONSIVO PARA EL MODAL DE COLMENAS (#modalColmena)
+   ========================================================================== */
+
+/* Ajustar el tamaño del modal en pantallas móviles */
+@media (max-width: 576px) {
+    .colmena-modal-unique .modal-dialog {
+        margin: 10px !important;
+        max-width: calc(100% - 20px) !important;
+    }
+}
+
+/* Contenedor principal del modal */
+.colmena-modal-unique .modal-content {
+    height: auto !important;
+    max-height: 92vh !important; /* No permite que el modal colapse la pantalla */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Cuerpo del modal libre de flexboxes conflictivos */
+.colmena-modal-unique .modal-body {
+    height: auto !important;
+    padding: 15px 20px !important;
+    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Estructura del Carrusel */
+.colmena-modal-unique .colmena-carousel {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* CONTENEDOR INTERNO CON ALTURA RESPONSIVA DILUIDA */
+.colmena-modal-unique .colmena-carousel-inner {
+    width: 100% !important;
+    height: 450px !important; /* Altura por defecto en computadoras */
+    background-color: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block !important;
+}
+
+/* Breakpoint para Tablets */
+@media (max-width: 768px) {
+    .colmena-modal-unique .colmena-carousel-inner {
+        height: 340px !important; 
+    }
+}
+
+/* Breakpoint para Celulares (ej. tu captura en iPhone) */
+@media (max-width: 480px) {
+    .colmena-modal-unique .colmena-carousel-inner {
+        height: 250px !important; /* Evita que la foto empuje los botones fuera del viewport */
+    }
+}
+
+/* Diapositivas individuales */
+.colmena-modal-unique .colmena-carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Contenedor de Zoom (Soporte táctil sin scroll nativo molesto) */
+.colmena-modal-unique .zoom-container {
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+    touch-action: none; /* Crucial: Previene que el celular haga scroll vertical mientras arrastras la foto */
+}
+
+/* La Imagen (Adaptable 100% a la proporción física del contenedor) */
+.colmena-modal-unique .zoomable-img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    transition: transform 0.15s ease-out;
+    transform-origin: center center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Botón de acción responsivo */
+.colmena-modal-unique #btnInfoEspecie {
+    width: 100%;
+    max-width: 340px; /* Tamaño estético límite */
+    font-weight: 600;
+}
+
+/* Controles de Zoom Flotantes */
+.colmena-zoom-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    gap: 6px;
+}
+
+.colmena-zoom-controls .btn {
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+/* Flechas laterales de carrusel */
+.colmena-modal-unique .carousel-control-prev,
+.colmena-modal-unique .carousel-control-next {
+    width: 12%;
+    z-index: 5;
+}
+
+.colmena-modal-unique .carousel-control-prev-icon,
+.colmena-modal-unique .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    padding: 12px;
+}
+/* ==========================================================================
+   2. CSS EXCLUSIVO PARA EL MODAL DE DETALLES DE LA ESPECIE (#mymodals)
+   ========================================================================== */
+
+.especie-modal-unique .modal-dialog {
+    max-width: 950px !important; /* Ancho cómodo para las dos columnas */
+}
+
+.especie-modal-unique .modal-content {
+    border-radius: 15px;
+}
+
+/* Forzar que el cuerpo use la rejilla original (sin flexbox global) */
+.especie-modal-unique .modal-body {
+    display: block !important;
+    height: auto !important;
+}
+
+/* Área donde va el carrusel de fotos de la especie */
+.especie-modal-unique .especie-carousel-inner {
+    width: 100%;
+    height: 380px !important; /* Altura estandarizada para las fotos de especies */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.especie-modal-unique .especie-carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.especie-modal-unique .especie-carousel-item.active {
+    display: flex !important;
+}
+
+
+/* ==========================================================================
+   3. ESTILOS DE INTERACCIÓN DE ZOOM COMPARTIDOS
+   ========================================================================== */
+
+.zoom-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+.zoomable-img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    margin: auto;
+    transition: transform 0.1s ease;
+    transform-origin: center center;
+}
+
+/* Mandar los controles de Zoom arriba de la imagen flotando */
+.colmena-zoom-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 101;
+    display: flex;
+    gap: 6px;
+}
+
+.colmena-zoom-controls .btn {
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}

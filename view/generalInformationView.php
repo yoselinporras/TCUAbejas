@@ -105,9 +105,21 @@
                     <p>Abejas de las orquídeas</p>
                 </div>
 
-                <div class="colmena-card colmena-card--center" data-especie="modalespecie1">
-                    <img src="img/solitarias.png" alt="Abejas solitarias">
-                    <p>Abejas solitarias<br>no identificadas</p>
+               </div> <div class="row justify-content-center mt-4">
+                <div class="col-auto d-flex justify-content-center gap-3">
+                    
+                    <div class="colmena-card m-0" data-especie="modalespecie1">
+                        <img src="./public/img/infoGeneral/solitarias.png" alt="Abejas solitarias">
+                        <p>Abejas solitarias<br>no identificadas</p>
+                    </div>
+
+                    <div class="colmena-card m-0" data-especie="modalespecie2">
+                        <img src="./public/img/infoGeneral/jicoteGato.jpg" alt="Jicote Gato">
+                        <p>Jicote Gato</p>
+                    </div>
+
+                </div>
+            </div>
                 </div>
             
         </section>

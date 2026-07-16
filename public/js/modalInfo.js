@@ -17,16 +17,16 @@ const infoEspecies = {
     ]
   }, 
   modalespecie2: {
-    nombreCientifico: "",
+    nombreCientifico: "Melipona beecheii",
     nombreComun: "Jicote Gato",
-    morfologia: "",
-    comportamiento: "",
-    caracteristica: "",
+    morfologia: "Es una abeja sin aguijón de tamaño grande y robusto (entre 7 y 10 mm de longitud). Su cuerpo presenta un integumento negro con bandas abdominales de color amarillento-anaranjado. Su tórax está densamente cubierto por una vellosidad de color café claro o anaranjado. Su característica más distintiva y la razón de su nombre común ('gato') es el color claro y llamativo de sus ojos compuestos.",
+    comportamiento: "Es una especie sumamente dócil y no defensiva con los humanos, por lo que históricamente ha sido criada cerca de los hogares. Su organización social es altamente compleja (eusocial); las colonias están formadas por una reina, machos y miles de obreras. En la entrada de su colmena siempre se mantiene una sola abeja guardiana custodiando de forma pacífica. Son excelentes polinizadoras y producen una de las mieles más valoradas por sus altas capacidades medicinales y antimicrobianas.",
+    caracteristica: "Tradicionalmente asociada a la cultura maya (donde es conocida como Xunan Kab o abeja sagrada), también tiene un profundo arraigo cultural en el bosque seco de Guanacaste. Construyen sus nidos dentro de cavidades profundas en troncos de árboles vivos. La entrada a su nido consiste en un único agujero circular revestido de barro y resinas, donde solo cabe una abeja a la vez. Almacenan su miel y polen en grandes potes ovoides fabricados de cerumen (mezcla de cera y propóleo).",
     ubicacion: "public/img/ubicaciongeografica/Especies-1-3-7-8.png",
-    referencias: [1,2],
+    referencias: [6, 14, 15],
     imagenes: [
-      "public/img/abejassolitarias/abejassolitarias1.jpg",
-      "public/img/abejassolitarias/abejassolitarias2.jpg"
+      "public/img/infoGeneral/jicoteGato.jpg",
+      "public/img/infoGeneral/jicoteGato2.jpeg",
     ]
   },
 
@@ -67,6 +67,9 @@ const infoEspecies = {
     referencias: [6,10],
     imagenes: [
        "public/img/mariola/mariola1.jpg",
+       "public/img/mariola/2026/A24-1.jpg",
+       "public/img/mariola/2026/A6 .jpg",
+      "/public/img/infoGeneral/mariola-esteto.jpeg",
       
     ]
   },
@@ -79,10 +82,12 @@ const infoEspecies = {
      ubicacion: "public/img/ubicaciongeografica/Especies-6.png",
     referencias: [6],
     imagenes: [
-      "public/img/chicopipe/chicopipe1.jpg",
-      "public/img/chicopipe/chicopipe2.jpg",
-      "public/img/chicopipe/chicopipe3.jpg",
-      "public/img/chicopipe/chicopipe4.jpg",
+      "public/img/chicopipe/2026/A36-2.jpg",
+      "public/img/chicopipe/2026/A18.jpg",
+      "public/img/chicopipe/2026/A26-1.jpg",
+      "/public/img/infoGeneral/chicopipe1-esteto.jpeg",
+      "/public/img/infoGeneral/chicopipe2-esteto.jpeg"
+
     ]
   },
   modalespecie7: {
@@ -94,7 +99,11 @@ const infoEspecies = {
      ubicacion: "public/img/ubicaciongeografica/Especies-1-3-7-8.png",
     referencias: [6,11],
     imagenes: [
-      "public/img/soncuano/soncuano1.jpg",
+     "public/img/soncuano/2026/A8-1.jpg",
+      "/public/img/infoGeneral/soncuano-esteto.jpeg",
+      "public/img/soncuano/2026/A41.jpg",
+       "public/img/soncuano/soncuano1.jpg",
+      
       
     ]
   },
@@ -161,6 +170,14 @@ const referencias={
   13: {
     referencia: "13. Parra, A. (2009). La arquitectura de nidos de Euglossa (Euglossa) hemichlora (Hymenoptera: Apidae: Euglossini). Revista Colombiana de Entomología 35(2): 283-285. Recuperado de:",
     url: "http://www.scielo.org.co/pdf/rcen/v35n2/v35n2a26.pdf"
+  },
+  14: {
+    referencia: "14. Wille, A. (1976). Las abejas jicotes del género Melipona (Apidae: Meliponini) de Costa Rica. Revista de Biología Tropical, 24(1), 123-147. Disponible en:",
+    url: "https://revistas.ucr.ac.cr/index.php/rbt/article/view/25975"
+  },
+  15: {
+    referencia: "15. Quezada-Euán, J. J. G. (2018). Stingless Bees of Mexico: The Biology, Management and Conservation of an Ancient Heritage. Springer Nature. (Información específica sobre Melipona beecheii y meliponicultura tradicional).",
+    url: ""
   }
 
 }

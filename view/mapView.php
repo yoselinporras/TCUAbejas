@@ -129,11 +129,11 @@ include_once 'public/header.php';
     $(document).ready(function () {
         // activebuttons();
         initmarkers2022();
-        popups();
+        // popups();
         // iniModalSidebar();
-        alertsColmenas2022();
-        $('#mymodalTutorial').modal('toggle');
-        responsiveModals();
+        // alertsColmenas2022();
+        
+        
     });
 
     var map = L.map('map', {
@@ -187,19 +187,7 @@ include_once 'public/header.php';
     // }).addTo(map);
 
 
-    function responsiveModals() {
-        var environment = $('.tutorial');
-        var environmentC = $('#carouselColmena');
-        let margin=((window.innerHeight * 0.20) + 44);
-        environment.css('height', (window.innerHeight - margin) + 'px');
-        environmentC.css('height', (window.innerHeight - margin) + 'px');
-        $(window).resize(function () {
-            let margin=((window.innerHeight * 0.20) + 44);
-            environment.css('height', (window.innerHeight - margin) + 'px');
-            environmentC.css('height', (window.innerHeight - margin) + 'px'); 
-        });
-
-    }
+   
 
     showMarkers(map);
     const speciesSidebar = document.getElementById('species-sidebar');

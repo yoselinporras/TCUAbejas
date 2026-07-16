@@ -54,27 +54,27 @@
             [
                 "nombre" => "Yoselin Porras Reyes",
                 "rol" => "Estudiante de Informática Empresarial",
-                "info" => "Encargada de la nueva imagen de la página web.",
+                "info" => "Encargada de actualizar la página web, desarrollar nuevas funcionalidades y mejorar su rendimiento.",
                 "foto" => "./public/img/fotosIntegrantes/Yoselin.png"
             ],
             [
                 "nombre" => "Silvia Gamboa Madrigal",
                 "rol" => "Estudiante de Informática Empresarial",
-                "info" => "Encargada de la nueva imagen de la página web.",
+                "info" => "Encargada del rediseño visual de la página web, así como de su actualización, el desarrollo de nuevas funcionalidades y la mejora de su rendimiento.",
                 "foto" => "./public/img/fotosIntegrantes/Silvia.jpeg"
             ],
             [
-                "nombre" => "Angie",
+                "nombre" => "Angie McCarthy Vega", 
                 "rol" => "Estudiante de Diseño Gráfico",
-                "info" => "Encargada de la nueva imagen de la página web.",
-                "foto" => "./public/img/fotosIntegrantes/Angie.jpeg"
+                "info" => "Encargada del registro de nuevas fotografías de las colmenas y de la supervisión de la línea gráfica del proyecto.",
+                "foto" => "./public/img/fotosIntegrantes/Angie.jpg"
             ],
             [
                 "nombre" => "Keiry Navas Miranda",
                 "rol" => "Estudiante de Agronomía",
-                "info" => "Encargada de la ubicación de las colmenas en la UCR Atlántico.",
+                "info" => "Responsable del trabajo de campo para la ubicación, monitoreo e identificación de las colmenas en la UCR Sede del Atlántico.",
                 "foto" => "./public/img/fotosIntegrantes/Keiry.jpeg"
-            ],
+            ]
         ],
     ];
 ?>
